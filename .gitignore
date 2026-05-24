@@ -1,0 +1,55 @@
+# Local / personal overrides
+CLAUDE.local.md
+.claude/local/
+.env
+.env.*
+*.local
+
+# Secrets — defensive patterns
+*credentials*.json
+*oauth*.json
+*-secrets.json
+gcp-*.json
+*.pem
+*.key
+1password-cli-config
+.op/
+
+# Migration scratch (used by AGENT-INSTRUCTIONS Phase 1)
+_migration-inventory.md
+_drafts/
+inbox/
+
+# Time-series binaries — store summaries, not raw audio/video
+meetings/**/*.mp3
+meetings/**/*.mp4
+meetings/**/*.wav
+meetings/**/transcripts/
+
+# MkDocs build output
+site/
+.cache/
+
+# Python / Node scratch
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Migration handoff (created by agent during bootstrap; user reads then deletes)
+# MIGRATION-HANDOFF.md   # uncomment if you want to gitignore it
