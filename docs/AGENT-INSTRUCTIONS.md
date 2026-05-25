@@ -3,6 +3,8 @@
 > **You are an AI coding agent (Claude Code, Cursor, Codex, OpenClaw, or similar) helping a founder turn a folder of existing files into a clean, agent-readable single source of truth, hosted as a private GitHub repo following the *Company Intelligence* template.**
 >
 > This document is your **complete operating manual** for that task. Read it end-to-end before acting. It is long because the task is unforgiving — the wrong shape early creates pain forever.
+>
+> **Prerequisite reading:** [`DATA-ORGANIZATION-PLAYBOOK.md`](./DATA-ORGANIZATION-PLAYBOOK.md) gives you the routing logic (what data goes where) and the generation contract for the six root files. Read it first. Then, for each folder you write into, that folder's `README.md` is the authoritative per-file contract — frontmatter fields, sourcing, worked example, quality bar, edge cases. This document is the *project procedure*; those are the *file specs*.
 
 ---
 

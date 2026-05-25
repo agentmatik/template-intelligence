@@ -39,7 +39,12 @@ See [`SETUP.md`](./SETUP.md). It walks you from empty clone to working intellige
 
 If you're an AI agent reading this repo for the first time — your operating contract is [`AGENTS.md`](./AGENTS.md). Read it before doing anything else.
 
-If you've been asked to **build** an intelligence repo for a company from existing files, read [`docs/AGENT-INSTRUCTIONS.md`](./docs/AGENT-INSTRUCTIONS.md). It's a complete, exhaustive operating manual for the migration task.
+If you've been asked to **build** an intelligence repo for a company from raw, unstructured data, read these two, in order:
+
+1. [`docs/DATA-ORGANIZATION-PLAYBOOK.md`](./docs/DATA-ORGANIZATION-PLAYBOOK.md) — what goes where and why, plus how to fill the six root files. The routing logic.
+2. [`docs/AGENT-INSTRUCTIONS.md`](./docs/AGENT-INSTRUCTIONS.md) — the full nine-phase migration procedure with human checkpoints.
+
+Then each folder's own `README.md` is the complete file-generation contract for that folder (frontmatter, fields, sourcing, worked example, quality bar, edge cases). An agent with no prior context can generate correct, consistent files from those READMEs alone.
 
 ## How to use this as a template
 

@@ -15,7 +15,14 @@
 - `AGENTS.md` — your operating contract
 - This file for navigation
 - Most recent file in `weekly/` for current focus
-- `docs/AGENT-INSTRUCTIONS.md` only if you're **building** an intelligence repo from existing files
+
+## If you're an agent BUILDING this repo from raw data
+
+Read in this order:
+
+1. `docs/DATA-ORGANIZATION-PLAYBOOK.md` — routing logic + how to fill the six root files
+2. `docs/AGENT-INSTRUCTIONS.md` — the nine-phase migration procedure with checkpoints
+3. The `README.md` inside each folder you write into — the complete per-file generation contract
 
 ---
 
