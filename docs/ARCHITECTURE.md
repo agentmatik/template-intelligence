@@ -69,7 +69,7 @@ Skills from untrusted sources can contain prompt injection. MCP servers can retu
 
 Vector DBs, graph DBs, temporal-graph memory: defer until trace data shows repeated misses. Month one is file-native, eval-driven, boring.
 
-## Why Git + Markdown beats database-backed brain
+## Why Git + Markdown beats a database-backed knowledge store
 
 - **Cheap to run.** No servers, no vector infra.
 - **Diffable.** Every change is a PR.

@@ -10,14 +10,7 @@ Durable truth lives here. Execution state stays in the systems that own it. Agen
 
 ## What's "intelligence"?
 
-We use the term **intelligence** (rather than "brain") deliberately:
-
-- It signals an *operating layer*, not just storage
-- It differentiates from the LLM "brain" (the agent runtime)
-- It aligns with how enterprise leaders talk about the same concept (Accenture's "Intelligent Digital Brain", Bloomfire's "Enterprise Intelligence")
-- It travels well into client work
-
-Think of it as the persistent knowledge layer your company runs on. Agents and humans both read from it. Both write to it. PRs gate the truth.
+The **intelligence** is the persistent knowledge layer your company runs on: an operating layer, not just storage. Agents and humans both read from it. Both write to it. PRs gate the truth.
 
 ## Who this is for
 
