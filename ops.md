@@ -11,77 +11,105 @@ tags: []
 audience: internal
 ---
 
-# Operations
+<!-- ============================================================
+GENERATION GUIDE (delete this block once filled)
 
-<!-- How we run the company. Keep this file ≤1000 words. Spin out a folder when it grows. -->
+PURPOSE: How the company actually runs day to day. The operating manual.
+Decision rights here are especially valuable — they tell an agent who can
+approve what, enabling autonomy.
+
+SOURCE FROM:
+  1. Team handbook / wiki
+  2. Calendar (reveals cadence)
+  3. Tool inventory (what's in the SSO app list)
+  4. Vendor contracts / invoices
+  5. Any privacy policy / GDPR docs (for the data inventory)
+
+RULES:
+  - Keep under ~1000 words. Spin out an ops/ folder only when it outgrows this.
+  - GDPR data inventory is required for EU companies. Skip only if genuinely
+    no personal data is processed (rare).
+  - Decision rights: list real names/roles. This is what lets agents and team
+    know who to route approvals to.
+  - status: draft when generated; human verifies.
+============================================================ -->
+
+# Operations
 
 ## Cadence
 
-| Cadence    | What happens                                                  |
-|------------|---------------------------------------------------------------|
-| Daily      | Standups (async in Slack #standups), Granola for meetings     |
-| Weekly     | Friday brief in `weekly/`, OKR check-in, retro                |
-| Monthly    | First Monday — strategic review, customer health pass        |
-| Quarterly  | Rewrite `strategy.md`, board update, OKR reset               |
-| Annually   | Annual planning week, comp review, vendor audit               |
+<!-- The rhythm of the company. Source: recurring calendar events, handbook. -->
+
+| Cadence    | What happens |
+|------------|--------------|
+| Daily      | e.g. async standup in Slack, meetings captured in Granola |
+| Weekly     | e.g. Friday brief in weekly/, team sync |
+| Monthly    | e.g. metrics review, customer health pass |
+| Quarterly  | e.g. rewrite strategy.md, board update, OKR reset |
+| Annually   | e.g. planning week, vendor audit |
 
 ## Decision rights
 
-Who decides what without committee:
+<!-- Who decides what WITHOUT committee. Critical for agent autonomy and team
+clarity. Source: founder, handbook. Use real names/roles. -->
 
 - **Product roadmap:** [name]
-- **Hiring (heads):** [name]
-- **Hiring (offers):** [name]
+- **Hiring (open a role):** [name]
+- **Hiring (make an offer):** [name]
 - **Pricing changes:** [name]
 - **Customer escalations:** [name]
-- **Marketing campaigns:** [name]
-- **Spend > €X:** [name]
+- **Spend above €[X]:** [name]
 
 For anything else: open a question in `decisions/` and tag the owner.
 
-## Tools we use
+## Tools
 
-| Function          | Tool                                  |
-|-------------------|---------------------------------------|
-| Execution / tickets | Linear                              |
-| Team chat         | Slack                                 |
-| Meetings + notes  | Granola                               |
-| Documents         | Google Workspace                      |
-| Code              | GitHub (private)                      |
-| Knowledge         | This repo + Notion (legacy only)      |
-| Design            | Figma                                 |
-| Payments          | Stripe                                |
-| Accounting        | [tool]                                |
-| Identity          | Google Workspace SSO                  |
-| Secrets           | 1Password                             |
+<!-- Function → tool. Source: SSO app list, expense reports, team knowledge. -->
+
+| Function            | Tool |
+|---------------------|------|
+| Execution / tickets | Linear |
+| Team chat           | Slack |
+| Meetings + notes    | Granola |
+| Documents           | Google Workspace |
+| Code                | GitHub |
+| Knowledge           | This repo (+ Notion legacy until migrated) |
+| Design              | Figma |
+| Payments            | Stripe |
+| Accounting          | [tool] |
+| Secrets             | 1Password |
 
 ## Vendors
 
-For each material vendor (>€100/mo): name, contact, contract location, renewal date.
+<!-- Material vendors (>€100/mo): name, what for, contact, renewal date.
+Source: invoices, contracts. -->
 
-- ...
+- [Vendor] — [purpose] — [contact] — renews [date]
 
 ## Security & access
 
-- Identity: SSO via Google Workspace
-- Secrets: 1Password (shared vaults per project)
+<!-- Source: IT setup, handbook. -->
+
+- Identity: [SSO provider]
+- Secrets: [1Password vaults]
 - 2FA: required on all accounts
-- Device policy: [encrypted laptops, …]
-- Incident playbook: see [`docs/incident-response.md`](./docs/incident-response.md) (TODO)
+- Device policy: [encrypted laptops, etc.]
 
 ## GDPR / data inventory
 
-Required for EU-based companies. What customer data lives where:
+<!-- Required for EU companies. What personal data, where, why allowed, how long.
+Source: privacy policy, data-processing records, system inventory. -->
 
-| Data category        | Where stored          | Lawful basis           | Retention |
-|----------------------|-----------------------|------------------------|-----------|
-| Customer emails      | Stripe + Linear       | Contract performance   | Indefinite while active |
-| Meeting transcripts  | Granola               | Legitimate interest    | 90 days   |
-| ...                  | ...                   | ...                    | ...       |
+| Data category       | Where stored    | Lawful basis          | Retention |
+|---------------------|-----------------|-----------------------|-----------|
+| Customer emails     | [system]        | Contract performance  | [period]  |
+| Meeting transcripts | Granola         | Legitimate interest   | 90 days   |
+| ...                 | ...             | ...                   | ...       |
 
-DPA template: link.
-Privacy policy source: link.
+DPA template: [link] · Privacy policy source: [link]
 
 ---
+
+<!-- APPEND-ONLY TIMELINE. Major process changes, tool migrations, policy updates. -->
 
 - 2026-04-22: Initialized ops.md.

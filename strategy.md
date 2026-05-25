@@ -11,42 +11,72 @@ tags: []
 audience: internal
 ---
 
-# Strategy
+<!-- ============================================================
+GENERATION GUIDE (delete this block once filled)
 
-<!-- What we're doing this quarter and why. Keep this file ≤1000 words. Split into a folder only if it genuinely outgrows that. -->
+PURPOSE: What the company is doing this quarter and why. The YC-style
+"what is the one thing you're focused on" file. Drives agent and team alignment.
+
+SOURCE FROM:
+  1. Most recent board update / investor update
+  2. Latest planning doc or OKR sheet
+  3. Founder's stated priorities (ask if not in raw data)
+  4. Any "annual plan" or "quarterly goals" document
+
+RULES:
+  - Keep the whole file under ~1000 words. If longer, you're putting tactical
+    decisions here that belong in decisions/.
+  - TOP 3 PRIORITIES, IN ORDER. More than three means no priorities — force the cut.
+  - "What we're NOT doing" is mandatory — the rejected-but-plausible directions.
+  - North-star: one metric. If the company tracks five "key metrics," pick the
+    single one that, if it moves, means everything is working.
+  - Be honest in risks. A risk section with no real risks is propaganda.
+  - status: draft when generated; human verifies.
+============================================================ -->
+
+# Strategy
 
 ## North star
 
+<!-- ONE metric. Source: board deck, KPI dashboard, founder. If multiple are
+tracked, pick the single most causal one. -->
+
 **Primary metric:** [the one number we optimize]
-**Current value:** [number with date]
+**Definition:** [exactly how it's calculated — avoids ambiguity later]
+**Current value:** [number + as-of date]
 **12-month target:** [where we're trying to get]
 
-## Current quarter — Q2 2026
+## Current quarter — [QX YYYY]
 
-Top 3 priorities, in order:
+<!-- Exactly three, ranked. Source: OKRs, planning doc. Each gets a why,
+a success metric, and an owner. If the raw data lists ten goals, force-rank
+and take the top three; note the rest were deprioritized. -->
 
-1. **[Priority 1]** — Why it matters, success metric, owner.
-2. **[Priority 2]** — Why it matters, success metric, owner.
-3. **[Priority 3]** — Why it matters, success metric, owner.
+1. **[Priority 1]** — Why it matters · success metric · owner.
+2. **[Priority 2]** — Why it matters · success metric · owner.
+3. **[Priority 3]** — Why it matters · success metric · owner.
 
 ## Active bets
 
-What we believe might pay off but isn't proven yet:
+<!-- Hypotheses not yet proven. Source: strategy docs, founder's "we think that..."
+statements. Each with the evidence so far and a decision deadline. -->
 
 - **Bet:** [hypothesis] · **Evidence so far:** ... · **Decision deadline:** ...
 
 ## Constraints
 
-What we can't change in the near term:
+<!-- What can't change near-term. Source: financials (runway), team size,
+regulatory context. -->
 
-- Capital
+- Capital / runway
 - Team capacity
 - Regulatory / legal
-- Technical debt
+- Technical
 
 ## Key risks
 
-Honestly named. Top three:
+<!-- Top three, honestly named, with mitigation if any. Source: board deck risk
+slide, founder candor, competitor moves. Don't sanitize. -->
 
 1. [Risk] — [mitigation if any]
 2. [Risk] — [mitigation if any]
@@ -54,13 +84,17 @@ Honestly named. Top three:
 
 ## What we're NOT doing
 
-The most important section. The space of plausible-but-rejected directions.
+<!-- The most important section. Plausible directions deliberately rejected, with
+the reason. Source: strategy doc non-goals, or infer from focus decisions.
+Example: "Not building mobile until web retention proves out. Not entering the US
+until DACH is saturated. Not raising until ARR hits €1M." -->
 
-- Not [adjacent direction X] because [reason]
-- Not [adjacent direction Y] because [reason]
+- Not [direction X] because [reason]
+- Not [direction Y] because [reason]
 
 ---
 
-<!-- Append-only timeline. Quarterly priority shifts, strategic pivots, bets retired or vindicated. -->
+<!-- APPEND-ONLY TIMELINE. Quarterly priority shifts, strategic pivots, bets
+retired or vindicated, north-star changes. Reverse-chronological. -->
 
 - 2026-04-22: Initialized strategy.md.

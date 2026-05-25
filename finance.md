@@ -11,49 +11,83 @@ tags: []
 audience: internal
 ---
 
+<!-- ============================================================
+GENERATION GUIDE (delete this block once filled)
+
+PURPOSE: Where the money truth LIVES — not the money truth itself. A pointer
+file plus metric definitions.
+
+⚠️ HARD RULE FOR AGENTS: If you encounter a cap table, payroll, term sheet, or
+exact revenue-by-customer in the raw data, DO NOT transcribe it into this file.
+Note in the migration handoff that it exists and recommend an encrypted home
+(1Password, encrypted Drive folder with strict ACL, or a stricter private repo).
+This file only records WHERE those things live and HOW metrics are defined.
+
+WHAT IS OK TO INCLUDE:
+  - Pointers to where financial artifacts live (with access notes)
+  - Metric DEFINITIONS (the formula for ARR, burn, etc. — not the values)
+  - Fundraising round summary (round/date/amount/lead are usually shareable;
+    exact terms are not)
+  - Review cadence
+
+SOURCE FROM: the founder telling you where things live. Not from financial
+documents you then copy.
+
+  - status: draft when generated; human verifies.
+============================================================ -->
+
 # Finance
 
-> **⚠️ This file is for high-level signal only.** Cap table, comp data, term sheets, customer revenue breakdowns — these do **not** go in this repo. They live in encrypted storage (1Password Business, encrypted Drive folder with strict ACL, or a separate stricter-controlled private repo).
->
-> What goes here: links to where the real numbers live, the metric definitions, and the cadence for reviewing them.
+> **This file is high-level signal only.** Cap table, comp, term sheets, and
+> customer-level revenue do NOT live here. They live in encrypted storage. This
+> file points to them and defines the metrics.
 
 ## Where the real numbers live
 
-| Document                  | Location                            | Access                  |
-|---------------------------|-------------------------------------|-------------------------|
-| Cap table                 | [link to encrypted store]           | Founders only           |
-| Bookkeeping               | [Stripe / accounting tool]          | Founder + accountant    |
-| Bank accounts             | [bank portal]                       | Founders                |
-| Investor reporting        | [Google Drive folder]               | Investors + founders    |
-| Customer revenue          | [Stripe Sigma / spreadsheet]        | Founder                 |
-| Salary band               | [encrypted vault]                   | Founders                |
+<!-- A directory of financial artifacts and their (secure) locations. Source: founder. -->
 
-## Key metrics (definitions)
+| Document            | Location                  | Access            |
+|---------------------|---------------------------|-------------------|
+| Cap table           | [encrypted store]         | Founders only     |
+| Bookkeeping         | [accounting tool]         | Founder + accountant |
+| Bank accounts       | [bank portal]             | Founders          |
+| Investor reporting  | [Drive folder]            | Investors + founders |
+| Customer revenue    | [Stripe / spreadsheet]    | Founder           |
+| Payroll / comp      | [encrypted vault]         | Founders          |
 
-What we measure and how we calculate. Numbers go in the dashboards, definitions stay here.
+## Key metrics (definitions only)
 
-- **ARR** = sum of MRR × 12 for all active subscriptions
-- **MRR** = ...
-- **Burn** = ...
-- **Runway** = cash on hand ÷ avg monthly burn over last 3 months
-- **CAC** = ...
-- **LTV** = ...
+<!-- The formulas, NOT the values. Values live in dashboards. Source: how the
+company defines these — ask if ambiguous. -->
+
+- **ARR** = [definition]
+- **MRR** = [definition]
+- **Burn** = [definition]
+- **Runway** = cash on hand ÷ avg monthly burn (last 3 months)
+- **CAC** = [definition]
+- **LTV** = [definition]
 
 ## Cadence
 
-- **Weekly:** quick burn check (Friday)
-- **Monthly:** P&L review (1st Monday)
+- **Weekly:** burn check (Friday)
+- **Monthly:** P&L review (first Monday)
 - **Quarterly:** investor update
 - **Annually:** audit, tax filing
 
-## Recent fundraising
+## Fundraising history
 
-| Round | Date     | Amount | Lead investor | Post-money valuation |
-|-------|----------|--------|---------------|----------------------|
-| Pre-seed | YYYY-MM | $X | [name]        | $X                   |
+<!-- Round / date / amount / lead are usually shareable. Exact terms (valuation
+caps, liquidation prefs) belong in the encrypted store, NOT here. -->
 
-Term sheets live in [encrypted location].
+| Round    | Date    | Amount | Lead investor |
+|----------|---------|--------|---------------|
+| Pre-seed | YYYY-MM | $X     | [name]        |
+
+Term sheets and detailed terms: [encrypted location].
 
 ---
+
+<!-- APPEND-ONLY TIMELINE. Fundraises closed, major financial milestones
+(first revenue, breakeven, etc.). No raw figures beyond round headlines. -->
 
 - 2026-04-22: Initialized finance.md.
