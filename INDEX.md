@@ -13,8 +13,15 @@
 ## If you're an agent starting a task
 
 - `AGENTS.md` — your operating contract
+- `memory/MEMORY.md` + today's and yesterday's `memory/YYYY-MM-DD.md` worklogs
 - This file for navigation
 - Most recent file in `weekly/` for current focus
+
+## If you're an operator running the company on this
+
+- `operating-system/README.md` — the artifact map (EOS/OKR/4DX-compatible)
+- `operating-system/vision.md` → `rocks.md` → `scorecard.md`
+- `docs/OPERATIONS.md` — the rituals that keep it alive
 
 ## If you're an agent BUILDING this repo from raw data
 
@@ -30,7 +37,7 @@ Read in this order:
 
 <!-- Update this section weekly. Keeps everyone aligned on what matters now. -->
 
-- **Current quarter:** see `strategy.md`
+- **Current quarter:** see `strategy.md` and `operating-system/rocks.md`
 - **This week's focus:** see most recent file in `weekly/`
 - **Active decisions:** see most recent files in `decisions/`
 - **Hot prospects / customers:** see `sales/pipeline.md`
@@ -54,6 +61,12 @@ Read in this order:
 | What's our voice/messaging?             | `brand.md`                             |
 | What happened this week?                | `weekly/` — most recent file           |
 | What was said in that meeting?          | `meetings/` — filter by date           |
+| Where is all of this going long-term?   | `operating-system/vision.md`           |
+| Are we on track this quarter?           | `operating-system/rocks.md`            |
+| How are the numbers?                    | `operating-system/scorecard.md` → live dashboards |
+| Who owns what?                          | `operating-system/accountability.md`   |
+| How do we do <process>?                 | `operating-system/processes/`          |
+| What have agents learned here?          | `memory/learnings.md`                  |
 
 ## When to use live data instead of this repo
 
