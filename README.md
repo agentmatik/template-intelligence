@@ -33,7 +33,7 @@ The **intelligence** is the persistent knowledge layer your company runs on: an 
 
 ## Quick start (≤30 minutes)
 
-See [`SETUP.md`](./SETUP.md). It walks you from empty clone to working intelligence with seeded strategy, one skill installed, and Claude Code reading the repo correctly.
+See [`SETUP.md`](./docs/SETUP.md). It walks you from empty clone to working intelligence with seeded strategy, one skill installed, and Claude Code reading the repo correctly.
 
 ## For agents starting fresh
 
@@ -42,7 +42,7 @@ If you're an AI agent reading this repo for the first time — your operating co
 If you've been asked to **build** an intelligence repo for a company from raw, unstructured data, read these two, in order:
 
 1. [`docs/DATA-ORGANIZATION-PLAYBOOK.md`](./docs/DATA-ORGANIZATION-PLAYBOOK.md) — what goes where and why, plus how to fill the six root files. The routing logic.
-2. [`docs/AGENT-INSTRUCTIONS.md`](./docs/AGENT-INSTRUCTIONS.md) — the full nine-phase migration procedure with human checkpoints.
+2. [`docs/AGENT-INSTRUCTIONS.md`](./docs/AGENT-INSTRUCTIONS.md) — the full eleven-phase migration procedure with human checkpoints.
 
 Then each folder's own `README.md` is the complete file-generation contract for that folder (frontmatter, fields, sourcing, worked example, quality bar, edge cases). An agent with no prior context can generate correct, consistent files from those READMEs alone.
 
@@ -52,7 +52,7 @@ Then each folder's own `README.md` is the complete file-generation contract for 
 2. Name the new repo `<company>-intelligence`
 3. Make it **private**
 4. Clone locally, run find/replace on `{{COMPANY_NAME}}`, `{{COMPANY_SHORT}}`, `{{FOUNDER_NAME}}`, etc.
-5. Follow [`SETUP.md`](./SETUP.md)
+5. Follow [`SETUP.md`](./docs/SETUP.md)
 
 For founders applying this to their own company: budget one afternoon for setup, one week for seed content. For consultancies applying it to a client: budget a 2-hour kickoff workshop plus one week of async ingestion.
 

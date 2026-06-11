@@ -1,0 +1,58 @@
+name: validate
+
+# CI for the intelligence repo. Three checks, all advisory rules made
+# deterministic (prose is advisory; CI guarantees it — see docs/ARCHITECTURE.md):
+#   1. Frontmatter — every canonical file carries the required fields
+#   2. Secrets — gitleaks scan; a leak fails the build
+#   3. Links — no broken relative links between Markdown files
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  frontmatter:
+    name: Frontmatter contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate frontmatter on canonical files
+        run: bash scripts/validate-frontmatter.sh
+
+  secrets:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  links:
+    name: Markdown link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check relative links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Offline: only verify file-to-file links inside the repo.
+          # External URLs are checked by humans; CI shouldn't fail on a
+          # third-party outage.
+          args: --offline --include-fragments --no-progress "**/*.md"
+          fail: true
+
+  stale-report:
+    name: Staleness report (advisory)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Report stale pages (does not fail the build)
+        run: bash scripts/check-stale.sh || true

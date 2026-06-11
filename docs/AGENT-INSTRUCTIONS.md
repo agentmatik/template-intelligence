@@ -213,7 +213,7 @@ Forcing functions, not rigid limits.
 
 ## 4. The migration process
 
-A **nine-phase** process. Do not skip phases. Do not reorder them.
+An **eleven-phase** process (Phases 0–10). Do not skip phases. Do not reorder them.
 
 ### Phase 0 — Pre-flight
 

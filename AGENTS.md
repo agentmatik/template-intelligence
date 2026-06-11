@@ -181,4 +181,4 @@ A task is complete when:
 
 ---
 
-*See [`CLAUDE.md`](./CLAUDE.md) for Claude-Code-specific extensions. See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for the rationale behind this structure. If you've been asked to bootstrap an intelligence repo from raw data, read [`docs/DATA-ORGANIZATION-PLAYBOOK.md`](./docs/DATA-ORGANIZATION-PLAYBOOK.md) (routing + root-file contracts) then [`docs/AGENT-INSTRUCTIONS.md`](./docs/AGENT-INSTRUCTIONS.md) (nine-phase procedure). Each folder's `README.md` is the per-file generation contract.*
+*See [`CLAUDE.md`](./CLAUDE.md) for Claude-Code-specific extensions. See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for the rationale behind this structure. If you've been asked to bootstrap an intelligence repo from raw data, read [`docs/DATA-ORGANIZATION-PLAYBOOK.md`](./docs/DATA-ORGANIZATION-PLAYBOOK.md) (routing + root-file contracts) then [`docs/AGENT-INSTRUCTIONS.md`](./docs/AGENT-INSTRUCTIONS.md) (eleven-phase procedure). Each folder's `README.md` is the per-file generation contract.*
