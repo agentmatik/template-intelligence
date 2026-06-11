@@ -31,8 +31,9 @@ Raw → time-series folders (auto-commit OK). Canonical → PR required.
 ## Weekly (Friday, 30 min)
 
 - Run `/weekly-brief` → review draft → merge
+- Scorecard & rocks check (if running `operating-system/`): off-track items become issues; off-track 2 weeks running → decide and log to `decisions/`
 - Run `scripts/check-stale.sh` — verify or archive flagged files
-- Merge open PRs
+- Merge open PRs — CI green (`validate` workflow: frontmatter, secrets, links)
 - Glance at rendered docs site (if you have one)
 
 ## Monthly (first Monday, 60 min)
@@ -40,12 +41,14 @@ Raw → time-series folders (auto-commit OK). Canonical → PR required.
 - OKR/bet check-in — update `strategy.md`
 - Refresh top 10 `customers/` compiled-truth blocks
 - Deep pass on one competitor
-- Archive `meetings/` and `weekly/` older than 6 months to `<folder>/archive/YYYY/`
+- Prune `memory/learnings.md`: merge duplicates, delete disproven entries, promote standing-behavior changes to `memory/MEMORY.md` (and keep it under its 200-line cap)
+- Archive `meetings/`, `weekly/`, and `memory/` dailies older than 6 months to `<folder>/archive/YYYY/`
 - Run `gitleaks detect --source .` — should be clean
 
 ## Quarterly (2 hrs)
 
 - Rewrite `strategy.md` for the new quarter
+- Roll `operating-system/rocks.md`: move the finished quarter below the `---` with final statuses, set 3-7 new rocks; review `vision.md` (rewrite the 1-year plan annually)
 - Prune duplicate canonical pages (merge them)
 - Refresh top 20 files
 - Audit MCP scopes — read-only by default

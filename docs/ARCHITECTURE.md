@@ -27,7 +27,7 @@
 
 Agents bridge all three layers. Humans write PRs into the middle. Live systems push data in. The middle layer is the **only** place durable truth lives.
 
-## Ten principles
+## Twelve principles
 
 ### 1. One durable truth, many live sources
 
@@ -69,6 +69,14 @@ Skills from untrusted sources can contain prompt injection. MCP servers can retu
 
 Vector DBs, graph DBs, temporal-graph memory: defer until trace data shows repeated misses. Month one is file-native, eval-driven, boring.
 
+### 11. Handbook-first
+
+Document the change in the repo, then announce it with a link — never the reverse (GitLab doctrine: write first, communicate second, so documentation is never the skipped step). One canonical version: "there is only *the* version."
+
+### 12. Prose is advisory; hooks and CI are deterministic
+
+Agents follow written rules most of the time; hooks and CI enforce them every time. Rules that must hold 100% (frontmatter contract, no secrets, no broken links) run as `.claude/settings.json` hooks and `.github/workflows/validate.yml` — the written rule stays as explanation.
+
 ## Why Git + Markdown beats a database-backed knowledge store
 
 - **Cheap to run.** No servers, no vector infra.
@@ -102,6 +110,11 @@ Each tier earns its complexity.
 
 ## Reference reading
 
+- [GitLab — Handbook-first documentation](https://handbook.gitlab.com/handbook/company/culture/all-remote/handbook-first/)
+- [Anthropic — Claude Code best practices (advisory vs deterministic; <200-line entry files)](https://code.claude.com/docs/en/best-practices)
+- [OpenClaw — agent workspace & two-tier memory](https://docs.openclaw.ai/concepts/agent-workspace)
+- [Garry Tan's gstack — process loop + /learn](https://github.com/garrytan/gstack)
+- [Sam Altman — Startup Playbook (north-star metric, metric transparency)](https://playbook.samaltman.com/)
 - [Anthropic — Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
 - [Anthropic — Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [agents.md — cross-tool standard](https://agents.md)
