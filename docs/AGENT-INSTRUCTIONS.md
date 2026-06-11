@@ -39,7 +39,7 @@ Create exactly this. No more, no less, on day one.
 ```
 <company>-intelligence/
 ├── README.md                  # Human pitch
-├── AGENTS.md                  # The agent contract (~150 lines). Every tool reads this.
+├── AGENTS.md                  # The agent contract (≤200 lines). Every tool reads this.
 ├── CLAUDE.md                  # Claude-Code shim. @AGENTS.md + Claude extras.
 ├── INDEX.md                   # Curated navigation, current focus
 ├── .gitignore                 # Defensive patterns
@@ -200,7 +200,7 @@ Below `---`: immutable, append-only timeline.
 
 | File                       | Cap                                |
 |----------------------------|------------------------------------|
-| `AGENTS.md`                | ≤150 lines                         |
+| `AGENTS.md`                | ≤200 lines                        |
 | Root knowledge files       | ≤1000 words each                   |
 | Entity files               | ≤1000 words above timeline         |
 | Decision files             | ≤500 words                         |
@@ -266,7 +266,7 @@ Show buckets to user, get sign-off. Don't move anything yet.
 Create the directory structure from §2 (above). Then write:
 
 - `README.md` — short, human-readable (~80 lines)
-- `AGENTS.md` — the agent contract from the template (~150 lines)
+- `AGENTS.md` — the agent contract from the template (≤200 lines)
 - `CLAUDE.md` — thin shim importing `AGENTS.md`
 - `INDEX.md` — minimal at first
 - `.gitignore` — see §6.4
@@ -518,7 +518,7 @@ Before declaring done:
 - [ ] `_migration-inventory.md` deleted
 - [ ] `MIGRATION-HANDOFF.md` written
 - [ ] Repo private, secret scanning + push protection enabled
-- [ ] `AGENTS.md` under 150 lines
+- [ ] `AGENTS.md` under 200 lines
 - [ ] No empty placeholder files
 - [ ] At least one of each: customer, competitor, person, decision, meeting, weekly (if source supports)
 

@@ -4,8 +4,10 @@
 
 set -euo pipefail
 
-CANONICAL_DIRS="customers competitors people sales decisions meetings weekly"
-ROOT_FILES="company.md strategy.md product.md brand.md ops.md finance.md"
+CANONICAL_DIRS="customers competitors people sales decisions meetings weekly operating-system"
+# memory/ daily worklogs (YYYY-MM-DD.md) are time-series drafts and exempt;
+# the two curated memory files are canonical and checked below.
+ROOT_FILES="company.md strategy.md product.md brand.md ops.md finance.md memory/MEMORY.md memory/learnings.md"
 REQUIRED_FIELDS="type status owner created updated last_verified"
 
 ERRORS=0

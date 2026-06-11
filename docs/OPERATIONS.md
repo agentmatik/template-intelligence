@@ -126,7 +126,7 @@ Regressions in answer quality = content rotted or structure no longer serves.
 
 **Agent makes things up:** the canonical page probably doesn't exist or is `status: draft`. Fix the file.
 
-**Agent ignores a rule in AGENTS.md:** the file is too long. `wc -l AGENTS.md` should be ≤150. Move detailed rules to skills.
+**Agent ignores a rule in AGENTS.md:** the file is too long. `wc -l AGENTS.md` should be ≤200. Move detailed rules to skills.
 
 **MCP server stopped:** OAuth expired. `claude mcp list` → re-authenticate. Pin server versions to avoid breaking updates.
 

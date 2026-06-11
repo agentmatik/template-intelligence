@@ -7,10 +7,11 @@ This file adds **Claude-Code-specific** guidance on top of the universal rules i
 ## Read order at session start
 
 1. `AGENTS.md` (loaded via the import above)
-2. `INDEX.md` for a curated map of entry points
-3. If the task is recent-work-related: the most recent file in `weekly/`
-4. If the task touches a specific domain: that root file or folder
-5. Only then use MCP for fresh operational state
+2. `memory/MEMORY.md` + today's and yesterday's `memory/YYYY-MM-DD.md` worklogs
+3. `INDEX.md` for a curated map of entry points
+4. If the task is recent-work-related: the most recent file in `weekly/`
+5. If the task touches a specific domain: that root file or folder
+6. Only then use MCP for fresh operational state
 
 ## Claude-Code features — when to reach for each
 

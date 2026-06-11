@@ -51,6 +51,8 @@ If two sources disagree, surface the conflict. Don't guess.
 | `decisions/`   | `YYYY-MM-DD-<slug>.md` — append-only ADRs, immutable            |
 | `meetings/`    | `YYYY-MM-DD-<topic>.md` — distilled meeting notes               |
 | `weekly/`      | `YYYY-Www.md` — Friday founder/team brief                       |
+| `operating-system/` | Management-system artifacts: vision, rocks, scorecard, accountability, `processes/` (SOPs) |
+| `memory/`      | Agent-operational memory: `MEMORY.md` index, daily worklogs, `learnings.md` |
 | `skills/`      | (Optional) Cross-tool agent skills in SKILL.md format           |
 | `templates/`   | Note templates with frontmatter scaffolding                     |
 
@@ -65,7 +67,9 @@ If two sources disagree, surface the conflict. Don't guess.
 - Use wikilinks (`[[customers/acme-co]]`), not repetition.
 - Mark uncertainty explicitly.
 - Never depend on chat history for continuity. Write important state to files.
-- **Every non-trivial canonical write opens a PR.** Time-series content (meetings, weekly briefs) can auto-commit.
+- **Handbook-first.** Document the change in this repo, then announce it (Slack/email) with a link to the diff — never the reverse.
+- **Every non-trivial canonical write opens a PR.** Time-series content (meetings, weekly briefs, memory worklogs) can auto-commit.
+- When a mistake gets corrected, **write a `memory/learnings.md` entry before finishing the task.**
 
 ---
 
@@ -75,7 +79,7 @@ Every durable note includes:
 
 ```yaml
 ---
-type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | sales | runbook
+type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | sales | runbook | vision | rocks | scorecard | accountability | memory
 status: verified          # draft | active | verified | superseded | archived
 owner: {{FOUNDER_NAME}}
 created: 2026-04-22
@@ -119,6 +123,12 @@ This is what humans and agents see first.>
 - Weekly: `YYYY-Www.md` (ISO week — e.g. `2026-W17.md`)
 - Evergreen: `kebab-case-name.md`
 - One idea per file. No catch-all `notes.md`.
+
+---
+
+## Memory
+
+At session start read [`memory/MEMORY.md`](./memory/MEMORY.md) (curated index, always small), then today's and yesterday's `memory/YYYY-MM-DD.md` worklogs. Older worklogs and `memory/learnings.md` load on demand. Memory holds *agent-operational* facts only — company knowledge belongs in the knowledge files. Full contract: [`memory/README.md`](./memory/README.md).
 
 ---
 

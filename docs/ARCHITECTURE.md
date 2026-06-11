@@ -43,7 +43,7 @@ Stable rules → `AGENTS.md`. Changing facts → entity pages, decisions, time-s
 
 ### 4. Keep always-loaded files small
 
-`AGENTS.md` ≤150 lines. If it grows beyond that, split into path-scoped rules. Forcing function, not a limit.
+`AGENTS.md` ≤200 lines (Anthropic guidance: under 200 lines per always-loaded file). If it grows beyond that, split into path-scoped rules. Forcing function, not a limit.
 
 ### 5. Put reusable know-how in Skills, not in the root prompt
 
