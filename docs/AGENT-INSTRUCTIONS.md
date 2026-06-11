@@ -83,13 +83,28 @@ Create exactly this. No more, no less, on day one.
 │   ├── README.md
 │   └── YYYY-Www.md            # Friday brief, one per ISO week
 │
+├── operating-system/          # Management-system artifacts (scaffold; fill only from real source material)
+│   ├── README.md
+│   ├── vision.md              # Long-horizon: values, 10-year target, 3-year picture, 1-year plan
+│   ├── rocks.md               # Quarterly goals — 3-7, one owner each, binary done
+│   ├── scorecard.md           # Weekly measurable definitions + dashboard links (never values)
+│   ├── accountability.md      # Seats → one owner each
+│   └── processes/             # Core SOPs (README contract; add <slug>.md only for real, repeating processes)
+│
+├── memory/                    # Agent-operational memory (see memory/README.md)
+│   ├── README.md
+│   ├── MEMORY.md              # Curated index — hard cap 200 lines / 25 KB
+│   └── learnings.md           # Typed lessons: pattern | pitfall | preference | architecture | tool
+│
 ├── templates/
 │   ├── customer.md
 │   ├── competitor.md
 │   ├── person.md
 │   ├── decision.md
 │   ├── meeting.md
-│   └── weekly.md
+│   ├── weekly.md
+│   ├── process.md
+│   └── rock.md
 │
 ├── docs/
 │   ├── AGENT-INSTRUCTIONS.md  # This file
@@ -133,7 +148,7 @@ Every durable note opens with this YAML block:
 
 ```yaml
 ---
-type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | sales | runbook
+type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | sales | runbook | vision | rocks | scorecard | accountability | memory
 status: draft             # draft | active | verified | superseded | archived
 owner: <person>           # who maintains this
 created: YYYY-MM-DD
@@ -289,6 +304,8 @@ Write the six root files in this order:
 
 For each: aim for **accurate**, not comprehensive. Mark `status: draft`. Note sources in handoff.
 
+If the source material contains long-horizon planning (mission/values docs, annual plans, quarterly goals with named owners), also fill the matching `operating-system/` artifacts (`vision.md`, `rocks.md`, `scorecard.md`, `accountability.md`) — same rules: `status: draft`, never invent, leave `<not yet set>` where the source is silent. If no such material exists, leave the scaffolds untouched and note it in the handoff.
+
 ### Phase 5 — Entities
 
 For each customer in source material:
@@ -407,6 +424,8 @@ Prioritized:
 
 - Didn't configure `.mcp.json` (configure when ready to wire MCP)
 - Didn't create skills (add when a workflow repeats)
+- Didn't fill `operating-system/` artifacts beyond what the source material supported
+- Didn't seed `memory/` (it fills itself as agents work)
 - Didn't set up rendered docs site
 - Didn't migrate decisions older than 90 days or meetings older than 30
 - Didn't configure pre-commit hooks (install gitleaks when ready)
@@ -426,7 +445,7 @@ Prioritized:
 
 The repo already contains:
 
-- `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md` — copy these into entity files and fill in
+- `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md`, `process.md`, `rock.md` — copy these into entity files and fill in
 - `docs/ARCHITECTURE.md` — keep as-is, customize examples
 - `docs/SETUP.md` — keep as-is
 - `docs/OPERATIONS.md` — keep as-is

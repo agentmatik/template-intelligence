@@ -34,6 +34,11 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | A specific competitor | `competitors/<slug>.md` | One file each |
 | A specific person (team/advisor/investor/partner) | `people/<slug>.md` | One file each, internal only |
 | Deal pipeline, pricing | `sales/pipeline.md`, `sales/pricing.md` | Ranges not exact figures in pipeline |
+| Long-horizon vision: core values, 10-year target, 3-year picture, 1-year plan | `operating-system/vision.md` | Quarterly detail stays in `strategy.md` |
+| Quarterly goals with owners (rocks/OKRs) | `operating-system/rocks.md` | 3–7, one owner each, binary done |
+| Weekly metric definitions, owners, goals | `operating-system/scorecard.md` | Definitions + dashboard links — never values |
+| Who owns which function (org structure) | `operating-system/accountability.md` | One name per seat |
+| A repeating procedure / SOP | `operating-system/processes/<slug>.md` | Core processes only; ≤500 words each |
 | A decision that was made | `decisions/YYYY-MM-DD-<slug>.md` | Immutable once written |
 | A meeting that happened | `meetings/YYYY-MM-DD-<topic>.md` | Distill, don't transcribe |
 | A weekly summary | `weekly/YYYY-Www.md` | One per ISO week |
@@ -140,7 +145,7 @@ No mutable block — the whole file is a dated record. Once written, it's not ed
 
 ```yaml
 ---
-type: <customer|competitor|person|decision|meeting|weekly|company|strategy|product|brand|ops|finance|sales>
+type: <customer|competitor|person|decision|meeting|weekly|company|strategy|product|brand|ops|finance|sales|runbook|vision|rocks|scorecard|accountability|memory>
 status: <draft|active|verified|superseded|archived>
 owner: "<who maintains this>"
 created: YYYY-MM-DD

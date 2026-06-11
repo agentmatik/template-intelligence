@@ -62,6 +62,8 @@ clarity. Source: founder, handbook. Use real names/roles. -->
 
 For anything else: open a question in `decisions/` and tag the owner.
 
+Full seat map — who owns which function, with responsibilities: [`operating-system/accountability.md`](./operating-system/accountability.md). Update both together on hires/reorgs. Documented core processes: [`operating-system/processes/`](./operating-system/processes/).
+
 ## Tools
 
 <!-- Function → tool. Source: SSO app list, expense reports, team knowledge. -->

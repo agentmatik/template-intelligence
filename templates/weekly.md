@@ -35,6 +35,16 @@ Link to live dashboards via MCP. Don't mirror numbers — they go stale.
 - [North-star dashboard]({{URL}})
 - [Pipeline]({{URL}})
 
+## Scorecard & rocks check
+
+<!-- Optional — use if running the operating-system/ pack. One line per
+off-track item only; all-green weeks just say "All on track." This is the
+L10-compatible review: scorecard → rocks → issues. -->
+
+- **Scorecard** ([[operating-system/scorecard]]): All on track / <measurable> off-track (week 2 → raise as issue)
+- **Rocks** ([[operating-system/rocks]]): All on track / Rock <#> off-track — <one-line why>
+- **Issues raised:** <!-- discuss, decide, log to decisions/ if course changes -->
+
 ## Blockers / risks
 
 Honestly named. What got in the way?
