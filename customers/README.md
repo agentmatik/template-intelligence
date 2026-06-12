@@ -83,14 +83,14 @@ Two parts separated by `---`: compiled truth (top, mutable) and timeline (bottom
 | **Expansion opportunities** | What else they could buy | QBR notes, stated interest, product gaps they hit |
 | **Risk signals** | What would cause churn | Support escalations, contract objections, low usage |
 
-Keep the whole block under ~1000 words. Link to evidence (`[[meetings/2026-04-15-acme-qbr]]`) rather than pasting.
+Keep the whole block under ~1000 words. Link to evidence (`[[meetings/customers/2026-04-15-acme-qbr]]`) rather than pasting.
 
 ### Timeline (below the `---`)
 
 Reverse-chronological dated bullets. Append-only. Log: contract events, renewals, expansions, escalations, key calls, churn. Cite the meeting note where one exists.
 
 ```
-- 2026-04-15: QBR. Renewal confirmed, interested in analytics-v2. [[meetings/2026-04-15-acme-qbr]]
+- 2026-04-15: QBR. Renewal confirmed, interested in analytics-v2. [[meetings/customers/2026-04-15-acme-qbr]]
 - 2026-01-12: Signed annual contract, €4k/mo Team plan.
 ```
 
@@ -137,7 +137,7 @@ tags: [enterprise, dach]
 
 ---
 
-- 2026-04-15: QBR. Renewal confirmed, analytics-v2 interest. [[meetings/2026-04-15-acme-qbr]]
+- 2026-04-15: QBR. Renewal confirmed, analytics-v2 interest. [[meetings/customers/2026-04-15-acme-qbr]]
 - 2026-03-20: Shipped SAML SSO (ENG-882). Resolved their main blocker.
 - 2026-01-12: Signed annual contract, €4k/mo Team plan.
 ```

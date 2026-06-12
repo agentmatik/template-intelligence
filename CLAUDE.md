@@ -7,7 +7,7 @@ This file adds **Claude-Code-specific** guidance on top of the universal rules i
 ## Read order at session start
 
 1. `AGENTS.md` (loaded via the import above)
-2. `memory/MEMORY.md` + today's and yesterday's `memory/YYYY-MM-DD.md` worklogs
+2. `memory/MEMORY.md` + today's and yesterday's `memory/YYYY-MM-DD.md` worklogs **if present** (a fresh repo has none — that's normal)
 3. `INDEX.md` for a curated map of entry points
 4. If the task is recent-work-related: the most recent file in `weekly/`
 5. If the task touches a specific domain: that root file or folder
@@ -48,6 +48,6 @@ Do not add to `CLAUDE.md`:
 
 ## Local overrides
 
-Personal per-machine overrides (sandbox URLs, local paths, preferred thinking mode) go in `CLAUDE.local.md`. That file is gitignored.
+Personal per-machine overrides (sandbox URLs, local paths, preferred thinking mode) go in `CLAUDE.local.md`. That file is gitignored and optional — Claude Code skips the import silently if it doesn't exist.
 
 @CLAUDE.local.md

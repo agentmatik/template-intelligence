@@ -39,7 +39,7 @@ RULES:
 
 | # | Goal (binary done definition) | Owner | Status | Links |
 |---|-------------------------------|-------|--------|-------|
-| 1 | <!-- measurable outcome by quarter end --> | <!-- one name --> | on-track | <!-- [[../strategy.md]] priority / decisions --> |
+| 1 | <!-- measurable outcome by quarter end --> | <!-- one name --> | on-track | <!-- [[strategy]] priority / decisions --> |
 
 **Quarter ends:** <date> · **Set on:** <date> · **Source:** quarterly planning session <link meeting note>
 

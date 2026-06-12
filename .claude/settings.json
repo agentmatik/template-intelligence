@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash scripts/validate-frontmatter.sh >&2 || exit 2"
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/scripts/validate-frontmatter.sh >&2 || exit 2"
           }
         ]
       }

@@ -64,6 +64,15 @@ For anything else: open a question in `decisions/` and tag the owner.
 
 Full seat map — who owns which function, with responsibilities: [`management/accountability.md`](./management/accountability.md). Update both together on hires/reorgs. Documented core processes: [`management/processes/`](./management/processes/).
 
+## Legal pointers
+
+<!-- Like finance.md: WHERE legal truth lives, never the contents.
+One row per artifact: incorporation docs, MSAs/customer contracts, DPAs,
+IP assignments, NDAs — location (drive/legal tool/lawyer) + access note. -->
+
+| Artifact | Where it lives | Access |
+|----------|----------------|--------|
+
 ## Tools
 
 <!-- Function → tool. Source: SSO app list, expense reports, team knowledge. -->

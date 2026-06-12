@@ -23,8 +23,10 @@ Raw → time-series folders (auto-commit OK). Canonical → PR required.
 
 ## Daily (10 min)
 
-- After each meeting: run `/normalize-meeting` within 48h (before Granola evicts)
-- Glance at any local `inbox/` folder: normalize or archive
+> The `/...` commands below are the starter skills — type them into Claude Code's chat (they live in `skills/`). Not technical? Your whole job is one page: [`HUMAN-JOB.md`](./HUMAN-JOB.md).
+
+- After each meeting: run `/normalize-meeting` within 48h, while context is fresh and the transcript is still easy to retrieve
+- Glance at your local `inbox/` folder (a gitignored scratch folder you create for raw drops): `/update-wiki`, or archive
 - Touch one canonical page per day
 - Log decisions as they happen — don't defer
 
@@ -32,7 +34,7 @@ Raw → time-series folders (auto-commit OK). Canonical → PR required.
 
 - Run `/weekly-brief` → review draft → merge
 - KPIs & goals check (if running `management/`): off-track items become issues; off-track 2 weeks running → decide and log to `decisions/`
-- Run `scripts/check-stale.sh` — verify or archive flagged files
+- Run `scripts/check-stale.sh` — verify or archive flagged files; resolve any `[VERIFY]` tags you know the answer to (confirm → remove tag → bump `last_verified`)
 - Merge open PRs — CI green (`validate` workflow: frontmatter, secrets, links)
 - Spot-check: ask the agent one question whose answer changed this week — wrong answer means a file needs fixing
 

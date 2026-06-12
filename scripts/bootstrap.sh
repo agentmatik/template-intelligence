@@ -23,9 +23,11 @@ ask() {
   # Escape sed special chars in the replacement
   local esc
   esc=$(printf '%s' "$val" | sed -e 's/[\/&|]/\\&/g')
+  # `|| true`: an already-filled placeholder makes grep exit 1, which would
+  # kill the script under `set -euo pipefail` — re-runs must be no-ops.
   grep -rl --exclude-dir=.git "{{$var}}" . 2>/dev/null | while IFS= read -r f; do
     sed -i.bak "s|{{$var}}|$esc|g" "$f" && rm -f "$f.bak"
-  done
+  done || true
   echo -e "${GRN}✓ {{$var}} → $val${NC}"
 }
 
@@ -46,9 +48,11 @@ TODAY=$(date +%Y-%m-%d)
 echo
 read -r -p "Stamp scaffold frontmatter dates with today ($TODAY)? [y/N]: " stamp
 if [[ "${stamp:-n}" =~ ^[Yy]$ ]]; then
-  grep -rl --exclude-dir=.git -E "^(created|updated|last_verified): 2026-0[46]-(11|22)$" . 2>/dev/null | while IFS= read -r f; do
-    sed -i.bak -E "s/^(created|updated|last_verified): 2026-0[46]-(11|22)$/\1: $TODAY/" "$f" && rm -f "$f.bak"
-  done
+  # Any pre-instantiation ISO date in scaffold frontmatter gets today's date.
+  # READMEs are excluded: their worked examples keep illustrative dates.
+  grep -rl --exclude-dir=.git --exclude='README.md' -E "^(created|updated|last_verified): 20[0-9]{2}-[0-9]{2}-[0-9]{2}" . 2>/dev/null | while IFS= read -r f; do
+    sed -i.bak -E "s/^(created|updated|last_verified): 20[0-9]{2}-[0-9]{2}-[0-9]{2}/\1: $TODAY/" "$f" && rm -f "$f.bak"
+  done || true
   echo -e "${GRN}✓ scaffold dates → $TODAY${NC}"
 fi
 
@@ -63,7 +67,9 @@ if [[ "${hook:-n}" =~ ^[Yy]$ ]]; then
 fi
 
 echo
-LEFT=$(grep -rlo --exclude-dir=.git "{{[A-Z_]*}}" . 2>/dev/null | wc -l | tr -d ' ')
+# templates/, SETUP's placeholder table, this script, and the CI exclude-regex
+# keep {{...}} on purpose — only count unexpected leftovers.
+LEFT=$( (grep -rlo --exclude-dir=.git --exclude-dir=templates --exclude=SETUP.md --exclude=bootstrap.sh --exclude=validate.yml "{{[A-Z_]*}}" . 2>/dev/null || true) | wc -l | tr -d ' ')
 if [ "$LEFT" -gt 0 ]; then
   echo -e "${YEL}$LEFT file(s) still contain {{PLACEHOLDERS}} — grep -r '{{' to find them.${NC}"
 else

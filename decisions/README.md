@@ -85,7 +85,7 @@ updated: 2026-03-10
 last_verified: 2026-03-10
 source_of_truth: manual
 source_refs:
-  - "[[meetings/2026-03-10-tooling-review]]"
+  - "[[meetings/product/2026-03-10-tooling-review]]"
 supersedes: []
 tags: [tooling, ops]
 ---
@@ -123,7 +123,7 @@ for long-form docs only, until migrated to the intelligence repo.
 
 ## Evidence
 
-- [[meetings/2026-03-10-tooling-review]]
+- [[meetings/product/2026-03-10-tooling-review]]
 - Engineering team poll: 5/6 preferred Linear.
 
 ## Review date

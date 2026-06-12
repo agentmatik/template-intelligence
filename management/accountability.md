@@ -39,7 +39,7 @@ RULES:
 
 ### <Seat name, e.g. Visionary / CEO>
 
-**Held by:** [[../people/<slug>]]
+**Held by:** [[people/<slug>]]
 **Accountable for:**
 
 1. <!-- responsibility -->
@@ -48,7 +48,7 @@ RULES:
 
 ### <Seat name, e.g. Operations>
 
-**Held by:** [[../people/<slug>]]
+**Held by:** [[people/<slug>]]
 **Accountable for:**
 
 1. <!-- responsibility -->

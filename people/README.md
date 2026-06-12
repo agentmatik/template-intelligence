@@ -167,6 +167,6 @@ tags: [engineering, founding-team]
 
 - **Missing data:** omit the line, or write `<unknown>`. Never guess a date, title, or email.
 - **Conflicting sources:** use the most recent, note the conflict in a timeline entry.
-- **Person leaves:** set `status: archived`, add a timeline entry with the departure date, move to `people/alumni/` if the folder is subfoldered. Keep the file.
+- **Person leaves:** set `status: archived` and add a timeline entry with the departure date (no `alumni/` folder — frontmatter is the archive). Keep the file.
 - **Person has two roles** (e.g. advisor who later invests): pick the primary `relationship`, mention the second in the Role line.
 - **You only have a name:** don't create a stub. Wait until there's real signal.

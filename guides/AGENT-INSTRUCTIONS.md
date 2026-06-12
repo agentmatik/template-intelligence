@@ -20,7 +20,7 @@ Internalize these before doing anything. They override generic AI behavior.
 
 **Compiled truth + append-only timeline.** The single most important pattern. Every entity page has current best understanding *above* a horizontal rule, dated bullets *below*. Top half is mutable, bottom half is immutable.
 
-**Auto-commit time-series, PR for canonical.** Meetings and weekly briefs can commit directly. Strategy, customers, decisions, people require PR review. Open PRs for canonical changes; don't push canonical truth to `main`.
+**Auto-commit time-series, PR for canonical.** Meeting notes and memory worklogs can commit directly. Weekly briefs, strategy, customers, decisions, people require PR review (a weekly brief is the alignment doc — never auto-merge it). Open PRs for canonical changes; don't push canonical truth to `main`.
 
 **Live systems stay live.** Linear tickets, Slack threads, Notion working docs — these stay where they are. The repo holds *durable* knowledge. Mirror only summaries and decisions, never tickets or live state.
 
@@ -36,7 +36,7 @@ Internalize these before doing anything. They override generic AI behavior.
 
 ## 2. The target structure
 
-Create exactly this. No more, no less, on day one.
+When you start from the GitHub template (the normal path), this structure **already exists** — verify it rather than re-creating it, and run `scripts/bootstrap.sh` for placeholders. Build it by hand only if the template isn't available. Either way: exactly this, no more, on day one.
 
 ```
 <company>-intelligence/
@@ -110,23 +110,33 @@ Create exactly this. No more, no less, on day one.
 │   ├── process.md
 │   └── goal.md
 │
+├── skills/                    # 4 starter skills (SKILL.md each): normalize-meeting,
+│                              # weekly-brief, customer-brief, update-wiki
+│
 ├── guides/
 │   ├── AGENT-INSTRUCTIONS.md  # This file
 │   ├── ARCHITECTURE.md        # The rationale
 │   ├── SETUP.md               # How to bootstrap from this template
-│   └── OPERATIONS.md          # Daily/weekly/monthly rituals
+│   ├── OPERATIONS.md          # Daily/weekly/monthly rituals
+│   ├── DATA-ORGANIZATION-PLAYBOOK.md  # Routing logic (your prerequisite reading)
+│   ├── CLIENT-ONBOARDING.md   # Consultancy engagement playbook
+│   ├── TEMPLATE-CHANGELOG.md  # Template versions
+│   └── README.md
 │
-└── scripts/                   # (Optional) helpers
-    ├── check-stale.sh
-    ├── validate-frontmatter.sh
-    └── pre-commit.sh
+├── scripts/                   # bootstrap.sh, validate-frontmatter.sh,
+│                              # check-stale.sh, check-links.sh, pre-commit.sh, README.md
+├── .claude/                   # settings.json hook + skills/ symlinks (Claude Code)
+├── agents-compat/openclaw/    # OpenClaw workspace adapter
+├── GLOSSARY.md                # Every term defined
+├── Makefile                   # `make verify` = the same checks CI runs
+└── LICENSE · SECURITY.md · CONTRIBUTING.md
 ```
 
 **Do not create:**
 
 - ❌ `ops/`, `market/`, `finance/` subfolders — root files until they outgrow ~1000 words
 - ❌ Numbered prefixes (`03-strategy/`) — clean names only
-- ❌ `archive/` subfolders — use `status: archived` in frontmatter
+- ❌ `archive/` subfolders **at migration time** — mark `status: archived` instead; `<folder>/archive/YYYY/` folders appear later via the OPERATIONS archive ritual, never on day one
 - ❌ `.mcp.json` — add later when the user is ready to wire MCP
 - ❌ skills beyond the four shipped starters (normalize-meeting, weekly-brief, customer-brief, update-wiki) — add more only when a workflow repeats
 - ❌ `inbox/` — use a local untracked folder during migration
@@ -282,16 +292,7 @@ Show buckets to user, get sign-off. Don't move anything yet.
 
 ### Phase 3 — Scaffold the repo
 
-Create the directory structure from §2 (above). Then write:
-
-- `README.md` — short, human-readable (~80 lines)
-- `AGENTS.md` — the agent contract from the template (≤200 lines)
-- `CLAUDE.md` — thin shim importing `AGENTS.md`
-- `INDEX.md` — minimal at first
-- `.gitignore` — see §6.4
-- `guides/` — copy `AGENT-INSTRUCTIONS.md`, `ARCHITECTURE.md`, `SETUP.md`, `OPERATIONS.md` from template
-- `templates/` — copy entity templates
-- `.github/workflows/validate.yml` — basic CI
+If you started from the GitHub template (normal path): the scaffold exists — run `scripts/bootstrap.sh`, then verify the structure matches §2 and `bash scripts/validate-frontmatter.sh` passes. If building by hand: copy every file in §2 from the template repo (all seven `guides/`, all eight `templates/`, the four `skills/`, `scripts/`, `.github/`, `.claude/`, `GLOSSARY.md`, `Makefile`, `LICENSE`, `SECURITY.md`, `CONTRIBUTING.md`, `.gitignore`).
 
 Initialize git locally. Do not push yet.
 
@@ -330,13 +331,13 @@ Same process for competitors (`competitors/<slug>.md`) and people (`people/<slug
 
 ### Phase 6 — Sales
 
-Create `sales/pipeline.md` if any pipeline data exists in source material:
+The template ships `sales/pipeline.md` as a scaffold — fill it from source material if pipeline data exists; otherwise leave the scaffold with a dated "no active pipeline yet" note (per `sales/README.md`). When filling:
 
 - Stage-organized list of active deals
 - One paragraph per deal: name, stage, value (rough range if known), next step, owner
 - **Never include exact deal values in headlines** — those are sensitive. Rough ranges OK.
 
-Create `sales/pricing.md` if source material includes pricing discussions:
+Fill `sales/pricing.md` (also a shipped scaffold) if source material includes pricing discussions:
 
 - Current pricing tiers
 - What's included at each tier
@@ -354,9 +355,9 @@ For each meaningful decision visible in source material from the **last 90 days*
 
 ### Phase 8 — Meetings
 
-**First, fit the taxonomy to the company.** The template ships eight default meeting categories (`meetings/README.md`). Look at the company's actual calendar and the transcripts in front of you:
+**First, fit the taxonomy to the company.** The template ships six default meeting categories (`meetings/README.md`). Look at the company's actual calendar and the transcripts in front of you:
 
-- **Delete** category folders with no matching recurring meeting (no board yet → delete `board/`).
+- **Delete** category folders with no matching recurring meeting (no standups → delete `standups/`).
 - **Rename or add** categories the real cadence demands (`all-hands/`, `partners/`, `hiring/`…), each with a short README on the same pattern (what belongs, distill focus, propagation).
 - The calendar is the source of truth — folders reflect real meetings, never aspiration. Note the reshaping in the handoff.
 
@@ -376,9 +377,9 @@ Write **one** weekly brief: `weekly/YYYY-Www.md` for the most recent complete IS
 
 **Before touching GitHub:**
 
-1. **Frontmatter sanity check.** Every canonical file has frontmatter with `type`, `status`, `owner`, `created`, `updated`, `last_verified`.
-2. **Wikilink check.** Every `[[link]]` resolves or is annotated `<!-- TODO -->`.
-3. **Secrets scan.** Run `grep -rE "(api[_-]?key|secret|token|password|bearer|aws_access)" .`. If anything matches: **stop**, tell the user.
+1. **Run `make verify`** — frontmatter, relative links, secrets: the same checks CI runs.
+2. **Frontmatter sanity check.** Every canonical file has frontmatter with `type`, `status`, `owner`, `created`, `updated`, `last_verified`.
+3. **Wikilink check.** Every `[[link]]` resolves (repo-root-relative, no `.md`, category segment included for meetings) or is annotated `<!-- TODO -->`. Wikilinks are NOT covered by `make verify` — check them by hand.
 4. **Sensitivity scan.** Search for emails of non-team people, phone numbers, financial figures, comp data.
 5. **Delete migration scratch.** `_migration-inventory.md` must not be committed.
 
@@ -454,12 +455,10 @@ Prioritized:
 
 The repo already contains:
 
-- `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md`, `process.md`, `goal.md` — copy these into entity files and fill in
-- `guides/ARCHITECTURE.md` — keep as-is, customize examples
-- `guides/SETUP.md` — keep as-is
-- `guides/OPERATIONS.md` — keep as-is
-- `.gitignore` — keep as-is (already has defensive patterns)
-- `.github/workflows/validate.yml` — keep as-is (CI for frontmatter + secrets)
+- `templates/` (all eight) — copy these into entity files and fill in
+- `guides/` (all seven) — keep as-is; customize examples only
+- `skills/` (four starters) + `.claude/` — keep as-is
+- `scripts/`, `Makefile`, `.gitignore`, `.github/` (CI, PR template, CODEOWNERS — fill the handle), `GLOSSARY.md`, `LICENSE`, `SECURITY.md`, `CONTRIBUTING.md` — keep as-is
 
 **Do not overwrite these.** They're already correct.
 
@@ -536,6 +535,7 @@ Extract into `brand.md`:
 
 Before declaring done:
 
+- [ ] `make verify` passes (frontmatter, links, secrets)
 - [ ] All canonical files have full frontmatter
 - [ ] No file marked `status: verified` unless content confirmed (most should be `status: draft`)
 - [ ] Every entity uses compiled-truth + timeline pattern

@@ -6,6 +6,20 @@ Versioning: tags `vMAJOR.MINOR` on the template repo. MAJOR = structural changes
 
 ---
 
+## v1.3 — 2026-06-12
+
+**QA hardening** (5-agent adversarial audit: cold-start agent + cold-start founder simulations, consistency forensics, SME gap analysis vs a production SSOT, executable verification):
+
+- **Contract fixes:** weekly briefs removed from the auto-commit list everywhere (PR + human review only — the worst cross-doc contradiction); `ops | finance` added to the canonical type enum; wikilink semantics defined (root-relative, no extension, agent convention); precedence rule (folder README > AGENTS.md > guides); `[VERIFY]`/`[INFERENCE]` uncertainty tags with weekly resolution ritual
+- **New:** `GLOSSARY.md` (every system term defined; company section grows), `guides/HUMAN-JOB.md` (the human's whole role incl. click-by-click PR review), `guides/FAQ-AND-FAILURE-MODES.md` (judgment calls, CI failures, anti-patterns), `LICENSE` (MIT — was claimed, not shipped), `SECURITY.md` (incl. burned-credential rotate-then-use), `CONTRIBUTING.md`, `Makefile` (`make verify` = CI parity) + `scripts/check-links.sh`
+- **Shipped scaffolds:** `sales/pipeline.md` + `sales/pricing.md` (INDEX/README routed to them but they didn't exist)
+- **Script bugs:** bootstrap.sh re-runs no longer abort under `set -euo pipefail`; date-stamp regex now matches any scaffold ISO date (was an enumerated list that missed 2026-06-12); leftover-placeholder count excludes intentional scaffolding
+- **Templates:** REQUIRED fields added (`relationship` to person + customer, `category`/`threat_level` to competitor); `{{CUSTOMER}}` → `{{CUSTOMER_NAME}}`
+- **Migration doc:** eight→six category count, template-ships-the-structure framing, complete target tree, archive rule scoped to migration time, `make verify` in Phase 10
+- **Routing rows added:** glossary terms, legal pointers (new ops.md section), job candidates (ATS, not repo), content calendar (live systems); `github` added to `source_of_truth` enums
+- **Founder UX:** SETUP leads with the agent-driven path ("the agent runs the commands; you answer questions"), seed list reconciled (finance.md, management/, memory, inbox), `/skill x` → `/x` syntax unified, honest note on branch protection for free-plan private repos
+- strategy.md ↔ goals.md boundary stated (narrative priorities vs the one tracked goal table); broken worked-example wikilinks fixed (category segment); hook command anchored to `$CLAUDE_PROJECT_DIR`; pre-commit dirs aligned with the validator
+
 ## v1.2 — 2026-06-12
 
 **Understandability pass** (founder feedback):

@@ -19,7 +19,7 @@ tags: []
 
 ## Owner
 
-<!-- One seat. Link: [[../management/accountability]] -->
+<!-- One seat. Link: [[management/accountability]] -->
 
 ## Steps
 

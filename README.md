@@ -66,14 +66,20 @@ Agents bridge all three layers. Humans write PRs into the middle. The middle lay
 | `skills/` | Cross-tool agent skills (SKILL.md format). Ships with 4 starters: normalize-meeting, weekly-brief, customer-brief, update-wiki. |
 | `templates/` | Frontmatter-scaffolded templates for every file type. |
 | `agents-compat/openclaw/` | Use the repo as an OpenClaw workspace: SOUL/USER/TOOLS stubs + mapping. |
-| `guides/` | The manuals: `ARCHITECTURE.md` (why), `SETUP.md` (bootstrap), `OPERATIONS.md` (rituals), `DATA-ORGANIZATION-PLAYBOOK.md` (routing), `AGENT-INSTRUCTIONS.md` (migration procedure), `CLIENT-ONBOARDING.md` (consultancy playbook), `TEMPLATE-CHANGELOG.md` (template versions). |
-| `scripts/` | `bootstrap.sh` (one-command template setup), `validate-frontmatter.sh`, `check-stale.sh`, `pre-commit.sh` (gitleaks). |
+| `GLOSSARY.md` | Every term defined — system vocabulary ships filled; company terms grow. |
+| `Makefile` | `make verify` — the same frontmatter/links/secrets checks CI runs, locally. |
+| `LICENSE` · `SECURITY.md` · `CONTRIBUTING.md` | MIT (template structure only) · secret rules + burned-credential policy · how changes enter the repo. |
+| `guides/` | The manuals: `ARCHITECTURE.md` (why), `SETUP.md` (bootstrap), `OPERATIONS.md` (rituals), `DATA-ORGANIZATION-PLAYBOOK.md` (routing), `AGENT-INSTRUCTIONS.md` (migration procedure), `CLIENT-ONBOARDING.md` (consultancy playbook), `HUMAN-JOB.md` (the human's whole role, click-by-click), `FAQ-AND-FAILURE-MODES.md` (when something feels wrong), `TEMPLATE-CHANGELOG.md` (template versions). |
+| `scripts/` | `bootstrap.sh` (one-command template setup), `validate-frontmatter.sh`, `check-stale.sh`, `check-links.sh`, `pre-commit.sh` (gitleaks); `make verify` runs the CI checks locally. |
 | `.claude/` | `settings.json` deterministic hooks (frontmatter validation on every agent write); `skills/` symlinks for Claude Code discovery. |
 | `.github/` | `workflows/validate.yml` CI (frontmatter, secrets, links, staleness) · PR template with the canonical-change checklist · `CODEOWNERS` stub. |
 
 Every folder's own `README.md` is the **complete file-generation contract** for that folder (frontmatter, fields, sourcing, worked example, quality bar, edge cases). An agent with no prior context can generate correct, consistent files from those READMEs alone.
 
 ## Reading paths — start here
+
+**Founder / operator (human):**
+[`guides/HUMAN-JOB.md`](./guides/HUMAN-JOB.md) — your entire role on one page, zero assumed tech background (incl. click-by-click PR review). Any unfamiliar word: [`GLOSSARY.md`](./GLOSSARY.md).
 
 **New team member (human):**
 Ask the agent: *"Read AGENTS.md and brief me on this company."* Or read directly on GitHub: `company.md` → `strategy.md` → `brand.md` → `ops.md` → most recent `weekly/`. Under 30 minutes to oriented either way.

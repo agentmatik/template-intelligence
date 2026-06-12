@@ -25,7 +25,7 @@ The non-obvious insight of the week. One paragraph. What do we now know that we 
 
 ## Customer signals
 
-- **{{CUSTOMER}}:** What happened → [[customers/<slug>]]
+- **{{CUSTOMER_NAME}}:** What happened → [[customers/<slug>]]
 - ...
 
 ## Metrics
@@ -65,8 +65,8 @@ Three priorities. Not ten.
 
 Only ones that produced something durable.
 
-- [[meetings/YYYY-MM-DD-<topic>]]
+- [[meetings/<category>/YYYY-MM-DD-<topic>]]
 
 ---
 
-*Drafted by `/skill weekly-brief`. Reviewed and edited by {{FOUNDER_NAME}}.*
+*Drafted by `/weekly-brief`. Reviewed and edited by {{FOUNDER_NAME}}.*

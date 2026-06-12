@@ -28,7 +28,7 @@ if echo "$STAGED" | grep -qE "^inbox/raw/|^inbox/granola-cache/|^inbox/slack-exp
 fi
 
 # 3. Frontmatter sanity check
-CANONICAL_DIRS="customers competitors people sales decisions"
+CANONICAL_DIRS="customers competitors people sales decisions meetings weekly management memory"
 for f in $STAGED; do
   for d in $CANONICAL_DIRS; do
     case "$f" in

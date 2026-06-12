@@ -1,5 +1,7 @@
 # Setup — from empty to working intelligence
 
+> **Not technical? You don't have to run any of this yourself.** After Step 1, open Claude Code in the repo folder and say: *"Read guides/SETUP.md and walk me through it — run the commands for me and interview me for the seed content."* The agent executes; you answer questions and review. The steps below are the manual path for technical users (and the agent's own playbook).
+
 ## Two paths
 
 **Path A:** I have existing files (decks, notes, docs) and want an agent to build the v1 for me.
@@ -10,9 +12,9 @@
 
 ## Prerequisites
 
-- GitHub account (private repo is free with limits, $4/mo Pro otherwise)
-- Claude Code installed — [`code.claude.com/docs/en/setup`](https://code.claude.com/docs/en/setup)
-- 1Password CLI with Claude Code shell plugin (for secrets) — [`developer.1password.com/docs/cli/shell-plugins/claude-code`](https://developer.1password.com/docs/cli/shell-plugins/claude-code)
+- GitHub account (private repos are free)
+- Claude Code installed — [`code.claude.com/docs/en/setup`](https://code.claude.com/docs/en/setup) — and the GitHub CLI (`gh`), which Claude Code can install for you
+- Optional: 1Password CLI with the Claude Code shell plugin (for secrets) — [`developer.1password.com/docs/cli/shell-plugins/claude-code`](https://developer.1password.com/docs/cli/shell-plugins/claude-code)
 
 ## Step 1 — Use this template (3 min)
 
@@ -48,15 +50,22 @@ The placeholders, if you prefer manual find/replace:
 Fill the minimum that makes the intelligence useful from day 1:
 
 - [ ] `company.md` — mission, stage, team. Mark `status: verified`.
-- [ ] `strategy.md` — top 3 priorities for this quarter. Mark `status: verified`.
+- [ ] `strategy.md` — north-star metric + top 3 priorities this quarter. Mark `status: verified`.
 - [ ] `product.md` — one paragraph, link to Linear roadmap.
 - [ ] `brand.md` — 3 dos, 3 don'ts, voice example.
 - [ ] `ops.md` — cadence, decision rights, tools.
+- [ ] `finance.md` — pointers to where the money truth lives (never numbers).
 - [ ] `customers/<top-customer>.md` — use `templates/customer.md`.
 - [ ] `competitors/<top-competitor>.md` — use `templates/competitor.md`.
 - [ ] `people/<cofounder>.md` — use `templates/person.md`.
 - [ ] `decisions/<today>-adopt-company-intelligence.md` — log this decision.
 - [ ] `weekly/<this-week>.md` — write your first weekly brief.
+
+Also decide now (5 min — optional, but the weekly ritual reads them):
+
+- **`management/`** — fill `goals.md` (this quarter's 3–7 goals) and `kpis.md` (your weekly numbers) if you track them; otherwise leave the scaffolds.
+- **`memory/MEMORY.md`** — add 3–5 standing preferences ("always PRs, never direct pushes", your name, your timezone).
+- Create a local **`inbox/`** folder (gitignored) — your drop zone for raw files the agent files via `/update-wiki`.
 
 Don't aim for comprehensive. Aim for **accurate**. Blanks are better than guesses.
 
@@ -65,7 +74,7 @@ Don't aim for comprehensive. Aim for **accurate**. Blanks are better than guesse
 GitHub Settings → Security:
 - ✅ Secret scanning + Push protection
 - ✅ Dependabot alerts
-- ✅ Branch protection on `main` (require PR review)
+- ✅ Branch protection on `main` (require PR review) — note: free-plan **private** repos don't enforce this; until upgraded, no-direct-pushes is self-enforced (agents via AGENTS.md, humans via [`HUMAN-JOB.md`](./HUMAN-JOB.md))
 - ✅ Add CODEOWNERS if multi-person
 
 Local pre-commit:
@@ -84,7 +93,8 @@ In Claude Code, add MCP servers one at a time:
 claude mcp add --transport http linear https://mcp.linear.app/mcp
 claude mcp add --transport http notion https://mcp.notion.com/mcp
 claude mcp add --transport http github https://api.githubcopilot.com/mcp
-# Granola, Slack, Workspace per current docs at github.com/<provider>/mcp-server
+# Granola, Slack, Google Workspace: each publishes its own MCP server —
+# search "<tool> MCP server" for install docs, or ask Claude Code to add them
 ```
 
 OAuth in browser when prompted. Test:
@@ -97,11 +107,13 @@ If wrong, fix the files (not the prompt).
 
 ## Step 6 — Try a real task
 
+Skills are invoked as slash commands — type them into Claude Code's chat:
+
 ```
-> /skill weekly-brief
+> /weekly-brief
 ```
 
-Or:
+Or just ask in plain language:
 
 ```
 > Brief me on <customer> before tomorrow's call.
@@ -118,5 +130,5 @@ Iterate. Add Skills when a workflow repeats. Add MCP servers as needed.
 | 3   | Write 3 recent decisions you've made                                               |
 | 4   | Add Granola MCP + normalize last 5 meetings                                        |
 | 5   | Add team members to `people/`                                                      |
-| 6   | First proper Friday weekly brief via `/skill weekly-brief`                         |
+| 6   | First proper Friday weekly brief via `/weekly-brief`                         |
 | 7   | Audit what's draft vs verified                                                     |

@@ -1,5 +1,6 @@
 ---
 type: customer
+relationship: prospect          # customer | prospect | pilot | churned. REQUIRED.
 title: "{{CUSTOMER_NAME}}"
 status: draft
 owner: "{{FOUNDER_NAME}}"

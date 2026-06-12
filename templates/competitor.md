@@ -1,5 +1,7 @@
 ---
 type: competitor
+category: direct                # direct | adjacent | tangential. REQUIRED.
+threat_level: medium            # low | medium | high. REQUIRED.
 title: "{{COMPETITOR_NAME}}"
 status: draft
 owner: "{{FOUNDER_NAME}}"

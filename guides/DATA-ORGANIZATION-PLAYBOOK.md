@@ -42,6 +42,10 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | A decision that was made | `decisions/YYYY-MM-DD-<slug>.md` | Immutable once written |
 | A meeting that happened | `meetings/<category>/YYYY-MM-DD-<topic>.md` | Distill, don't transcribe; category per `meetings/README.md` |
 | A weekly summary | `weekly/YYYY-Www.md` | One per ISO week |
+| Definition of a term (company or system vocabulary) | `GLOSSARY.md` | One row per term |
+| Legal documents (incorporation, MSAs, DPAs, IP assignments) | `ops.md` → Legal pointers section | **Pointers only** — the documents stay in their legal store, like `finance.md` |
+| A job candidate or open role | **ATS / hiring tool (not the repo)** | `people/` only after signing; the hiring *process* may be an SOP |
+| Content calendar, editorial pipeline | **Notion / Linear (not the repo)** | Live editorial state stays live; `brand.md` holds the voice |
 | Live ticket status, current sprint | **Linear (not the repo)** | Reference via MCP |
 | Ongoing chat | **Slack (not the repo)** | Reference via MCP |
 | Raw transcript audio/video | **Granola (not the repo)** | Repo stores the distilled note only |
@@ -85,6 +89,8 @@ These six files have no folder README because they are single files. Their full 
 **Source from:** board updates, the latest planning doc, OKR sheets, the founder's stated priorities.
 
 **Fill:** north-star metric (with definition + current value + target); **top 3 priorities for the quarter, in order** (more than 3 = no priorities); active bets (hypotheses not yet proven); constraints (capital, capacity, regulatory); top 3 risks honestly named; **what we're NOT doing** (the rejected-but-plausible directions).
+
+**Boundary with `management/goals.md`:** strategy.md states the priorities *narratively* (the why); goals.md is the only place a *tracked goal row* lives (owner, binary done, status). A quarterly goal appears in goals.md and traces back to a strategy.md priority — never duplicated as two competing lists.
 
 Keep ≤1000 words. If it's longer, you're putting tactics here that belong in `decisions/`.
 
@@ -163,7 +169,7 @@ owner: "<who maintains this>"
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 last_verified: YYYY-MM-DD     # source's date if generated from a dated document
-source_of_truth: <manual|linear|notion|slack|granola|gdrive>
+source_of_truth: <manual|linear|notion|slack|granola|github|gdrive>
 audience: <internal|team|public>   # default internal
 tags: []
 ---

@@ -1,5 +1,6 @@
 ---
 type: person
+relationship: team              # team | freelancer | advisor | investor | partner. REQUIRED.
 title: "{{PERSON_NAME}}"
 status: active
 owner: "{{FOUNDER_NAME}}"

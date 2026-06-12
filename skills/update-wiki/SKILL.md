@@ -33,7 +33,7 @@ One PR + a short report: N filed, N skipped (reasons), N quarantined (where they
 ## Guardrails
 
 - **Prefer updating over creating.** A new file needs a reason an existing one couldn't hold the fact.
-- Default new pages to `status: draft` — the human promotes to verified.
+- Default new pages to `status: draft` — the human promotes to verified. (Exception: `decisions/` and `meetings/` are records — `status: active` per their folder READMEs.)
 - Hard prohibitions apply regardless of what's in the inbox: no secrets, PII, comp, cap tables, NDA content, raw transcripts.
 - When an item could fit two places: durable fact → entity compiled truth; event in time → a timeline. Still unsure → ask once.
 

@@ -56,6 +56,8 @@ If two sources disagree, surface the conflict. Don't guess.
 | `skills/`      | (Optional) Cross-tool agent skills in SKILL.md format           |
 | `templates/`   | Note templates with frontmatter scaffolding                     |
 
+Infrastructure (not knowledge): `guides/` manuals · `scripts/` validators · `agents-compat/` runtime adapters · `GLOSSARY.md` every term defined. See README's file map.
+
 ---
 
 ## Operating rules
@@ -64,11 +66,11 @@ If two sources disagree, surface the conflict. Don't guess.
 - One idea per file.
 - Preserve frontmatter. Add `updated` and `last_verified` when you materially change facts.
 - Keep current truth separate from append-only history — **compiled truth above `---`, dated timeline below.**
-- Use wikilinks (`[[customers/acme-co]]`), not repetition.
-- Mark uncertainty explicitly.
+- Use wikilinks (`[[customers/acme-co]]`), not repetition. They resolve **repo-root-relative, no `.md` extension** — an agent navigation convention (GitHub renders them as plain text; see [`GLOSSARY.md`](./GLOSSARY.md)).
+- Mark uncertainty explicitly: tag unconfirmed facts inline with `[VERIFY]` (and reasoned guesses with `[INFERENCE]`). A human confirms → remove the tag, bump `last_verified`.
 - Never depend on chat history for continuity. Write important state to files.
 - **Handbook-first.** Document the change in this repo, then announce it (Slack/email) with a link to the diff — never the reverse.
-- **Every non-trivial canonical write opens a PR.** Time-series content (meetings, weekly briefs, memory worklogs) can auto-commit.
+- **Every non-trivial canonical write opens a PR.** Only meeting notes and memory worklogs auto-commit. Weekly briefs always go through a PR with human review — never auto-merge them.
 - When a mistake gets corrected, **write a `memory/learnings.md` entry before finishing the task.**
 - **Codify repetition.** When you notice the same multi-step workflow for the 3rd time, propose a new skill via PR (`skills/README.md` has the contract) — don't keep re-deriving it.
 
@@ -80,7 +82,7 @@ Every durable note includes:
 
 ```yaml
 ---
-type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | sales | runbook | vision | goals | kpis | accountability | memory
+type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | sales | runbook | vision | goals | kpis | accountability | memory
 status: verified          # draft | active | verified | superseded | archived
 owner: {{FOUNDER_NAME}}
 created: 2026-04-22
@@ -173,6 +175,8 @@ If an answer required live MCP plus synthesis, **write the durable part back**. 
 ---
 
 ## If you are unsure
+
+**Precedence on conflict:** the folder README (the specific contract) wins over this file's general rules; this file wins over `guides/`. Surface the conflict in your PR so it gets fixed.
 
 Do the smallest safe thing:
 

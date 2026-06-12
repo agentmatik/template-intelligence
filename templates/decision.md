@@ -44,7 +44,7 @@ What we decided, stated plainly. One paragraph.
 
 Links to meetings, customer feedback, data.
 
-- [[meetings/YYYY-MM-DD-<relevant>]]
+- [[meetings/<category>/YYYY-MM-DD-<relevant>]]
 - [[customers/<relevant>]]
 - External: URL with context
 
