@@ -24,20 +24,25 @@ gh repo clone <org>/<company>-intelligence
 cd <company>-intelligence
 ```
 
-## Step 2 — Find & replace placeholders (5 min)
+## Step 2 — Fill placeholders (2 min)
 
-Replace these throughout the repo:
+```bash
+./scripts/bootstrap.sh
+```
 
-| Placeholder              | Example                      |
-|--------------------------|------------------------------|
-| `{{COMPANY_NAME}}`       | Acme Labs Ltd.               |
-| `{{COMPANY_SHORT}}`      | acme                         |
-| `{{COMPANY_TAGLINE}}`    | AI-native analytics for SMEs |
-| `{{FOUNDER_NAME}}`       | Sarah Reinhardt              |
-| `{{FOUNDER_EMAIL}}`      | sarah@acme.co                |
-| `{{GITHUB_ORG}}`         | acme-labs                    |
+Interactive: fills every `{{PLACEHOLDER}}` across the repo, stamps scaffold dates with today, and offers to install the gitleaks pre-commit hook. Idempotent — skip a question to fill it later.
 
-Use your editor's multi-file find/replace.
+The placeholders, if you prefer manual find/replace:
+
+| Placeholder                  | Example                      |
+|------------------------------|------------------------------|
+| `{{COMPANY_NAME}}`           | Acme Labs Ltd.               |
+| `{{COMPANY_SHORT}}`          | acme                         |
+| `{{COMPANY_TAGLINE}}`        | AI-native analytics for SMEs |
+| `{{FOUNDER_NAME}}`           | Sarah Reinhardt              |
+| `{{FOUNDER_EMAIL}}`          | sarah@acme.co                |
+| `{{GITHUB_ORG}}`             | acme-labs                    |
+| `{{GITHUB_FOUNDER_HANDLE}}`  | sarahreinhardt (CODEOWNERS)  |
 
 ## Step 3 — Seed the ten minimum files (60 min)
 

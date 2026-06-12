@@ -2,7 +2,7 @@
 
 Cross-tool agent skills. Each subfolder is one skill containing a `SKILL.md`. This README is the contract for what skills are, when to add them, and how to write one.
 
-**Do not pre-create skills during initial setup.** This folder starts empty (except this README). Add a skill only when a workflow has repeated enough to be worth codifying.
+**The template ships four first-party starter skills** (below) — the workflows every intelligence repo runs from week one. Delete any you don't use. **Beyond those, do not pre-create skills:** add one only when a workflow has repeated enough to be worth codifying.
 
 ---
 
@@ -33,14 +33,16 @@ Create one when **all** of these hold:
 
 ---
 
-## Suggested starter skills (build when the need is real)
+## The four shipped starter skills
 
 | Skill | Trigger | What it does |
 |-------|---------|--------------|
-| `normalize-meeting` | "process this meeting / transcript" | Granola transcript → structured `meetings/` note + PRs to affected entity files |
-| `weekly-brief` | "draft the weekly" | Synthesize week's meetings, decisions, Linear, PRs → `weekly/YYYY-Www.md` draft |
-| `customer-brief` | "brief me on <customer>" | One-page customer summary for a call/board/investor from the customer file + recent activity |
-| `update-wiki` | "reconcile the inbox" | Turn raw dropped material into structured files via PRs |
+| [`normalize-meeting`](./normalize-meeting/SKILL.md) | "process this meeting / transcript" | Transcript → distilled `meetings/` note + one PR to affected entity/decision files |
+| [`weekly-brief`](./weekly-brief/SKILL.md) | "draft the weekly" | Synthesize week's meetings, decisions, Linear, PRs → `weekly/YYYY-Www.md` draft PR |
+| [`customer-brief`](./customer-brief/SKILL.md) | "brief me on <customer>" | One-page customer summary for a call/board/investor from the customer file + recent activity |
+| [`update-wiki`](./update-wiki/SKILL.md) | "reconcile the inbox" | Route raw dropped material to canonical homes via one reviewable PR |
+
+**Claude Code wiring:** Claude Code discovers skills under `.claude/skills/`; this repo keeps `skills/` canonical and symlinks each one into `.claude/skills/` (already done for the four starters — repeat for new skills: `ln -s ../../skills/<name> .claude/skills/<name>`). On Windows, copy instead of symlinking. Other runtimes (OpenClaw, Cursor, Codex) read `skills/` directly or per their docs.
 
 ---
 

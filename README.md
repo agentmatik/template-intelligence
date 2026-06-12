@@ -63,13 +63,13 @@ Agents bridge all three layers. Humans write PRs into the middle. The middle lay
 | `weekly/` | `YYYY-Www.md` — the Friday brief. Human alignment cadence. |
 | `operating-system/` | Management-system layer: `vision.md`, `rocks.md`, `scorecard.md`, `accountability.md`, `processes/` (SOPs). EOS/OKR/4DX-compatible — see its README's mapping table. |
 | `memory/` | **Agent** continuity: `MEMORY.md` curated index (≤200 lines), `YYYY-MM-DD.md` daily worklogs, `learnings.md` typed lessons. |
-| `skills/` | Cross-tool agent skills (SKILL.md format). Starts empty by design. |
+| `skills/` | Cross-tool agent skills (SKILL.md format). Ships with 4 starters: normalize-meeting, weekly-brief, customer-brief, update-wiki. |
 | `templates/` | Frontmatter-scaffolded templates for every file type. |
 | `agents-compat/openclaw/` | Use the repo as an OpenClaw workspace: SOUL/USER/TOOLS stubs + mapping. |
-| `docs/` | The manuals: `ARCHITECTURE.md` (why), `SETUP.md` (bootstrap), `OPERATIONS.md` (rituals), `DATA-ORGANIZATION-PLAYBOOK.md` (routing), `AGENT-INSTRUCTIONS.md` (migration procedure). |
-| `scripts/` | `validate-frontmatter.sh`, `check-stale.sh`, `pre-commit.sh` (gitleaks). |
-| `.claude/settings.json` | Deterministic hooks — frontmatter validation on every agent write. |
-| `.github/workflows/validate.yml` | CI: frontmatter contract, secret scan, link check, staleness report. |
+| `docs/` | The manuals: `ARCHITECTURE.md` (why), `SETUP.md` (bootstrap), `OPERATIONS.md` (rituals), `DATA-ORGANIZATION-PLAYBOOK.md` (routing), `AGENT-INSTRUCTIONS.md` (migration procedure), `CLIENT-ONBOARDING.md` (consultancy playbook), `TEMPLATE-CHANGELOG.md` (template versions). |
+| `scripts/` | `bootstrap.sh` (one-command template setup), `validate-frontmatter.sh`, `check-stale.sh`, `pre-commit.sh` (gitleaks). |
+| `.claude/` | `settings.json` deterministic hooks (frontmatter validation on every agent write); `skills/` symlinks for Claude Code discovery. |
+| `.github/` | `workflows/validate.yml` CI (frontmatter, secrets, links, staleness) · PR template with the canonical-change checklist · `CODEOWNERS` stub. |
 
 Every folder's own `README.md` is the **complete file-generation contract** for that folder (frontmatter, fields, sourcing, worked example, quality bar, edge cases). An agent with no prior context can generate correct, consistent files from those READMEs alone.
 
@@ -128,10 +128,10 @@ See [`docs/SETUP.md`](./docs/SETUP.md). It walks you from empty clone to working
 
 1. Click **Use this template** on GitHub (or `gh repo create --template`)
 2. Name the new repo `<company>-intelligence`, make it **private**
-3. Clone locally, find/replace `{{COMPANY_NAME}}`, `{{COMPANY_SHORT}}`, `{{FOUNDER_NAME}}`, etc.
+3. Clone locally and run `./scripts/bootstrap.sh` — fills every placeholder, stamps dates, installs the pre-commit hook
 4. Follow [`docs/SETUP.md`](./docs/SETUP.md)
 
-Founders: budget one afternoon for setup, one week for seed content. Consultancies: a 2-hour kickoff workshop plus one week of async ingestion.
+Founders: budget one afternoon for setup, one week for seed content. Consultancies applying it to a client: follow [`docs/CLIENT-ONBOARDING.md`](./docs/CLIENT-ONBOARDING.md) — a 2-hour kickoff workshop, one week of async ingestion, a 1-hour handoff.
 
 ## Design principles (the one-paragraph version)
 
@@ -148,7 +148,7 @@ The full twelve principles with rationale: [`docs/ARCHITECTURE.md`](./docs/ARCHI
 
 ## FAQ
 
-**Do I need all of this on day one?** No. The eleven-phase migration deliberately builds a 10–30 file spine. `skills/` starts empty; `operating-system/` is an optional pack; structure is added when content demands it.
+**Do I need all of this on day one?** No. The eleven-phase migration deliberately builds a 10–30 file spine. `skills/` ships only the four universal starters; `operating-system/` is an optional pack; structure is added when content demands it.
 
 **What if my company doesn't run EOS?** The `operating-system/` artifacts use generic names with an EOS/OKR/4DX mapping table. Use them under any framework, or ignore the folder entirely.
 
@@ -160,9 +160,11 @@ The full twelve principles with rationale: [`docs/ARCHITECTURE.md`](./docs/ARCHI
 
 **Is my data safe in here?** The repo is private by design, with hard prohibitions (no secrets, PII, cap tables, comp — see the playbook), gitleaks in pre-commit and CI, and GitHub push protection recommended in setup.
 
-## License
+## License & versioning
 
 MIT for the template structure. Your content is yours.
+
+Template versions are tagged and logged in [`docs/TEMPLATE-CHANGELOG.md`](./docs/TEMPLATE-CHANGELOG.md) — when you instantiate, note the version in your first commit so you can pull future template improvements selectively.
 
 EOS®, V/TO®, and Level 10 Meeting™ are trademarks of EOS Worldwide, LLC. This template is EOS-*compatible* and not affiliated with or endorsed by EOS Worldwide.
 

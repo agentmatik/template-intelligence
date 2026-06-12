@@ -124,7 +124,7 @@ Create exactly this. No more, no less, on day one.
 - ❌ Numbered prefixes (`03-strategy/`) — clean names only
 - ❌ `archive/` subfolders — use `status: archived` in frontmatter
 - ❌ `mkdocs.yml`, `.mcp.json` — add later when the user is ready
-- ❌ `skills/` with content — leave it empty; user adds skills when workflows repeat
+- ❌ skills beyond the four shipped starters (normalize-meeting, weekly-brief, customer-brief, update-wiki) — add more only when a workflow repeats
 - ❌ `inbox/` — use a local untracked folder during migration
 
 ---
@@ -423,7 +423,7 @@ Prioritized:
 ## What I didn't do
 
 - Didn't configure `.mcp.json` (configure when ready to wire MCP)
-- Didn't create skills (add when a workflow repeats)
+- Didn't create skills beyond the four shipped starters (add more when a workflow repeats)
 - Didn't fill `operating-system/` artifacts beyond what the source material supported
 - Didn't seed `memory/` (it fills itself as agents work)
 - Didn't set up rendered docs site
