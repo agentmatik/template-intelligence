@@ -22,6 +22,9 @@ Re-read the routing table. Still nothing? Prefer extending an existing file over
 **I'm about to write a file >1000 words.**
 Stop — you're probably pasting instead of distilling, or putting tactics where strategy belongs. Check the length caps in [`AGENT-INSTRUCTIONS.md`](./AGENT-INSTRUCTIONS.md) §3.4.
 
+**Where's the changelog? Who changed this fact, and why?**
+Git is the changelog — never hand-maintain one for content. Per file: GitHub → **History** (every version) or **Blame** (who last touched each line). Per fact: the entity's timeline and `decisions/` give the narrative; commit bodies give the why; `Co-Authored-By` trailers identify which agent authored what. Fastest: ask the agent — *"who changed X, when, and why?"*
+
 ## Mechanical failures
 
 **CI: Frontmatter contract failed.**

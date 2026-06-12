@@ -29,6 +29,8 @@ Every term this repo uses, defined. If a word here is unclear anywhere in the do
 | **IDS** | Identify–Discuss–Solve — EOS's issue-processing method: name the real issue, discuss it once, decide. The point is issues get *solved*, not re-discussed weekly. |
 | **Segue** | The opening minutes of an L10: each person shares one piece of good news. Jargon for "check-in." |
 | **`[VERIFY]`** | Inline tag marking a fact that came from an unconfirmed source (auto-transcription, inference). Anyone who knows the answer confirms it, removes the tag, bumps `last_verified`. `[INFERENCE]` marks a reasoned guess. |
+| **Audit trail** | The automatic record of what changed, why, by whom (human or agent), and when. Git provides it: commits + PR history + the `Co-Authored-By` agent trailer. Readable per file via GitHub's **History**/**Blame** buttons — or by asking the agent. |
+| **Blame** | GitHub's per-line view of who last changed each line of a file and in which commit. Despite the name, it's just attribution. |
 | **Staleness** | How long since a file's `last_verified` date. `scripts/check-stale.sh` flags files past their type's threshold. |
 | **gitleaks** | The secret scanner that blocks commits/PRs containing API keys, tokens, or credentials. |
 | **ISO week** | Week numbering where week 1 contains the year's first Thursday — keeps `weekly/2026-W17.md` files sorting correctly across years. |

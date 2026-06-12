@@ -75,7 +75,8 @@ Run `scripts/check-stale.sh` weekly.
 
 **Good:**
 - Small — one idea, one file (or tight set)
-- Semantic commit: `customer(acme): update renewal status after 2026-04-15 call`
+- Semantic commit: `customer(acme): update renewal status after 2026-04-15 call` — the *why* in the body
+- Agent-authored commits carry `Co-Authored-By: <agent>` (provenance survives forever)
 - Frontmatter `updated` and `last_verified` refreshed
 - Links to evidence
 - No secrets, no PII

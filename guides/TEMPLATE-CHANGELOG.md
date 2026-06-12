@@ -19,6 +19,7 @@ Versioning: tags `vMAJOR.MINOR` on the template repo. MAJOR = structural changes
 - **Routing rows added:** glossary terms, legal pointers (new ops.md section), job candidates (ATS, not repo), content calendar (live systems); `github` added to `source_of_truth` enums
 - **Founder UX:** SETUP leads with the agent-driven path ("the agent runs the commands; you answer questions"), seed list reconciled (finance.md, management/, memory, inbox), `/skill x` → `/x` syntax unified, honest note on branch protection for free-plan private repos
 - strategy.md ↔ goals.md boundary stated (narrative priorities vs the one tracked goal table); broken worked-example wikilinks fixed (category segment); hook command anchored to `$CLAUDE_PROJECT_DIR`; pre-commit dirs aligned with the validator
+- **Versioning & audit trail made explicit:** AGENTS.md "Sign your work" rule (semantic commits, why in the body, `Co-Authored-By: <agent>` trailer on every agent-authored commit — never impersonate the human); README "Versioning & audit trail" section; HUMAN-JOB "Seeing the history"; GLOSSARY (audit trail, blame) + FAQ entries; PR-template provenance checkbox. Doctrine: Git is the changelog — never hand-maintain one for content
 
 ## v1.2 — 2026-06-12
 

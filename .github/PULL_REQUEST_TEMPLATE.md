@@ -14,3 +14,4 @@
 - [ ] No secrets, no PII, no financials, no NDA content
 - [ ] New canonical files follow their folder README contract (frontmatter, structure)
 - [ ] If this changes standing behavior or process: the relevant doc/SOP updated in this same PR (handbook-first)
+- [ ] Agent-authored commits carry their `Co-Authored-By: <agent>` trailer (provenance)

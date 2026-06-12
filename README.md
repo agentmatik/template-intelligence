@@ -108,6 +108,18 @@ Everything in the repo reduces to five conventions. Internalize these and the re
 4. **Two-tier memory** — small always-loaded `memory/MEMORY.md` index; dated detail retrieved on demand; every corrected mistake becomes a typed `learnings.md` entry before the task ends. → [`memory/README.md`](./memory/README.md)
 5. **PR-gated truth, handbook-first** — canonical changes go through PR review; time-series auto-commits; and you document the change here *before* announcing it anywhere — never the reverse. → [`guides/OPERATIONS.md`](./guides/OPERATIONS.md)
 
+## Versioning & audit trail — built in, not bolted on
+
+Every change to truth is automatically logged with **what, why, who (human or agent), and when** — no separate changelog to maintain, because Git *is* the log:
+
+- **What changed:** every edit is a commit; every canonical change is a PR with a reviewable line-by-line diff.
+- **Why:** semantic commit titles + the PR's "What changed" body carry the reason; decisions get a full ADR in `decisions/`.
+- **Who — human or agent:** the commit author is the human; agent-authored commits carry a `Co-Authored-By:` trailer naming the agent (an AGENTS.md rule), and the PR reviewer/merger is recorded by GitHub. You can always tell which agent wrote what and which human approved it.
+- **When + history of any fact:** on GitHub, any file → **History** shows every version; *blame* shows who last touched each line. Or just ask the agent: *"who changed Acme's renewal date, when, and why?"*
+- **In-file history for humans:** entity timelines (append-only, dated) and `decisions/` give the readable narrative without opening Git at all; `updated`/`last_verified` frontmatter dates every fact's freshness.
+
+What we deliberately do **not** do: hand-maintain a "CHANGELOG of company content" — that would duplicate Git history and silently rot (the SSOT rule applies to history too). The one exception is [`guides/TEMPLATE-CHANGELOG.md`](./guides/TEMPLATE-CHANGELOG.md), which versions the *template structure itself*.
+
 ## Operating cadence
 
 | Rhythm | Ritual |

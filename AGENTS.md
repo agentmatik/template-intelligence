@@ -63,7 +63,6 @@ Infrastructure (not knowledge): `guides/` manuals · `scripts/` validators · `a
 ## Operating rules
 
 - Prefer **updating** an existing canonical page over creating a new one.
-- One idea per file.
 - Preserve frontmatter. Add `updated` and `last_verified` when you materially change facts.
 - Keep current truth separate from append-only history — **compiled truth above `---`, dated timeline below.**
 - Use wikilinks (`[[customers/acme-co]]`), not repetition. They resolve **repo-root-relative, no `.md` extension** — an agent navigation convention (GitHub renders them as plain text; see [`GLOSSARY.md`](./GLOSSARY.md)).
@@ -73,6 +72,7 @@ Infrastructure (not knowledge): `guides/` manuals · `scripts/` validators · `a
 - **Every non-trivial canonical write opens a PR.** Only meeting notes and memory worklogs auto-commit. Weekly briefs always go through a PR with human review — never auto-merge them.
 - When a mistake gets corrected, **write a `memory/learnings.md` entry before finishing the task.**
 - **Codify repetition.** When you notice the same multi-step workflow for the 3rd time, propose a new skill via PR (`skills/README.md` has the contract) — don't keep re-deriving it.
+- **Sign your work.** Semantic commit titles (`customer(acme): update renewal after 2026-04-15 call`) with the *why* in the body, and every agent-authored commit carries a `Co-Authored-By: <Agent> <noreply@…>` trailer naming the agent/runtime. Never impersonate the human — provenance is part of the audit trail.
 
 ---
 

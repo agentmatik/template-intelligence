@@ -35,6 +35,14 @@ A **PR (pull request)** is a proposed change to the repo's truth. Nothing become
 
 Files the agent creates start as `status: draft` — meaning *unconfirmed*. When a draft's content is right, tell the agent: *"mark <file> verified"*. Only you promote drafts; that's what makes `verified` mean something. Same with `[VERIFY]` tags: when you see one you know the answer to, say so — the agent fixes the fact and removes the tag (a 2-minute PR).
 
+## Seeing the history (who changed what, and why)
+
+You never lose a previous version — everything is automatically versioned:
+
+- On GitHub, open any file → **History** button → every past version, with who made each change and the stated reason. The **Blame** view shows who last touched each individual line.
+- Agent-made changes are labeled (`Co-Authored-By: <agent>` on the commit), so you can always distinguish your edits, a teammate's, and each agent's.
+- Easiest of all: ask the agent — *"who changed Acme's renewal date, when, and why?"* or *"show me everything that changed last week and the reasons."*
+
 ## What you must never do
 
 - Edit truth directly on `main` (always via PR — even you).
