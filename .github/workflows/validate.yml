@@ -52,7 +52,10 @@ jobs:
           # External URLs are checked by humans; CI shouldn't fail on a
           # third-party outage. {{PLACEHOLDER}} links in templates/ are
           # scaffolding, not real targets — excluded (raw + URL-encoded).
-          args: --offline --include-fragments --no-progress --exclude '(%7B%7B|\{\{)' "**/*.md"
+          # .claude/skills/* are symlinks into skills/ — lychee resolves
+          # their relative links against the symlink path, so the canonical
+          # copies are checked and the symlinked views are skipped.
+          args: --offline --include-fragments --no-progress --exclude '(%7B%7B|\{\{)' --exclude-path '.claude' "**/*.md"
           fail: true
 
   stale-report:
