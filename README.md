@@ -59,7 +59,7 @@ Agents bridge all three layers. Humans write PRs into the middle. The middle lay
 | `people/` | Team, advisors, investors, partners. Internal only. |
 | `sales/` | `pipeline.md` (deals by stage, ranges not exact figures), `pricing.md`. |
 | `decisions/` | `YYYY-MM-DD-<slug>.md` — append-only ADRs. Immutable; superseded by new files. |
-| `meetings/` | `YYYY-MM-DD-<topic>.md` — distilled notes (≤500 words), never raw transcripts. |
+| `meetings/` | `<category>/YYYY-MM-DD-<topic>.md` — distilled notes (≤500 words), never raw transcripts. Ships 8 best-practice categories (standups, leadership, one-on-ones, customers, product, marketing, board, planning); reshape to the company's real calendar. |
 | `weekly/` | `YYYY-Www.md` — the Friday brief. Human alignment cadence. |
 | `operating-system/` | Management-system layer: `vision.md`, `rocks.md`, `scorecard.md`, `accountability.md`, `processes/` (SOPs). EOS/OKR/4DX-compatible — see its README's mapping table. |
 | `memory/` | **Agent** continuity: `MEMORY.md` curated index (≤200 lines), `YYYY-MM-DD.md` daily worklogs, `learnings.md` typed lessons. |

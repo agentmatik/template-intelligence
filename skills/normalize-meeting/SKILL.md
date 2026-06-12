@@ -22,14 +22,14 @@ Turn a raw meeting transcript into the repo's durable form: one distilled note i
 ## Steps
 
 1. Read the full transcript. Identify: date, attendees, topic, decisions made, action items, customer/competitor/people mentions.
-2. Create `meetings/YYYY-MM-DD-<topic>.md` from [`templates/meeting.md`](../../templates/meeting.md), following the contract in [`meetings/README.md`](../../meetings/README.md): ≤500 words, action items + decisions + key quotes only, link to the source transcript. Frontmatter `source_of_truth: granola` (or `manual`), `status: active`.
+2. Create `meetings/<category>/YYYY-MM-DD-<topic>.md` (category per the taxonomy in [`meetings/README.md`](../../meetings/README.md)) from [`templates/meeting.md`](../../templates/meeting.md), following the contract in [`meetings/README.md`](../../meetings/README.md): ≤500 words, action items + decisions + key quotes only, link to the source transcript. Frontmatter `source_of_truth: granola` (or `manual`), `status: active`.
 3. For each **decision** made in the meeting: create `decisions/YYYY-MM-DD-<slug>.md` per [`decisions/README.md`](../../decisions/README.md), citing the meeting note.
 4. For each **entity** materially affected (customer, competitor, person): append a dated timeline entry to its page; update the compiled-truth block only if a durable fact changed.
 5. Commit: the meeting note may auto-commit (time-series). Entity and decision changes go in **one PR** titled `meeting(<topic>): normalize YYYY-MM-DD` with links back to the note.
 
 ## Output
 
-- `meetings/YYYY-MM-DD-<topic>.md` (committed)
+- `meetings/<category>/YYYY-MM-DD-<topic>.md` (committed)
 - One PR with entity/decision updates, or "no canonical changes" stated explicitly.
 
 ## Guardrails
@@ -42,4 +42,4 @@ Turn a raw meeting transcript into the repo's durable form: one distilled note i
 ## Example
 
 Input: "Normalize today's Acme renewal call."
-Output: `meetings/2026-06-12-acme-renewal-call.md` + PR appending `2026-06-12: Renewal confirmed at €4k/mo …` to `customers/acme-co.md`.
+Output: `meetings/customers/2026-06-12-acme-renewal-call.md` + PR appending `2026-06-12: Renewal confirmed at €4k/mo …` to `customers/acme-co.md`.

@@ -21,7 +21,7 @@ Produce the Friday alignment draft: what shipped, what we learned, customer sign
 ## Steps
 
 1. Gather, in order:
-   - `meetings/YYYY-MM-DD-*.md` dated within the ISO week
+   - `meetings/**/YYYY-MM-DD-*.md` dated within the ISO week
    - `decisions/YYYY-MM-DD-*.md` from the week
    - `customers/` files modified this week (`git log --since`)
    - Live state via MCP if connected: Linear closed issues/cycle, GitHub merged PRs

@@ -76,8 +76,10 @@ Create exactly this. No more, no less, on day one.
 │   └── YYYY-MM-DD-<slug>.md   # Append-only ADRs
 │
 ├── meetings/
-│   ├── README.md
-│   └── YYYY-MM-DD-<topic>.md  # Distilled meeting notes
+│   ├── README.md              # Taxonomy contract — categories below are a default; reshape to the company's calendar
+│   └── <category>/            # standups | leadership | one-on-ones | customers | product | marketing | board | planning
+│       ├── README.md          # Per-category distill focus + propagation rules
+│       └── YYYY-MM-DD-<topic>.md
 │
 ├── weekly/
 │   ├── README.md
@@ -136,7 +138,7 @@ Create exactly this. No more, no less, on day one.
 | Type            | Format                  | Example                                     |
 |-----------------|-------------------------|---------------------------------------------|
 | Entity files    | `kebab-case-slug.md`    | `customers/acme-co.md`                      |
-| Daily-time      | `YYYY-MM-DD-topic.md`   | `meetings/2026-04-22-acme-renewal.md`       |
+| Daily-time      | `YYYY-MM-DD-topic.md`   | `meetings/customers/2026-04-22-acme-renewal.md`       |
 | Weekly          | `YYYY-Www.md` (ISO)     | `weekly/2026-W17.md`                        |
 | Decisions       | `YYYY-MM-DD-slug.md`    | `decisions/2026-04-15-pricing-tier-3.md`    |
 
@@ -258,7 +260,7 @@ Produce a temporary `_migration-inventory.md` file (gitignored, deleted at the e
 | Source file              | Type            | Date       | Subject            | Sensitivity   | Confidence | Target location                              |
 |--------------------------|-----------------|------------|--------------------|--------------:|------------|----------------------------------------------|
 | pitch-deck-2024.pdf      | pitch deck      | 2024-Q3    | company overview   | confidential  | dated      | selective extraction into strategy.md         |
-| acme-call-2026-04-15.txt | meeting tx      | 2026-04-15 | Acme renewal       | confidential  | high       | meetings/2026-04-15-acme-renewal-call.md      |
+| acme-call-2026-04-15.txt | meeting tx      | 2026-04-15 | Acme renewal       | confidential  | high       | meetings/customers/2026-04-15-acme-renewal-call.md      |
 ```
 
 **Show inventory to user. Get sign-off before Phase 2.**
@@ -350,9 +352,15 @@ For each meaningful decision visible in source material from the **last 90 days*
 
 ### Phase 8 — Meetings
 
-For each meeting transcript in source material from the **last 30 days**:
+**First, fit the taxonomy to the company.** The template ships eight default meeting categories (`meetings/README.md`). Look at the company's actual calendar and the transcripts in front of you:
 
-- Distill into `meetings/YYYY-MM-DD-<topic>.md` (≤500 words)
+- **Delete** category folders with no matching recurring meeting (no board yet → delete `board/`).
+- **Rename or add** categories the real cadence demands (`all-hands/`, `partners/`, `hiring/`…), each with a short README on the same pattern (what belongs, distill focus, propagation).
+- The calendar is the source of truth — folders reflect real meetings, never aspiration. Note the reshaping in the handoff.
+
+Then, for each meeting transcript in source material from the **last 30 days**:
+
+- Distill into `meetings/<category>/YYYY-MM-DD-<topic>.md` (≤500 words; category per `meetings/README.md`)
 - Action items, decisions, key quotes only — never paste full transcripts
 - Link to original Granola URL if available
 

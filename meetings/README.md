@@ -1,8 +1,32 @@
 # Meetings
 
-Distilled meeting notes, one file per meeting. This README is the complete contract for turning a raw transcript (Granola, Otter, Zoom, hand notes) into a structured meeting note.
+Distilled meeting notes, one file per meeting, **routed into a category folder**. This README is the complete contract for turning a raw transcript (Granola, Otter, Zoom, hand notes) into a structured meeting note.
 
 Template: [`../templates/meeting.md`](../templates/meeting.md)
+
+---
+
+## Category folders — a default taxonomy, made to be adjusted
+
+Notes live at `meetings/<category>/YYYY-MM-DD-<topic>.md`. The template ships the recurring meeting types of a default startup operating cadence (YC- and EOS-shaped):
+
+| Category | What goes there | Cadence anchor |
+|----------|-----------------|----------------|
+| [`standups/`](./standups/README.md) | Daily/async team syncs — only the rare one that produced something durable | Daily |
+| [`leadership/`](./leadership/README.md) | The weekly leadership meeting (EOS L10-compatible: scorecard, rocks, issues) | Weekly |
+| [`one-on-ones/`](./one-on-ones/README.md) | Manager 1:1s — commitments and themes, never comp/performance detail | Weekly/biweekly |
+| [`customers/`](./customers/README.md) | Customer, prospect, and user calls — the YC "talk to users" record | Continuous |
+| [`product/`](./product/README.md) | Sprint planning, design/eng reviews, retros | Weekly/sprint |
+| [`marketing/`](./marketing/README.md) | Marketing & growth syncs, campaign reviews, experiment readouts | Weekly/monthly |
+| [`board/`](./board/README.md) | Board meetings and investor updates | Monthly/quarterly |
+| [`planning/`](./planning/README.md) | Quarterly and annual planning sessions (EOS quarterly pulse) | Quarterly |
+
+**This taxonomy is a starting point, not a prescription.** During setup or migration, reshape it to the company's *actual* calendar:
+
+- **Delete** category folders the company doesn't use (no standups? remove `standups/`).
+- **Rename or add** categories its real cadence demands (`all-hands/`, `partners/`, `hiring/`…) — each new category gets a short README on the same pattern: what belongs, distill focus, propagation rule.
+- The company's calendar is the source of truth for which categories exist — folders must reflect real recurring meetings, never aspiration.
+- A meeting that fits no category: prefer creating the right category over inventing a `misc/`.
 
 ---
 
@@ -22,14 +46,14 @@ Create a note for any meeting that produced something durable:
 
 ## Filename / slug derivation
 
-Format: `YYYY-MM-DD-<short-topic>.md` — date is the **meeting date**, not today.
+Format: `<category>/YYYY-MM-DD-<short-topic>.md` — date is the **meeting date**, not today.
 
-- Acme renewal call on 2026-04-15 → `2026-04-15-acme-renewal-call.md`
-- Weekly eng sync on 2026-04-22 → `2026-04-22-eng-sync.md`
+- Acme renewal call on 2026-04-15 → `customers/2026-04-15-acme-renewal-call.md`
+- Weekly eng sync on 2026-04-22 → `product/2026-04-22-eng-sync.md`
 
 If two meetings share a date and topic, append a disambiguator: `-am` / `-pm` or a number.
 
-Archive notes older than 6 months to `meetings/archive/YYYY/` to keep the folder browsable.
+Archive notes older than 6 months to `meetings/<category>/archive/YYYY/` to keep folders browsable.
 
 ---
 
@@ -85,7 +109,7 @@ The meeting note records *what happened*; the canonical files hold *what's now t
 
 ## Worked example
 
-`meetings/2026-04-15-acme-renewal-call.md`:
+`meetings/customers/2026-04-15-acme-renewal-call.md`:
 
 ```markdown
 ---

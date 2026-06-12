@@ -40,7 +40,7 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | Who owns which function (org structure) | `operating-system/accountability.md` | One name per seat |
 | A repeating procedure / SOP | `operating-system/processes/<slug>.md` | Core processes only; ≤500 words each |
 | A decision that was made | `decisions/YYYY-MM-DD-<slug>.md` | Immutable once written |
-| A meeting that happened | `meetings/YYYY-MM-DD-<topic>.md` | Distill, don't transcribe |
+| A meeting that happened | `meetings/<category>/YYYY-MM-DD-<topic>.md` | Distill, don't transcribe; category per `meetings/README.md` |
 | A weekly summary | `weekly/YYYY-Www.md` | One per ISO week |
 | Live ticket status, current sprint | **Linear (not the repo)** | Reference via MCP |
 | Ongoing chat | **Slack (not the repo)** | Reference via MCP |

@@ -10,6 +10,7 @@ Versioning: tags `vMAJOR.MINOR` on the template repo. MAJOR = structural changes
 
 **Turnkey wave** — from documented skeleton to instant starting package:
 
+- `meetings/` default taxonomy: 8 best-practice category folders (standups, leadership/L10, one-on-ones, customers, product, marketing, board, planning), each with its own distill-focus + propagation README — explicitly designed to be reshaped to the company's real calendar during migration (Phase 8)
 - Four first-party starter skills shipped: `normalize-meeting`, `weekly-brief`, `customer-brief`, `update-wiki` (symlinked into `.claude/skills/` for Claude Code)
 - `scripts/bootstrap.sh` — interactive placeholder fill, date stamping, hook install
 - `docs/CLIENT-ONBOARDING.md` — the consultancy engagement playbook (kickoff workshop → ingestion week → handoff → retainer)

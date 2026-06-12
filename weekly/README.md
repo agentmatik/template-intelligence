@@ -63,7 +63,7 @@ Target ≤400 words — readable in two minutes. Sections:
 ### How it's generated (the `weekly-brief` skill)
 
 An agent generating this pulls from:
-1. `meetings/YYYY-MM-DD-*.md` dated within the ISO week
+1. `meetings/**/YYYY-MM-DD-*.md` dated within the ISO week
 2. `decisions/YYYY-MM-DD-*.md` from the week
 3. Linear via MCP — closed issues, cycle progress
 4. GitHub via MCP — merged PRs
@@ -121,7 +121,7 @@ unprompted this week. It moved from "nice to have" to a deal-blocker.
 3. Onboard new engineer.
 
 ## Meetings
-- [[meetings/2026-04-15-acme-renewal-call]]
+- [[meetings/customers/2026-04-15-acme-renewal-call]]
 ```
 
 ---

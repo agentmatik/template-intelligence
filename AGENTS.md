@@ -49,7 +49,7 @@ If two sources disagree, surface the conflict. Don't guess.
 | `people/`      | Team, advisors, partners, investors (one file each)             |
 | `sales/`       | Pipeline by stage; deals worth tracking; pricing                |
 | `decisions/`   | `YYYY-MM-DD-<slug>.md` — append-only ADRs, immutable            |
-| `meetings/`    | `YYYY-MM-DD-<topic>.md` — distilled meeting notes               |
+| `meetings/`    | `<category>/YYYY-MM-DD-<topic>.md` — distilled notes in a per-type folder (standups, leadership, customers, board…)               |
 | `weekly/`      | `YYYY-Www.md` — Friday founder/team brief                       |
 | `operating-system/` | Management-system artifacts: vision, rocks, scorecard, accountability, `processes/` (SOPs) |
 | `memory/`      | Agent-operational memory: `MEMORY.md` index, daily worklogs, `learnings.md` |

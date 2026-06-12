@@ -8,7 +8,7 @@ Frontmatter-scaffolded starting points, one per file type. Copy → fill → sav
 | `competitor.md` | A competitor page | `competitors/<slug>.md` | [`../competitors/README.md`](../competitors/README.md) |
 | `person.md` | A person page | `people/<slug>.md` | [`../people/README.md`](../people/README.md) |
 | `decision.md` | An ADR | `decisions/YYYY-MM-DD-<slug>.md` | [`../decisions/README.md`](../decisions/README.md) |
-| `meeting.md` | A distilled meeting note | `meetings/YYYY-MM-DD-<topic>.md` | [`../meetings/README.md`](../meetings/README.md) |
+| `meeting.md` | A distilled meeting note | `meetings/<category>/YYYY-MM-DD-<topic>.md` | [`../meetings/README.md`](../meetings/README.md) |
 | `weekly.md` | The Friday brief | `weekly/YYYY-Www.md` | [`../weekly/README.md`](../weekly/README.md) |
 | `process.md` | A core-process SOP | `operating-system/processes/<slug>.md` | [`../operating-system/processes/README.md`](../operating-system/processes/README.md) |
 | `rock.md` | A table row (not a file) | `operating-system/rocks.md` | [`../operating-system/README.md`](../operating-system/README.md) |

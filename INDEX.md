@@ -60,7 +60,7 @@ Read in this order:
 | What's our financial picture?           | `finance.md` (high-level only)         |
 | What's our voice/messaging?             | `brand.md`                             |
 | What happened this week?                | `weekly/` — most recent file           |
-| What was said in that meeting?          | `meetings/` — filter by date           |
+| What was said in that meeting?          | `meetings/<category>/` — filter by date |
 | Where is all of this going long-term?   | `operating-system/vision.md`           |
 | Are we on track this quarter?           | `operating-system/rocks.md`            |
 | How are the numbers?                    | `operating-system/scorecard.md` → live dashboards |
