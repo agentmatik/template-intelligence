@@ -125,7 +125,7 @@ Create exactly this. No more, no less, on day one.
 - ❌ `ops/`, `market/`, `finance/` subfolders — root files until they outgrow ~1000 words
 - ❌ Numbered prefixes (`03-strategy/`) — clean names only
 - ❌ `archive/` subfolders — use `status: archived` in frontmatter
-- ❌ `mkdocs.yml`, `.mcp.json` — add later when the user is ready
+- ❌ `.mcp.json` — add later when the user is ready to wire MCP
 - ❌ skills beyond the four shipped starters (normalize-meeting, weekly-brief, customer-brief, update-wiki) — add more only when a workflow repeats
 - ❌ `inbox/` — use a local untracked folder during migration
 
@@ -434,7 +434,6 @@ Prioritized:
 - Didn't create skills beyond the four shipped starters (add more when a workflow repeats)
 - Didn't fill `operating-system/` artifacts beyond what the source material supported
 - Didn't seed `memory/` (it fills itself as agents work)
-- Didn't set up rendered docs site
 - Didn't migrate decisions older than 90 days or meetings older than 30
 - Didn't configure pre-commit hooks (install gitleaks when ready)
 
@@ -444,7 +443,7 @@ Prioritized:
 2. Walk the high-priority drafts list. Mark `status: verified` after review.
 3. Add Linear MCP: `claude mcp add --transport http linear https://mcp.linear.app/mcp`.
 4. Try: "Read AGENTS.md and summarize how this company is organized." If wrong, fix files.
-5. Add MCP servers, skills, mkdocs, etc. only when you feel the pain.
+5. Add MCP servers and new skills only when you feel the pain.
 ```
 
 ---
@@ -525,7 +524,7 @@ Extract into `brand.md`:
 - Don't auto-promote drafts to verified.
 - Don't backfill > 90 days of decisions or > 30 days of meetings.
 - Don't create empty placeholder files.
-- Don't add MCP, skills, mkdocs preemptively.
+- Don't add MCP servers or new skills preemptively.
 - Don't push secrets.
 - Don't be silent about ambiguity. Surface in handoff.
 

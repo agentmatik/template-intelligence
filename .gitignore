@@ -26,10 +26,6 @@ meetings/**/*.mp4
 meetings/**/*.wav
 meetings/**/transcripts/
 
-# MkDocs build output
-site/
-.cache/
-
 # Python / Node scratch
 __pycache__/
 *.pyc
@@ -44,8 +40,6 @@ Thumbs.db
 .vscode/settings.json
 .idea/
 *.swp
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
 
 # Logs
 *.log

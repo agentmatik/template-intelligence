@@ -13,7 +13,6 @@
 - GitHub account (private repo is free with limits, $4/mo Pro otherwise)
 - Claude Code installed — [`code.claude.com/docs/en/setup`](https://code.claude.com/docs/en/setup)
 - 1Password CLI with Claude Code shell plugin (for secrets) — [`developer.1password.com/docs/cli/shell-plugins/claude-code`](https://developer.1password.com/docs/cli/shell-plugins/claude-code)
-- (Optional) Obsidian for local Markdown editing
 
 ## Step 1 — Use this template (3 min)
 

@@ -2,11 +2,11 @@
 
 A single-source-of-truth Git repo of plain Markdown that serves three audiences at once:
 
-- **Humans** read it in their editor, GitHub, Obsidian, or a rendered MkDocs site.
-- **AI agents** (Claude Code, Cursor, Codex, OpenClaw, Gemini, Windsurf, Aider…) read it via `AGENTS.md`.
-- **Live systems** (Linear, Slack, Notion, Granola, Google Workspace) plug in through MCP.
+- **Humans** interact with it **through the agent** — ask a question in Slack or Claude Code, get an answer grounded in the repo; review changes as GitHub PRs. Nobody is expected to browse folders or edit Markdown by hand.
+- **AI agents** (Claude Code, Cursor, Codex, OpenClaw, Gemini, Windsurf, Aider…) read it via `AGENTS.md` and write back through PRs.
+- **Live systems** (Slack, Notion, Linear, Granola, Google Workspace) plug in through MCP.
 
-Durable truth lives here. Execution state stays in the systems that own it. Agents synthesize across both.
+Durable truth lives here. Execution state stays in the systems that own it. Agents synthesize across both — **the agent is the interface; the repo is its memory.**
 
 **The promise:** point any new agent or team member at this repo and everything they need is absorbable from the documentation alone. Every folder carries its own complete generation contract; every rule has a written rationale; nothing requires tribal knowledge.
 
@@ -19,8 +19,8 @@ The **intelligence** is the persistent knowledge layer your company runs on: an 
 ```
 ┌──────────────────────────────────────────────────────────┐
 │ HUMAN INTERFACE                                          │
-│ Editor (VS Code, Cursor, Obsidian) · Rendered (GitHub,   │
-│ MkDocs) · Conversational (Slack agent, Telegram)         │
+│ Talk to the agent (Slack agent, Claude Code, chat) ·     │
+│ Review PRs and read on GitHub                            │
 └─────────────────────────┬────────────────────────────────┘
                           │  reads, opens PRs
                           ▼
@@ -76,7 +76,7 @@ Every folder's own `README.md` is the **complete file-generation contract** for 
 ## Reading paths — start here
 
 **New team member (human):**
-`company.md` → `strategy.md` → `brand.md` → `ops.md` → most recent `weekly/`. Under 30 minutes to oriented.
+Ask the agent: *"Read AGENTS.md and brief me on this company."* Or read directly on GitHub: `company.md` → `strategy.md` → `brand.md` → `ops.md` → most recent `weekly/`. Under 30 minutes to oriented either way.
 
 **Agent starting a task:**
 [`AGENTS.md`](./AGENTS.md) (your operating contract — read it before doing anything else) → `memory/MEMORY.md` + today/yesterday worklogs → `INDEX.md` → the domain file the task touches → MCP only for fresh operational state.
@@ -141,7 +141,7 @@ The full twelve principles with rationale: [`docs/ARCHITECTURE.md`](./docs/ARCHI
 
 ## What this is NOT (alternatives considered)
 
-- **Not a Notion/Confluence wiki.** Wikis don't scale company truth: content goes stale silently, there's no review gate, and agents can't diff them. Git + PR review splits proposer from approver and gives you an audit trail for free.
+- **Not a Notion/Confluence wiki.** Wikis don't scale company truth: content goes stale silently, there's no review gate, and agents can't diff them. Git + PR review splits proposer from approver and gives you an audit trail for free. Notion keeps its job as the *working-docs* surface — a live system the agent reads via MCP — it just isn't where durable truth lives.
 - **Not a plain CLAUDE.md.** One always-loaded file can't hold a company — it bloats past the size agents reliably follow. This repo keeps the entry contract small and pushes everything else into routed, on-demand files.
 - **Not a vector-memory plugin.** File-native context (grep + frontmatter routing) beats retrieval infrastructure below ~100k tokens of knowledge. The evolution path to evals → hybrid search → vector DB exists ([`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) § Evolution path) — earn each tier.
 - **Not a mirror of your live systems.** Linear tickets, Slack threads, and dashboards stay where they are; the repo holds distilled, durable conclusions and links out.

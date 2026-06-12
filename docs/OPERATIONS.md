@@ -34,7 +34,7 @@ Raw → time-series folders (auto-commit OK). Canonical → PR required.
 - Scorecard & rocks check (if running `operating-system/`): off-track items become issues; off-track 2 weeks running → decide and log to `decisions/`
 - Run `scripts/check-stale.sh` — verify or archive flagged files
 - Merge open PRs — CI green (`validate` workflow: frontmatter, secrets, links)
-- Glance at rendered docs site (if you have one)
+- Spot-check: ask the agent one question whose answer changed this week — wrong answer means a file needs fixing
 
 ## Monthly (first Monday, 60 min)
 

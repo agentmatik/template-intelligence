@@ -5,8 +5,8 @@
 ```
 ┌──────────────────────────────────────────────────────────┐
 │ HUMAN INTERFACE                                          │
-│ Editor (VS Code, Cursor, Obsidian) · Rendered (GitHub,  │
-│ MkDocs) · Conversational (Slack agent, Telegram)        │
+│ Talk to the agent (Slack agent, Claude Code, chat) ·    │
+│ Review PRs and read on GitHub                           │
 └─────────────────────────┬────────────────────────────────┘
                           │  reads, opens PRs
                           ▼
@@ -84,7 +84,7 @@ Agents follow written rules most of the time; hooks and CI enforce them every ti
 - **Durable.** Markdown from 2015 still reads.
 - **Portable.** Every agent tool reads the same files.
 - **Searchable.** Grep is fast enough. Agents route via frontmatter `type:`.
-- **Renderable.** MkDocs-Material → searchable docs site for free. Obsidian → graph view locally.
+- **Agent-readable everywhere.** Plain Markdown is native input for every agent runtime; GitHub renders it for the rare human who reads directly. No docs site to build or maintain.
 - **Version-controlled.** `git log` is your audit trail.
 
 ## What this architecture deliberately does NOT do

@@ -158,7 +158,7 @@ tags: [engineering, founding-team]
 - **No performance reviews or ratings.** Lives in your HR system.
 - **No medical, health, or sensitive personal information.** Ever.
 - **No personal details beyond work-relevant context.** Birthday is fine if you celebrate them; home address is not.
-- `audience: internal` always. People files never go on a public docs site.
+- `audience: internal` always. People files are never shared outside the team.
 
 ---
 
