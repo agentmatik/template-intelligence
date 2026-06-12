@@ -32,13 +32,13 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | Money: where numbers live, metric definitions | `finance.md` | **Pointers only — never raw figures** |
 | A specific customer or prospect | `customers/<slug>.md` | One file each |
 | A specific competitor | `competitors/<slug>.md` | One file each |
-| A specific person (team/advisor/investor/partner) | `people/<slug>.md` | One file each, internal only |
+| A specific person (team/freelancer/contractor/advisor/investor/partner) | `people/<slug>.md` | One file each, internal only |
 | Deal pipeline, pricing | `sales/pipeline.md`, `sales/pricing.md` | Ranges not exact figures in pipeline |
-| Long-horizon vision: core values, 10-year target, 3-year picture, 1-year plan | `operating-system/vision.md` | Quarterly detail stays in `strategy.md` |
-| Quarterly goals with owners (rocks/OKRs) | `operating-system/rocks.md` | 3–7, one owner each, binary done |
-| Weekly metric definitions, owners, goals | `operating-system/scorecard.md` | Definitions + dashboard links — never values |
-| Who owns which function (org structure) | `operating-system/accountability.md` | One name per seat |
-| A repeating procedure / SOP | `operating-system/processes/<slug>.md` | Core processes only; ≤500 words each |
+| Long-horizon vision: core values, 10-year target, 3-year picture, 1-year plan | `management/vision.md` | Quarterly detail stays in `strategy.md` |
+| Quarterly goals with owners (EOS Rocks / OKRs) | `management/goals.md` | 3–7, one owner each, binary done |
+| Weekly metric definitions, owners, goals | `management/kpis.md` | Definitions + dashboard links — never values |
+| Who owns which function (org structure) | `management/accountability.md` | One name per seat |
+| A repeating procedure / SOP | `management/processes/<slug>.md` | Core processes only; ≤500 words each |
 | A decision that was made | `decisions/YYYY-MM-DD-<slug>.md` | Immutable once written |
 | A meeting that happened | `meetings/<category>/YYYY-MM-DD-<topic>.md` | Distill, don't transcribe; category per `meetings/README.md` |
 | A weekly summary | `weekly/YYYY-Www.md` | One per ISO week |
@@ -49,6 +49,18 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | Customer PII, employee personal data | **Source system (not the repo)** | Never commit |
 
 When a piece of data could fit two places, ask: *is this a durable fact about an entity, or an event in time?* Facts go in the entity file's compiled-truth block; events go in a timeline (the entity's, or a meeting/decision file).
+
+---
+
+## Language rule
+
+**English is the operating language of the repo** — compiled truth, summaries, frontmatter, file names — regardless of the company's market or the source material's language. Agents and tools work most reliably in English, and it keeps every repo consistent. The exceptions, where the original language is *evidence* and translation would lose it:
+
+- **Verbatim quotes** in meeting notes and entity timelines — quote in the original language, then summarize in English.
+- **Brand voice examples** in `brand.md` — if the company sells in a local-language market, the dos/don'ts examples should include real local-language copy (the voice boundary only exists in the market's language). The surrounding explanation stays English.
+- **Customer-facing artifacts referenced by link** (local-language website, decks) — stay as they are; the repo describes them in English.
+
+When migrating non-English raw data: distill into English, preserve original-language quotes verbatim, and never machine-paraphrase a quote — if you can't translate it confidently, keep the original and mark it.
 
 ---
 
@@ -145,7 +157,7 @@ No mutable block — the whole file is a dated record. Once written, it's not ed
 
 ```yaml
 ---
-type: <customer|competitor|person|decision|meeting|weekly|company|strategy|product|brand|ops|finance|sales|runbook|vision|rocks|scorecard|accountability|memory>
+type: <customer|competitor|person|decision|meeting|weekly|company|strategy|product|brand|ops|finance|sales|runbook|vision|goals|kpis|accountability|memory>
 status: <draft|active|verified|superseded|archived>
 owner: "<who maintains this>"
 created: YYYY-MM-DD

@@ -31,6 +31,16 @@ Create one when **all** of these hold:
 
 **Do NOT create a skill for:** one-off tasks, things a single prompt handles, or anything you haven't actually done yet. Premature skills are dead weight.
 
+### Agents: codify repetition yourself — don't wait to be asked
+
+Detecting repetition and proposing the skill is **the agent's job**, not the founder's (it's an operating rule in `AGENTS.md`). The signals:
+
+- You're executing a multi-step procedure you remember doing twice before
+- `memory/learnings.md` holds several `pattern` entries describing the same workflow
+- A `management/processes/` SOP gets executed by an agent repeatedly (the process doc stays the human truth; the skill becomes its executable form — link them both ways)
+
+When a signal fires: draft `skills/<name>/SKILL.md` per the contract below, open a PR (skills are canonical content — never auto-commit), and note in the PR which 3+ occurrences justify it. The human merges. The monthly learnings prune (`guides/OPERATIONS.md`) is the backstop sweep for missed candidates.
+
 ---
 
 ## The four shipped starter skills

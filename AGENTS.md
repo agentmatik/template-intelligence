@@ -46,12 +46,12 @@ If two sources disagree, surface the conflict. Don't guess.
 | (root)         | `company.md`, `strategy.md`, `product.md`, `brand.md`, `ops.md`, `finance.md` |
 | `customers/`   | One file per named customer or active prospect                  |
 | `competitors/` | One file per competitor                                         |
-| `people/`      | Team, advisors, partners, investors (one file each)             |
+| `people/`      | Team, freelancers/contractors, advisors, partners, investors (one file each) |
 | `sales/`       | Pipeline by stage; deals worth tracking; pricing                |
 | `decisions/`   | `YYYY-MM-DD-<slug>.md` — append-only ADRs, immutable            |
-| `meetings/`    | `<category>/YYYY-MM-DD-<topic>.md` — distilled notes in a per-type folder (standups, leadership, customers, board…)               |
+| `meetings/`    | `<category>/YYYY-MM-DD-<topic>.md` — distilled notes in a per-type folder (standups, leadership, one-on-ones, customers, product, marketing) |
 | `weekly/`      | `YYYY-Www.md` — Friday founder/team brief                       |
-| `operating-system/` | Management-system artifacts: vision, rocks, scorecard, accountability, `processes/` (SOPs) |
+| `management/` | Management-system artifacts: vision, goals, KPIs, accountability, `processes/` (SOPs) |
 | `memory/`      | Agent-operational memory: `MEMORY.md` index, daily worklogs, `learnings.md` |
 | `skills/`      | (Optional) Cross-tool agent skills in SKILL.md format           |
 | `templates/`   | Note templates with frontmatter scaffolding                     |
@@ -70,6 +70,7 @@ If two sources disagree, surface the conflict. Don't guess.
 - **Handbook-first.** Document the change in this repo, then announce it (Slack/email) with a link to the diff — never the reverse.
 - **Every non-trivial canonical write opens a PR.** Time-series content (meetings, weekly briefs, memory worklogs) can auto-commit.
 - When a mistake gets corrected, **write a `memory/learnings.md` entry before finishing the task.**
+- **Codify repetition.** When you notice the same multi-step workflow for the 3rd time, propose a new skill via PR (`skills/README.md` has the contract) — don't keep re-deriving it.
 
 ---
 
@@ -79,7 +80,7 @@ Every durable note includes:
 
 ```yaml
 ---
-type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | sales | runbook | vision | rocks | scorecard | accountability | memory
+type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | sales | runbook | vision | goals | kpis | accountability | memory
 status: verified          # draft | active | verified | superseded | archived
 owner: {{FOUNDER_NAME}}
 created: 2026-04-22
@@ -141,6 +142,7 @@ When answering questions or writing content:
 - **Founder-readable** — no jargon unless it's our jargon.
 - **Explicit about confidence** — flag uncertainty.
 - **Linked to evidence** — cite the page or the live source.
+- **English is the operating language.** Compiled truth, summaries, and frontmatter are always English, whatever the source language. Verbatim evidence stays in its original language — quotes, transcript excerpts, local-market brand voice examples. Quote first, summarize in English after.
 
 ---
 
@@ -191,4 +193,4 @@ A task is complete when:
 
 ---
 
-*See [`CLAUDE.md`](./CLAUDE.md) for Claude-Code-specific extensions. See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for the rationale behind this structure. If you've been asked to bootstrap an intelligence repo from raw data, read [`docs/DATA-ORGANIZATION-PLAYBOOK.md`](./docs/DATA-ORGANIZATION-PLAYBOOK.md) (routing + root-file contracts) then [`docs/AGENT-INSTRUCTIONS.md`](./docs/AGENT-INSTRUCTIONS.md) (eleven-phase procedure). Each folder's `README.md` is the per-file generation contract.*
+*See [`CLAUDE.md`](./CLAUDE.md) for Claude-Code-specific extensions. See [`guides/ARCHITECTURE.md`](./guides/ARCHITECTURE.md) for the rationale behind this structure. If you've been asked to bootstrap an intelligence repo from raw data, read [`guides/DATA-ORGANIZATION-PLAYBOOK.md`](./guides/DATA-ORGANIZATION-PLAYBOOK.md) (routing + root-file contracts) then [`guides/AGENT-INSTRUCTIONS.md`](./guides/AGENT-INSTRUCTIONS.md) (eleven-phase procedure). Each folder's `README.md` is the per-file generation contract.*

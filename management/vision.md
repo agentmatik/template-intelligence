@@ -35,7 +35,7 @@ RULES:
   - 3-year picture: what the company looks like — revenue range, team
     shape, product scope — written as bullets you could check true/false.
   - 1-year plan: 3-7 dated, measurable goals. Rewrite annually.
-  - Current quarter does NOT go here — link strategy.md and rocks.md.
+  - Current quarter does NOT go here — link strategy.md and goals.md.
   - status: draft until the leadership team has confirmed every section.
 ============================================================ -->
 
@@ -77,7 +77,7 @@ product scope, market position. -->
 
 ## This quarter
 
-See [`../strategy.md`](../strategy.md) (priorities, bets, risks) and [`rocks.md`](./rocks.md) (quarterly rocks).
+See [`../strategy.md`](../strategy.md) (priorities, bets, risks) and [`goals.md`](./goals.md) (quarterly goals).
 
 ## Long-term issues list
 

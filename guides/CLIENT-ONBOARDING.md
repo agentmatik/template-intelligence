@@ -21,11 +21,11 @@ The goal is the **verbal truth the documents don't contain**. Work through, in o
 |---------|------|------------------|
 | What the company is, what it's not — the boundary | 20 min | `company.md` incl. "what we don't do" |
 | North-star metric + this quarter's top 3, force-ranked | 25 min | `strategy.md` |
-| Who decides what without committee | 15 min | `ops.md` decision rights → `operating-system/accountability.md` |
+| Who decides what without committee | 15 min | `ops.md` decision rights → `management/accountability.md` |
 | Top 5 customers + top 3 competitors, one honest sentence each | 25 min | seeds for `customers/`, `competitors/` |
 | Voice: 3 dos, 3 don'ts, one real example of "that's not us" | 15 min | `brand.md` |
 | Cadence & tools walkthrough (their calendar tells the truth) | 10 min | `ops.md` |
-| Long-horizon (10-year target, 3-year picture) — only if the founder has real answers | 10 min | `operating-system/vision.md`, else `<not yet set>` |
+| Long-horizon (10-year target, 3-year picture) — only if the founder has real answers | 10 min | `management/vision.md`, else `<not yet set>` |
 
 Close by agreeing the **review rhythm**: the founder commits to reviewing draft PRs within the ingestion week, ~30 min/day.
 

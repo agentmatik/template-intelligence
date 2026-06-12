@@ -26,6 +26,8 @@ Internalize these before doing anything. They override generic AI behavior.
 
 **Never commit secrets, PII, financials, or NDA content.** Even if it's in the source files. Especially if it's in the source files. You will see things you should not commit. Refuse, even if the user asks.
 
+**English is the operating language.** Distill everything into English — compiled truth, summaries, frontmatter — whatever language the source material is in. Verbatim quotes stay in their original language (they're evidence). Full rule: [`DATA-ORGANIZATION-PLAYBOOK.md`](./DATA-ORGANIZATION-PLAYBOOK.md) § Language rule.
+
 **Ask once, then proceed.** When you genuinely need clarification, ask one focused question. After the answer, proceed; don't keep asking.
 
 **Sensitive content gets approval.** Before creating any page that touches finance, comp, legal, NDA, or HR content, ask explicit permission.
@@ -64,7 +66,7 @@ Create exactly this. No more, no less, on day one.
 │
 ├── people/
 │   ├── README.md
-│   └── <slug>.md              # One file per teammate, advisor, partner, investor
+│   └── <slug>.md              # One file per teammate, freelancer/contractor, advisor, partner, investor
 │
 ├── sales/
 │   ├── README.md
@@ -77,7 +79,7 @@ Create exactly this. No more, no less, on day one.
 │
 ├── meetings/
 │   ├── README.md              # Taxonomy contract — categories below are a default; reshape to the company's calendar
-│   └── <category>/            # standups | leadership | one-on-ones | customers | product | marketing | board | planning
+│   └── <category>/            # standups | leadership | one-on-ones | customers | product | marketing (default 6; reshape to the company calendar)
 │       ├── README.md          # Per-category distill focus + propagation rules
 │       └── YYYY-MM-DD-<topic>.md
 │
@@ -85,11 +87,11 @@ Create exactly this. No more, no less, on day one.
 │   ├── README.md
 │   └── YYYY-Www.md            # Friday brief, one per ISO week
 │
-├── operating-system/          # Management-system artifacts (scaffold; fill only from real source material)
+├── management/          # Management-system artifacts (scaffold; fill only from real source material)
 │   ├── README.md
 │   ├── vision.md              # Long-horizon: values, 10-year target, 3-year picture, 1-year plan
-│   ├── rocks.md               # Quarterly goals — 3-7, one owner each, binary done
-│   ├── scorecard.md           # Weekly measurable definitions + dashboard links (never values)
+│   ├── goals.md               # Quarterly goals — 3-7, one owner each, binary done
+│   ├── kpis.md           # Weekly measurable definitions + dashboard links (never values)
 │   ├── accountability.md      # Seats → one owner each
 │   └── processes/             # Core SOPs (README contract; add <slug>.md only for real, repeating processes)
 │
@@ -106,9 +108,9 @@ Create exactly this. No more, no less, on day one.
 │   ├── meeting.md
 │   ├── weekly.md
 │   ├── process.md
-│   └── rock.md
+│   └── goal.md
 │
-├── docs/
+├── guides/
 │   ├── AGENT-INSTRUCTIONS.md  # This file
 │   ├── ARCHITECTURE.md        # The rationale
 │   ├── SETUP.md               # How to bootstrap from this template
@@ -150,7 +152,7 @@ Every durable note opens with this YAML block:
 
 ```yaml
 ---
-type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | sales | runbook | vision | rocks | scorecard | accountability | memory
+type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | sales | runbook | vision | goals | kpis | accountability | memory
 status: draft             # draft | active | verified | superseded | archived
 owner: <person>           # who maintains this
 created: YYYY-MM-DD
@@ -287,7 +289,7 @@ Create the directory structure from §2 (above). Then write:
 - `CLAUDE.md` — thin shim importing `AGENTS.md`
 - `INDEX.md` — minimal at first
 - `.gitignore` — see §6.4
-- `docs/` — copy `AGENT-INSTRUCTIONS.md`, `ARCHITECTURE.md`, `SETUP.md`, `OPERATIONS.md` from template
+- `guides/` — copy `AGENT-INSTRUCTIONS.md`, `ARCHITECTURE.md`, `SETUP.md`, `OPERATIONS.md` from template
 - `templates/` — copy entity templates
 - `.github/workflows/validate.yml` — basic CI
 
@@ -306,7 +308,7 @@ Write the six root files in this order:
 
 For each: aim for **accurate**, not comprehensive. Mark `status: draft`. Note sources in handoff.
 
-If the source material contains long-horizon planning (mission/values docs, annual plans, quarterly goals with named owners), also fill the matching `operating-system/` artifacts (`vision.md`, `rocks.md`, `scorecard.md`, `accountability.md`) — same rules: `status: draft`, never invent, leave `<not yet set>` where the source is silent. If no such material exists, leave the scaffolds untouched and note it in the handoff.
+If the source material contains long-horizon planning (mission/values docs, annual plans, quarterly goals with named owners), also fill the matching `management/` artifacts (`vision.md`, `goals.md`, `kpis.md`, `accountability.md`) — same rules: `status: draft`, never invent, leave `<not yet set>` where the source is silent. If no such material exists, leave the scaffolds untouched and note it in the handoff.
 
 ### Phase 5 — Entities
 
@@ -432,7 +434,7 @@ Prioritized:
 
 - Didn't configure `.mcp.json` (configure when ready to wire MCP)
 - Didn't create skills beyond the four shipped starters (add more when a workflow repeats)
-- Didn't fill `operating-system/` artifacts beyond what the source material supported
+- Didn't fill `management/` artifacts beyond what the source material supported
 - Didn't seed `memory/` (it fills itself as agents work)
 - Didn't migrate decisions older than 90 days or meetings older than 30
 - Didn't configure pre-commit hooks (install gitleaks when ready)
@@ -452,10 +454,10 @@ Prioritized:
 
 The repo already contains:
 
-- `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md`, `process.md`, `rock.md` — copy these into entity files and fill in
-- `docs/ARCHITECTURE.md` — keep as-is, customize examples
-- `docs/SETUP.md` — keep as-is
-- `docs/OPERATIONS.md` — keep as-is
+- `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md`, `process.md`, `goal.md` — copy these into entity files and fill in
+- `guides/ARCHITECTURE.md` — keep as-is, customize examples
+- `guides/SETUP.md` — keep as-is
+- `guides/OPERATIONS.md` — keep as-is
 - `.gitignore` — keep as-is (already has defensive patterns)
 - `.github/workflows/validate.yml` — keep as-is (CI for frontmatter + secrets)
 

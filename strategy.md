@@ -36,7 +36,7 @@ RULES:
 
 # Strategy
 
-> Quarterly layer. Longer horizons (core values, 10-year target, 3-year picture, 1-year plan) live in [`operating-system/vision.md`](./operating-system/vision.md); this quarter's rocks and owners in [`operating-system/rocks.md`](./operating-system/rocks.md); weekly measurables in [`operating-system/scorecard.md`](./operating-system/scorecard.md).
+> Quarterly layer. Longer horizons (core values, 10-year target, 3-year picture, 1-year plan) live in [`management/vision.md`](./management/vision.md); this quarter's goals and owners in [`management/goals.md`](./management/goals.md); weekly measurables in [`management/kpis.md`](./management/kpis.md).
 
 ## North star
 

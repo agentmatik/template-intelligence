@@ -1,7 +1,7 @@
 name: validate
 
 # CI for the intelligence repo. Three checks, all advisory rules made
-# deterministic (prose is advisory; CI guarantees it — see docs/ARCHITECTURE.md):
+# deterministic (prose is advisory; CI guarantees it — see guides/ARCHITECTURE.md):
 #   1. Frontmatter — every canonical file carries the required fields
 #   2. Secrets — gitleaks scan; a leak fails the build
 #   3. Links — no broken relative links between Markdown files

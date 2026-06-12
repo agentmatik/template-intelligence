@@ -1,6 +1,6 @@
-# Operating System
+# Management
 
-The management-system layer: how the company sets direction, assigns ownership, measures the week, and documents its core processes. This README is the complete contract for the folder.
+How the company is run, written down: where it's going (`vision.md`), what this quarter must achieve (`goals.md`), the numbers watched weekly (`kpis.md`), who owns what (`accountability.md`), and how the core work gets done (`processes/`). This README is the complete contract for the folder.
 
 **This pack is optional and framework-agnostic.** The artifacts use generic names so any operating framework maps onto them. If you don't run a named system, use them as-is — they're the minimum set any disciplined company keeps written down.
 
@@ -13,8 +13,8 @@ The management-system layer: how the company sets direction, assigns ownership, 
 | File | What it holds | EOS equivalent | OKR equivalent | 4DX equivalent |
 |------|---------------|----------------|----------------|----------------|
 | `vision.md` | Long-horizon direction: values, focus, 10-year target, 3-year picture, 1-year plan | V/TO® (Vision/Traction Organizer) | Mission + annual objectives | WIG context |
-| `rocks.md` | This quarter's 3–7 most important goals, one owner each | Rocks | Quarterly OKRs | WIGs |
-| `scorecard.md` | 5–15 weekly measurables with owners and goals; north-star on top | Scorecard | KR dashboard | Lead measures + scoreboard |
+| `goals.md` | This quarter's 3–7 most important goals, one owner each | Rocks | Quarterly OKRs | WIGs |
+| `kpis.md` | 5–15 weekly measurables with owners and goals; north-star on top | Scorecard | KR dashboard | Lead measures + scoreboard |
 | `accountability.md` | Seats → roles → responsibilities, one owner per seat | Accountability Chart | — | — |
 | `processes/` | Documented core processes (SOPs) | Core Processes ("the EOS Process Component") | — | — |
 
@@ -22,17 +22,17 @@ Relationship to the root files (SSOT rule — link, never duplicate):
 
 - `strategy.md` stays the **quarterly "what we're doing now"** — north-star definition, top-3 priorities, bets, risks. `vision.md` holds the **longer horizons** and links to `strategy.md` for the current quarter.
 - `ops.md` keeps the cadence table and tools; its decision-rights section links to `accountability.md` for the full seat map.
-- `weekly/` briefs report **against** `rocks.md` and `scorecard.md` (the optional L10-compatible agenda in `templates/weekly.md`).
-- Metric *values* live in dashboards (live systems); `scorecard.md` holds definitions, owners, goals, and links — per the repo-wide rule that numbers stay in the systems that own them.
+- `weekly/` briefs report **against** `goals.md` and `kpis.md` (the optional L10-compatible agenda in `templates/weekly.md`).
+- Metric *values* live in dashboards (live systems); `kpis.md` holds definitions, owners, goals, and links — per the repo-wide rule that numbers stay in the systems that own them.
 
 ---
 
 ## Conventions
 
-- All four root artifacts are **canonical**: full frontmatter, PR-gated changes, `compiled truth above ---, dated timeline below` where history matters (`rocks.md` keeps past quarters below the rule).
-- Frontmatter `type:` values: `vision`, `rocks`, `scorecard`, `accountability`; process docs use `runbook`.
-- Quarterly rhythm: rewrite `rocks.md` compiled-truth block each quarter (move the finished quarter to the timeline); review `vision.md` quarterly, rewrite the 1-year plan annually.
-- Weekly rhythm: scorecard reviewed in the weekly brief; a measurable off-track two weeks running becomes an issue (and possibly a `decisions/` entry).
+- All four root artifacts are **canonical**: full frontmatter, PR-gated changes, `compiled truth above ---, dated timeline below` where history matters (`goals.md` keeps past quarters below the rule).
+- Frontmatter `type:` values: `vision`, `goals`, `kpis`, `accountability`; process docs use `runbook`.
+- Quarterly rhythm: rewrite `goals.md` compiled-truth block each quarter (move the finished quarter to the timeline); review `vision.md` quarterly, rewrite the 1-year plan annually.
+- Weekly rhythm: KPIs reviewed in the weekly brief; a KPI off-track two weeks running becomes an issue (and possibly a `decisions/` entry).
 
 ---
 
@@ -48,9 +48,9 @@ A process that an agent executes repeatedly is a candidate for promotion to `ski
 
 ## Quality bar
 
-**Good:** 3–7 rocks with one owner and a binary done/not-done definition. A scorecard a stranger could read and know if the week was good. An accountability chart where every seat has exactly one name. Processes a new hire follows without asking.
+**Good:** 3–7 goals with one owner and a binary done/not-done definition. A KPI table a stranger could read and know if the week was good. An accountability chart where every seat has exactly one name. Processes a new hire follows without asking.
 
-**Bad:** Ten rocks (= no priorities — same rule as `strategy.md`). Scorecard numbers pasted weekly into the file (they go stale; link the dashboard). Two names on one seat ("when two people are accountable, nobody is"). Aspirational processes describing how things *should* work instead of how they do.
+**Bad:** Ten goals (= no priorities — same rule as `strategy.md`). KPI values pasted weekly into the file (they go stale; link the dashboard). Two names on one seat ("when two people are accountable, nobody is"). Aspirational processes describing how things *should* work instead of how they do.
 
 ---
 

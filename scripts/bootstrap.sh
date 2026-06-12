@@ -71,7 +71,7 @@ else
 fi
 
 echo
-echo "Next steps (docs/SETUP.md):"
+echo "Next steps (guides/SETUP.md):"
 echo "  1. Seed the ten minimum files (Step 3)"
 echo "  2. Secure the repo: secret scanning, push protection, branch protection (Step 4)"
 echo "  3. Configure MCP servers (Step 5)"

@@ -5,7 +5,7 @@
 
 <!-- One or two sentences. Link evidence (meeting note, decision, live source). -->
 
-## Checklist (from docs/OPERATIONS.md → "How PRs should look")
+## Checklist (from guides/OPERATIONS.md → "How PRs should look")
 
 - [ ] Small — one idea, one file (or a tight set)
 - [ ] Frontmatter `updated` + `last_verified` refreshed on touched canonical files

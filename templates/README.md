@@ -1,6 +1,8 @@
 # Templates
 
-Frontmatter-scaffolded starting points, one per file type. Copy → fill → save into the target folder. Never edit a template "to use it" — copy it out.
+**What this folder is:** blank file skeletons for *this repo's own file types* — the correct frontmatter block plus the section structure, so every new customer page, decision, or meeting note starts with the right shape instead of being improvised. Copy → fill → save into the target folder. Never edit a template "to use it" — copy it out.
+
+**What this folder is NOT:** business-document templates (pitch decks, board-update formats, offer letters). The business best practice — YC-style strategy discipline, EOS-style goal setting — isn't stored here as fill-in forms; it's encoded as **generation guides** inside the files themselves (the `<!-- GENERATION GUIDE -->` comment blocks in `strategy.md`, `management/vision.md`, etc.) and as the per-folder README contracts. The know-how lives where the content lives; this folder only supplies the skeletons.
 
 | Template | Produces | Target folder | Full contract |
 |----------|----------|---------------|---------------|
@@ -10,8 +12,8 @@ Frontmatter-scaffolded starting points, one per file type. Copy → fill → sav
 | `decision.md` | An ADR | `decisions/YYYY-MM-DD-<slug>.md` | [`../decisions/README.md`](../decisions/README.md) |
 | `meeting.md` | A distilled meeting note | `meetings/<category>/YYYY-MM-DD-<topic>.md` | [`../meetings/README.md`](../meetings/README.md) |
 | `weekly.md` | The Friday brief | `weekly/YYYY-Www.md` | [`../weekly/README.md`](../weekly/README.md) |
-| `process.md` | A core-process SOP | `operating-system/processes/<slug>.md` | [`../operating-system/processes/README.md`](../operating-system/processes/README.md) |
-| `rock.md` | A table row (not a file) | `operating-system/rocks.md` | [`../operating-system/README.md`](../operating-system/README.md) |
+| `process.md` | A core-process SOP | `management/processes/<slug>.md` | [`../management/processes/README.md`](../management/processes/README.md) |
+| `goal.md` | A table row (not a file) | `management/goals.md` | [`../management/README.md`](../management/README.md) |
 
 Conventions:
 

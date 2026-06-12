@@ -27,6 +27,11 @@ CRITICAL RULE: The 3 DON'TS and the worked NEGATIVE example matter most. Voice
 is defined by its boundaries. An agent can't write in-voice from adjectives
 ("friendly, professional") — it needs concrete do/don't pairs with examples.
 
+LANGUAGE: If the company sells in a non-English market, the voice examples
+(dos/don'ts, worked copy) should be in the MARKET'S language — the voice
+boundary only exists there. Explanations around them stay English, like the
+rest of the repo (see guides/DATA-ORGANIZATION-PLAYBOOK.md → Language rule).
+
   - status: draft when generated; human verifies.
   - Link visual assets (logo, deck) — don't embed binaries.
 ============================================================ -->

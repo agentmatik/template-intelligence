@@ -1,10 +1,10 @@
 # Leadership
 
-The weekly leadership meeting — EOS Level-10-compatible if the company runs the `operating-system/` pack (segue → scorecard review → rock review → headlines → to-dos → IDS issue-solving → conclude), or whatever the company's weekly leadership sync actually is.
+The weekly leadership meeting — EOS Level-10-compatible if the company runs the `management/` pack (segue → KPI review → goal review → headlines → to-dos → IDS issue-solving → conclude — the EOS L10 agenda), or whatever the company's weekly leadership sync actually is.
 
-- **Distill focus:** issues *solved* (not just discussed) with the decision each produced; to-dos with owners; scorecard measurables flagged off-track; rock status changes.
-- **Propagate:** decisions → `decisions/`; rock status → [`../../operating-system/rocks.md`](../../operating-system/rocks.md); off-track measurables → the weekly brief's scorecard check; anything affecting an entity → its timeline.
-- **Don't:** restate the scorecard numbers (link the dashboard) or carry unsolved issues silently — an issue discussed twice without resolution gets named in the note.
+- **Distill focus:** issues *solved* (not just discussed) with the decision each produced; to-dos with owners; KPIs flagged off-track; goal status changes.
+- **Propagate:** decisions → `decisions/`; goal status → [`../../management/goals.md`](../../management/goals.md); off-track KPIs → the weekly brief's KPIs & goals check; anything affecting an entity → its timeline.
+- **Don't:** restate the KPI values (link the dashboard) or carry unsolved issues silently — an issue discussed twice without resolution gets named in the note.
 
 Parent contract: [`../README.md`](../README.md)
 

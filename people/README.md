@@ -1,6 +1,6 @@
 # People
 
-One file per person: team members, advisors, partners, investors. This README is the complete contract for generating a person file. An agent with no prior context should be able to read this and produce a correct, consistent file from raw data.
+One file per person: team members, freelancers and contractors, advisors, partners, investors. This README is the complete contract for generating a person file. An agent with no prior context should be able to read this and produce a correct, consistent file from raw data.
 
 Template: [`../templates/person.md`](../templates/person.md)
 
@@ -13,6 +13,7 @@ Create a file when a person meets **any** of these:
 - Is a current team member (employee or long-term contractor)
 - Is an advisor, board member, or mentor with an ongoing relationship
 - Is an investor (angel or fund partner) in the company
+- Is a freelancer or contractor doing recurring work (a big group at most small companies — they carry real context: what they own, rates live elsewhere, their working agreements)
 - Is a recurring external partner (agency lead, key supplier contact, channel partner)
 
 **Do NOT create a file for:**
@@ -36,7 +37,7 @@ Format: `<first>-<last>.md`, lowercase, ASCII, hyphen-separated.
 - Name collision (two Sarah Chens) → append a disambiguator: `sarah-chen-eng.md`, `sarah-chen-sales.md`
 
 Subfolder by relationship if the folder grows past ~15 files:
-`people/team/`, `people/advisors/`, `people/investors/`, `people/partners/`. Until then, keep them flat in `people/`.
+`people/team/`, `people/freelancers/`, `people/advisors/`, `people/investors/`, `people/partners/`. Until then, keep them flat in `people/`.
 
 ---
 
@@ -55,7 +56,7 @@ updated: 2026-04-22             # Date of last material edit (today, when genera
 last_verified: 2026-04-22       # Date facts last confirmed against reality. If you
                                 #   pulled from a dated source, use the SOURCE's date.
 source_of_truth: manual         # manual | linear | notion | slack | granola | gdrive
-relationship: team              # team | advisor | investor | partner. REQUIRED.
+relationship: team              # team | freelancer | advisor | investor | partner. REQUIRED.
 audience: internal              # ALWAYS "internal" for people files. Never "public".
 tags: []                        # e.g. [founder, engineering, board]
 ---
@@ -79,7 +80,7 @@ Fill these fields. Omit a line only if you genuinely have no data and no reasona
 
 | Field | What goes here | How to source it from raw data |
 |-------|----------------|-------------------------------|
-| **Role** | Current title + reporting line (team), or relationship nature (advisor/investor/partner) | Org chart, email signature, LinkedIn, intro email |
+| **Role** | Current title + reporting line (team), or relationship nature (freelancer/advisor/investor/partner) + what they own | Org chart, email signature, LinkedIn, intro email |
 | **Contact** | Work email, preferred channel. Phone only if work-relevant. | Email headers, signature, CRM |
 | **Timezone** | UTC±X or city | Calendar, signature, stated location |
 | **Joined / met** | Date they joined the team or the relationship began | Offer letter date, first email, contract start |

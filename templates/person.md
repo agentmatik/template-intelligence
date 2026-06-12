@@ -16,7 +16,7 @@ audience: internal
 <!-- COMPILED TRUTH — current role, contact, context.
      NEVER include compensation, performance reviews, health/personal info. -->
 
-**Role:** Current role, reporting line (if team), relationship (advisor/partner/investor).
+**Role:** Current role, reporting line (if team), relationship (freelancer/contractor/advisor/partner/investor) and what they own.
 
 **Contact:** Work email, phone (if relevant), preferred channel.
 

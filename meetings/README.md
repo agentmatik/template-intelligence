@@ -13,18 +13,16 @@ Notes live at `meetings/<category>/YYYY-MM-DD-<topic>.md`. The template ships th
 | Category | What goes there | Cadence anchor |
 |----------|-----------------|----------------|
 | [`standups/`](./standups/README.md) | Daily/async team syncs — only the rare one that produced something durable | Daily |
-| [`leadership/`](./leadership/README.md) | The weekly leadership meeting (EOS L10-compatible: scorecard, rocks, issues) | Weekly |
+| [`leadership/`](./leadership/README.md) | The weekly leadership meeting (EOS L10-compatible: KPIs, goals, issues) | Weekly |
 | [`one-on-ones/`](./one-on-ones/README.md) | Manager 1:1s — commitments and themes, never comp/performance detail | Weekly/biweekly |
 | [`customers/`](./customers/README.md) | Customer, prospect, and user calls — the YC "talk to users" record | Continuous |
 | [`product/`](./product/README.md) | Sprint planning, design/eng reviews, retros | Weekly/sprint |
 | [`marketing/`](./marketing/README.md) | Marketing & growth syncs, campaign reviews, experiment readouts | Weekly/monthly |
-| [`board/`](./board/README.md) | Board meetings and investor updates | Monthly/quarterly |
-| [`planning/`](./planning/README.md) | Quarterly and annual planning sessions (EOS quarterly pulse) | Quarterly |
 
 **This taxonomy is a starting point, not a prescription.** During setup or migration, reshape it to the company's *actual* calendar:
 
 - **Delete** category folders the company doesn't use (no standups? remove `standups/`).
-- **Rename or add** categories its real cadence demands (`all-hands/`, `partners/`, `hiring/`…) — each new category gets a short README on the same pattern: what belongs, distill focus, propagation rule.
+- **Rename or add** categories its real cadence demands (`board/` once there's a board, `planning/` for quarterly sessions, `all-hands/`, `partners/`, `hiring/`…) — each new category gets a short README on the same pattern: what belongs, distill focus, propagation rule. For planning sessions, remember the propagation duty: goals set there feed `strategy.md`, `management/goals.md`, and `management/vision.md` — the note records the session, the artifacts hold the plan.
 - The company's calendar is the source of truth for which categories exist — folders must reflect real recurring meetings, never aspiration.
 - A meeting that fits no category: prefer creating the right category over inventing a `misc/`.
 
@@ -91,7 +89,7 @@ Meetings are **distillations, not transcripts.** A 60-minute meeting becomes ~30
 | **Decisions** | What was decided (or deliberately not). The most important section. Owner + due where applicable. | Look for commitments, agreements, conclusions |
 | **Action items** | Checkbox list: owner — action — deadline | Look for "I'll...", "can you...", assignments |
 | **Risks / flags** | Concerns surfaced. Link to the entity they affect. | Objections, worries, blockers raised |
-| **Key moments / quotes** | Short attributed quotes ONLY when they matter materially. Never a transcript. | Pivotal statements |
+| **Key moments / quotes** | Short attributed quotes ONLY when they matter materially. Never a transcript. Quotes stay in their **original language** (translation loses evidence); summarize in English after. | Pivotal statements |
 | **Links** | Granola original, related customer/decision files, Linear tickets created | Cross-references |
 
 ### Critical: propagate canonical changes

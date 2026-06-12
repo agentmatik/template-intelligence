@@ -54,7 +54,7 @@ Target ≤400 words — readable in two minutes. Sections:
 | **What we learned** | The one non-obvious insight of the week | Synthesis across meetings/customer calls. If none, say so — don't invent. |
 | **Customer signals** | Who did what, what they said. Link customer files. | `customers/` updates, call notes, support themes |
 | **Metrics** | Links to live dashboards. **Do NOT paste numbers** — they go stale. | `INDEX.md` / `strategy.md` dashboard links |
-| **Scorecard & rocks check** *(optional)* | Off-track items only; all-green weeks say "All on track." The L10-compatible review: scorecard → rocks → issues. Off-track 2 weeks running → raise as an issue, decide, log to `decisions/` if course changes. | `operating-system/scorecard.md` + `operating-system/rocks.md` |
+| **KPIs & goals check** *(optional)* | Off-track items only; all-green weeks say "All on track." The L10-compatible review: KPIs → goals → issues. Off-track 2 weeks running → raise as an issue, decide, log to `decisions/` if course changes. | `management/kpis.md` + `management/goals.md` |
 | **Blockers / risks** | Honestly named | Meeting notes, Linear blocked items |
 | **Decisions this week** | Link decision files | `decisions/` created this week |
 | **Next week's focus** | Three priorities, not ten | Current Linear cycle, open decisions |

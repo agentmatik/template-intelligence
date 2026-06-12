@@ -3,7 +3,7 @@
 ## Two paths
 
 **Path A:** I have existing files (decks, notes, docs) and want an agent to build the v1 for me.
-→ Use [`docs/AGENT-INSTRUCTIONS.md`](./AGENT-INSTRUCTIONS.md). Open it in Claude Code, point at your source folder, and follow Phase 0 onwards.
+→ Use [`guides/AGENT-INSTRUCTIONS.md`](./AGENT-INSTRUCTIONS.md). Open it in Claude Code, point at your source folder, and follow Phase 0 onwards.
 
 **Path B:** I'm starting fresh and want to seed it myself.
 → Continue reading.

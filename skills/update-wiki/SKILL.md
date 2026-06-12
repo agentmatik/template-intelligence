@@ -20,7 +20,7 @@ Turn a pile of raw dropped material (an `inbox/` folder, pasted notes, a stack o
 
 ## Steps
 
-1. Inventory every item. For each, decide its bucket using the routing table in [`docs/DATA-ORGANIZATION-PLAYBOOK.md`](../../docs/DATA-ORGANIZATION-PLAYBOOK.md): durable → repo file; live → stays in its system (note it); sensitive → quarantine and tell the user; stale/duplicate → skip with reason.
+1. Inventory every item. For each, decide its bucket using the routing table in [`guides/DATA-ORGANIZATION-PLAYBOOK.md`](../../guides/DATA-ORGANIZATION-PLAYBOOK.md): durable → repo file; live → stays in its system (note it); sensitive → quarantine and tell the user; stale/duplicate → skip with reason.
 2. For each durable item, apply the matching folder README contract: update an existing canonical page (preferred) or create one from the matching template. Compiled-truth edits + dated timeline appends, per the entity pattern.
 3. Show the user the routing plan (item → action → target) **before writing** if more than ~5 items are involved.
 4. Make the changes. Open **one PR** titled `wiki: reconcile <source> (<N> items)`, listing per item what was done and what was skipped/quarantined and why.

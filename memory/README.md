@@ -79,7 +79,7 @@ Rules:
 
 - **Write the entry before finishing the task** in which the mistake was made or corrected. A lesson recorded a session later is a lesson lost.
 - One entry per lesson. If a new event confirms an existing entry, add a dated confirmation line to it instead of duplicating.
-- **Prune monthly** (see `docs/OPERATIONS.md`): merge duplicates, delete entries that proved wrong, promote entries that changed standing behavior into `MEMORY.md` (one line + pointer) or — if they changed *company* process — into `ops.md` or a process doc.
+- **Prune monthly** (see `guides/OPERATIONS.md`): merge duplicates, delete entries that proved wrong, promote entries that changed standing behavior into `MEMORY.md` (one line + pointer) or — if they changed *company* process — into `ops.md` or a process doc.
 
 ---
 
