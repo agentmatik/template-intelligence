@@ -69,7 +69,7 @@ Agents bridge all three layers. Humans write PRs into the middle. The middle lay
 | `GLOSSARY.md` | Every term defined — system vocabulary ships filled; company terms grow. |
 | `Makefile` | `make verify` — the same frontmatter/links/secrets checks CI runs, locally. |
 | `LICENSE` · `SECURITY.md` · `CONTRIBUTING.md` | MIT (template structure only) · secret rules + burned-credential policy · how changes enter the repo. |
-| `guides/` | The manuals: `ARCHITECTURE.md` (why), `SETUP.md` (bootstrap), `OPERATIONS.md` (rituals), `DATA-ORGANIZATION-PLAYBOOK.md` (routing), `AGENT-INSTRUCTIONS.md` (migration procedure), `CLIENT-ONBOARDING.md` (consultancy playbook), `HUMAN-JOB.md` (the human's whole role, click-by-click), `FAQ-AND-FAILURE-MODES.md` (when something feels wrong), `TEMPLATE-CHANGELOG.md` (template versions). |
+| `guides/` | The manuals: `ARCHITECTURE.md` (why), `SETUP.md` (bootstrap), `OPERATIONS.md` (rituals), `DATA-ORGANIZATION-PLAYBOOK.md` (routing), `AGENT-INSTRUCTIONS.md` (migration procedure), `CLIENT-ONBOARDING.md` (consultancy playbook), `HUMAN-JOB.md` (the human's whole role, click-by-click), `TEAM-ACCESS.md` (how the whole team reads/edits without GitHub), `FAQ-AND-FAILURE-MODES.md` (when something feels wrong), `TEMPLATE-CHANGELOG.md` (template versions). |
 | `scripts/` | `bootstrap.sh` (one-command template setup), `validate-frontmatter.sh`, `check-stale.sh`, `check-links.sh`, `pre-commit.sh` (gitleaks); `make verify` runs the CI checks locally. |
 | `.claude/` | `settings.json` deterministic hooks (frontmatter validation on every agent write); `skills/` symlinks for Claude Code discovery. |
 | `.github/` | `workflows/validate.yml` CI (frontmatter, secrets, links, staleness) · PR template with the canonical-change checklist · `CODEOWNERS` stub. |
@@ -94,6 +94,9 @@ Ask the agent: *"Read AGENTS.md and brief me on this company."* Or read directly
 
 **Operator running the company on it:**
 [`management/README.md`](./management/README.md) (artifact map + EOS/OKR/4DX table) → `vision.md` → `goals.md` → `kpis.md` → [`guides/OPERATIONS.md`](./guides/OPERATIONS.md) for the rituals that keep it alive.
+
+**A teammate who just needs to read or change something (no GitHub account):**
+[`guides/TEAM-ACCESS.md`](./guides/TEAM-ACCESS.md) — talk to the agent in Slack to ask or to propose a change; browse read-only published views in Notion. Nobody but the maintainer needs GitHub.
 
 **OpenClaw user:**
 [`agents-compat/openclaw/README.md`](./agents-compat/openclaw/README.md) — the repo doubles as an OpenClaw workspace; AGENTS.md and `memory/` work unmodified.
@@ -173,6 +176,8 @@ The full twelve principles with rationale: [`guides/ARCHITECTURE.md`](./guides/A
 **Where do the actual metric numbers live?** In your dashboards. The repo holds definitions, owners, goals, and links — numbers pasted into Markdown go stale and rot trust.
 
 **How do agents avoid hallucinating company facts?** Source-of-truth hierarchy (`AGENTS.md`): verified repo files → live MCP → never training data. Files without frontmatter are drafts; `status: verified` requires a human. The 20-question quarterly eval catches regressions.
+
+**How does the rest of the team read or edit this without GitHub accounts?** Three tiers: everyone asks and proposes changes by talking to the agent in Slack (it opens the PR); a few key pages are published read-only into Notion; only the 1–2 maintainers use GitHub to merge. Never two-way-sync Notion back into the repo. Full design: [`guides/TEAM-ACCESS.md`](./guides/TEAM-ACCESS.md).
 
 **Can multiple agents work in it concurrently?** Time-series folders (meetings, weeklies, memory dailies) are append-only and auto-commit safely. Canonical pages go through PRs — the human reviewer is the arbiter when agents disagree.
 

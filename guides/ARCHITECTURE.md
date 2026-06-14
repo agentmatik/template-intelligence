@@ -96,6 +96,7 @@ Agents follow written rules most of the time; hooks and CI enforce them every ti
 - ❌ Long procedures in `AGENTS.md`. Skills load on demand.
 - ❌ Everything-in-one mega-file.
 - ❌ Mirroring Linear/Notion/Slack into the repo. Live systems stay live.
+- ❌ Two-way sync between the repo and any other surface. Publish *out* to Notion read-only views (one-way); never let edits flow back unreviewed. See [`TEAM-ACCESS.md`](./TEAM-ACCESS.md).
 
 ## Evolution path
 

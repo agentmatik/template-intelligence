@@ -6,6 +6,14 @@ Versioning: tags `vMAJOR.MINOR` on the template repo. MAJOR = structural changes
 
 ---
 
+## v1.4 — 2026-06-14
+
+**Team access & rollout** (closes the last acknowledged gap — the README promised "ask in Slack" with no wiring path):
+
+- New `guides/TEAM-ACCESS.md`: the three access tiers (1 ask & edit via the Slack agent — everyone, no GitHub account; 2 browse read-only Notion views; 3 review & merge on GitHub — 1–2 maintainers), the **one-way-out / never-two-way** rule with reasoning, the published-view stamped-header convention driven off the `audience:` field, and Slack-agent wiring options (Claude in Slack / OpenClaw-in-a-channel / n8n webhook bridge) with the read-broad/write-as-PR invariants
+- Wired into README (new "teammate without GitHub" reading path + FAQ entry + file map), `guides/README.md`, `guides/ARCHITECTURE.md` (deliberately-NOT now names two-way sync explicitly), and `HUMAN-JOB.md`
+- Companion (agency toolkit, not the template): an n8n `publish-to-notion` building block for Tier-2 one-way publishing
+
 ## v1.3 — 2026-06-12
 
 **QA hardening** (5-agent adversarial audit: cold-start agent + cold-start founder simulations, consistency forensics, SME gap analysis vs a production SSOT, executable verification):

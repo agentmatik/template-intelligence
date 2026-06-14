@@ -1,6 +1,6 @@
 # The human's job
 
-Agents do the file work. Your job is small, specific, and non-delegable: **answer questions, review changes, verify truth.** This page is everything you personally must know how to do — with zero assumed technical background.
+Agents do the file work. Your job is small, specific, and non-delegable: **answer questions, review changes, verify truth.** (This page is for the maintainer who merges. Teammates who only need to read or request changes never touch GitHub — see [`TEAM-ACCESS.md`](./TEAM-ACCESS.md).) This page is everything you personally must know how to do — with zero assumed technical background.
 
 ## Your week at a glance
 
