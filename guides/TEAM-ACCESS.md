@@ -14,7 +14,9 @@ The repo is the source of truth, but **most of the team will never open GitHub.*
 | 2. **Browse** | Anyone | Published **Notion** views (read-only) | Yes — a few key pages | No (edits go via Tier 1) | No |
 | 3. **Review & merge** | Founder / maintainer (1–2 people) | **GitHub** | Yes — everything | Yes — approve/merge PRs | Yes |
 
-The mental model to give the team: **Notion is the noticeboard, Slack is the reception desk, GitHub is the vault.** You read the noticeboard, you talk to reception to change anything, and only the keyholder opens the vault.
+The mental model to give the team: **Notion is the noticeboard, Slack is the reception desk, Linear is the job board, GitHub is the vault.** You read the noticeboard, you talk to reception to change anything, you track your work on the job board, and only the keyholder opens the vault.
+
+(This page covers the *durable truth* in the repo. Live task tracking stays in Linear — the two are different layers; see § Where Linear fits.)
 
 ### Tier 1 — Ask & edit (the primary interface for everyone)
 
@@ -41,6 +43,29 @@ A reference implementation (GitHub webhook on push to `main` → render changed 
 ### Tier 3 — Review & merge (GitHub, for the few)
 
 Only the founder/maintainer (and a consultant during an engagement) needs a GitHub account — `CODEOWNERS` already encodes who must approve what. Their whole job is one page: [`HUMAN-JOB.md`](./HUMAN-JOB.md) (incl. click-by-click PR review). Note: GitHub free private repos allow unlimited read-only collaborators, so a curious teammate *can* be invited to browse the raw repo — but Tiers 1–2 mean nobody has to.
+
+---
+
+## Where Linear fits — durable truth vs live work
+
+Linear isn't a fourth access tier to the repo; it's a **different layer**, and the team keeps using it exactly as before. The one question that decides where anything belongs:
+
+> **"Is this still true next week?"** → the repo (durable truth). **"Is this something someone needs to *do*?"** → Linear (live work).
+
+| | Repo (the SSOT / GitHub) | Linear |
+|---|---|---|
+| Holds | Durable truth: decisions, strategy, who customers are, the *why* | Live execution: tasks, who's on what now, cycle/sprint status, the backlog |
+| Lifespan | Weeks–months | Hours–days |
+| Source of truth for | "What's true / what did we decide" | "What's being done / what's next" |
+
+They never copy each other — the repo does **not** mirror Linear tickets, and Linear does **not** hold durable decisions. They connect through the agent and a few clean handoffs:
+
+- A **decision** logged in `decisions/` can spawn Linear tasks to execute it — the decision stays in the repo, the tasks live in Linear.
+- `product.md` **links to** the Linear roadmap rather than copying it (a pasted backlog rots in days).
+- When work **ships**, the durable conclusion flows back to the repo (a decision, a customer timeline entry, the weekly brief); the ticket itself stays in Linear.
+- The **weekly brief** joins both layers: closed Linear issues + repo decisions + customer signals → one summary (the agent reads Linear live via MCP).
+
+So: track tasks in Linear as you always have; the repo holds the truth those tasks are *about*; the agent reads both and stitches them together when you ask.
 
 ---
 
@@ -80,6 +105,7 @@ Set the channel (e.g. `#intelligence`) and put its name in the Tier-2 published-
 ## Quick decision guide
 
 - *"I just want to look something up."* → Ask the agent in Slack (Tier 1), or read the Notion view (Tier 2).
-- *"I need to change a fact."* → Tell the agent in Slack. It opens the PR. (Tier 1)
+- *"I need to change a fact / decision."* → Tell the agent in Slack. It opens the PR. (Tier 1)
+- *"I need to track a task or see what's in progress."* → Linear, as always (it's live work, not durable truth — see § Where Linear fits).
 - *"I approve changes / I own the repo."* → GitHub (Tier 3); your job is [`HUMAN-JOB.md`](./HUMAN-JOB.md).
 - *"Can we let Notion edits flow back to the repo?"* → **No.** See § Why not two-way sync.
