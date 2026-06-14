@@ -10,11 +10,13 @@ The repo is the source of truth, but **most of the team will never open GitHub.*
 
 | Tier | Who | Surface | Reads? | Edits? | Needs a GitHub account? |
 |------|-----|---------|--------|--------|--------------------------|
-| 1. **Ask & edit** | Everyone | The agent, in **Slack** | Yes — ask in plain language | Yes — say the change; agent opens a PR | No |
+| 1. **Ask & edit** | Everyone | The **agent** (living in **Slack**) | Yes — ask in plain language | Yes — say the change; agent opens a PR | No |
 | 2. **Browse** | Anyone | Published **Notion** views (read-only) | Yes — a few key pages | No (edits go via Tier 1) | No |
 | 3. **Review & merge** | Founder / maintainer (1–2 people) | **GitHub** | Yes — everything | Yes — approve/merge PRs | Yes |
 
-The mental model to give the team: **Notion is the noticeboard, Slack is the reception desk, Linear is the job board, GitHub is the vault.** You read the noticeboard, you talk to reception to change anything, you track your work on the job board, and only the keyholder opens the vault.
+The mental model to give the team: **Notion is the noticeboard, the agent in Slack is the receptionist, Linear is the job board, GitHub is the vault.** You read the noticeboard, you ask the receptionist to look things up or change anything, you track your work on the job board, and only the keyholder opens the vault.
+
+A note on "the agent in Slack": Slack is just the *room* — the **agent is who you actually talk to** (it reads the vault, drafts the changes, opens the PRs). Which agent runs there is a setup choice (Claude in Slack, an OpenClaw bot in a channel, or an n8n bridge — see § Wiring the Slack agent); to the team it's simply "the receptionist in our channel."
 
 (This page covers the *durable truth* in the repo. Live task tracking stays in Linear — the two are different layers; see § Where Linear fits.)
 
