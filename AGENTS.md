@@ -9,6 +9,8 @@ This repo is the single durable context store for **{{COMPANY_NAME}}**.
 
 Use it to answer questions, prepare work, normalize raw material, and update company knowledge safely.
 
+**Syncing this repo into an AI for company context?** See [`docs/CLAUDE_SYNC.md`](docs/CLAUDE_SYNC.md): sync the compiled brain (root knowledge + entity folders + curated decisions), skip the raw sources (`meetings/`, any `decisions/imported/`, images) — already compiled and the capacity hogs.
+
 ---
 
 ## Source-of-truth hierarchy
