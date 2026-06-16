@@ -135,7 +135,7 @@ When you start from the GitHub template (the normal path), this structure **alre
 **Do not create:**
 
 - ❌ `ops/`, `market/`, `finance/` subfolders — root files until they outgrow ~1000 words
-- ❌ Numbered prefixes (`03-strategy/`) — clean names only
+- ❌ Numbered prefixes (`03-strategy/`) — clean names only (why: `ARCHITECTURE.md` § Folder & file naming)
 - ❌ `archive/` subfolders **at migration time** — mark `status: archived` instead; `<folder>/archive/YYYY/` folders appear later via the OPERATIONS archive ritual, never on day one
 - ❌ `.mcp.json` — add later when the user is ready to wire MCP
 - ❌ skills beyond the four shipped starters (normalize-meeting, weekly-brief, customer-brief, update-wiki) — add more only when a workflow repeats

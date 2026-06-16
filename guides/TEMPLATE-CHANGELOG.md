@@ -6,6 +6,13 @@ Versioning: tags `vMAJOR.MINOR` on the template repo. MAJOR = structural changes
 
 ---
 
+## v1.5 — 2026-06-14
+
+**Naming rationale documented** (structure-conventions review):
+
+- `ARCHITECTURE.md` gains a "Folder & file naming (and why no numbered prefixes)" section — records *why* clean semantic names beat numbered prefixes for an agent-first repo (route-by-name/`type:` not tree position; guessable = self-locating; no false sequence; cheap to grow), the plural-folders/singular-root-files + kebab/ISO conventions, and when numbering (Johnny.Decimal) *would* be right (human-browsed trees / curricula). Makes the existing "no numbered prefixes" rule absorbable instead of arbitrary, and records the considered divergence from numbered-folder SSOTs.
+- AGENT-INSTRUCTIONS "no numbered prefixes" rule now points to that rationale.
+
 ## v1.4 — 2026-06-14
 
 **Team access & rollout** (closes the last acknowledged gap — the README promised "ask in Slack" with no wiring path):

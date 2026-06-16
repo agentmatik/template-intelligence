@@ -77,6 +77,18 @@ Document the change in the repo, then announce it with a link — never the reve
 
 Agents follow written rules most of the time; hooks and CI enforce them every time. Rules that must hold 100% (frontmatter contract, no secrets, no broken links) run as `.claude/settings.json` hooks and `.github/workflows/validate.yml` — the written rule stays as explanation.
 
+## Folder & file naming (and why no numbered prefixes)
+
+The naming is optimized for how **agents** navigate, which also happens to be clearest for humans:
+
+- **Clean, semantic names — never numbered prefixes** (`customers/`, not `02_customers/`). Agents route by *name* and by frontmatter `type:`, never by tree position: the retrieval model is `grep customers/` and "files where `type: customer`". A number adds noise to every path, wikilink, and commit scope while buying nothing — an agent never needs "the folder that sorts second."
+- **Guessable = self-locating.** Asked "where do customer notes go?", an agent (or a new hire) with zero context guesses `customers/` right. Nobody can guess `02_customers/`, so every reference needs a lookup. Guessable names are the single biggest absorbability win in the tree.
+- **No false sequence.** A knowledge base has no inherent order — `customers` isn't "before" `competitors`. Where a reading *order* genuinely matters (onboarding), `INDEX.md` and the README reading-paths supply it explicitly and curatedly — far better than a rigid number baked into every path.
+- **Cheap to grow.** Numbered schemes force renumber cascades when you insert a domain; clean names absorb new folders with zero churn — essential when "structure earns itself, added only when content demands it."
+- **Conventions:** plural for collections (`customers/`, `people/`), singular for the single root knowledge files (`strategy.md`, `ops.md`); `kebab-case` for entity slugs; ISO dates (`YYYY-MM-DD`) and ISO weeks (`YYYY-Www`) for time-series so they sort correctly.
+
+*When numbered prefixes (Johnny.Decimal and similar) **are** right: a repo whose primary interface is a human browsing the raw file tree with a fixed taxonomy, or a curriculum with a real sequence. This repo is neither — it's agent-first, browsed via the agent and curated indexes, with a deliberately-growing taxonomy. (A repo built for direct human browsing may reasonably choose numbering; that's a different trade-off, not a contradiction.)*
+
 ## Why Git + Markdown beats a database-backed knowledge store
 
 - **Cheap to run.** No servers, no vector infra.
