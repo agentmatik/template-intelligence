@@ -41,12 +41,14 @@ brain** and skip the **raw sources**, which are redundant *and* the capacity hog
 > The calls are **not** summarised file-by-file — but their substance is already in
 > the compiled pages. **The compiled pages *are* the summary of every call.**
 
-| Sync? | Paths | Why |
-|-------|-------|-----|
-| ✅ **Include** | `company.md` · `strategy.md` · `product.md` · `brand.md` · `ops.md` · `finance.md`; `customers/` · `competitors/` · `people/` · `sales/`; curated `decisions/`; `weekly/`; `INDEX.md` · `README.md` | The compiled company brain — small, pure signal. |
-| ❌ **Skip** | `meetings/` (raw transcripts) · `decisions/imported/` (if present) · any chart images · `.github/` · `scripts/` · `skills/` · `templates/` | Raw sources already compiled above; images + transcripts blow past capacity; the rest is machinery. |
+| Tier | Paths | Notes |
+|------|-------|-------|
+| ✅ **Always sync** (the compiled brain) | `company.md` · `strategy.md` · `product.md` · `brand.md` · `ops.md` · `finance.md`; `customers/` · `competitors/` · `people/` · `sales/`; curated `decisions/`; `weekly/`; `INDEX.md` · `README.md` | Small, pure signal — this alone is full company context. |
+| 🔶 **Optional** (only if you have headroom) | `decisions/imported/` (if present — granular auto-extracts) · the **last 2–4** strategic `meetings/` (leadership/product/model) | All text/cheap; adds detail but lower-signal than the compiled pages. |
+| ❌ **Don't sync** | `meetings/` bulk — **especially standups** · any chart images · `.github/` · `scripts/` · `skills/` · `templates/` | Content already compiled above; images + transcripts are the capacity hogs; the rest is machinery. |
 
-Full detail + rationale: [`docs/CLAUDE_SYNC.md`](./docs/CLAUDE_SYNC.md).
+Rule of thumb: **text = high signal per token, images = low.** Even with headroom,
+low-value files dilute what the AI retrieves. Full rationale: [`docs/CLAUDE_SYNC.md`](./docs/CLAUDE_SYNC.md).
 
 ## Quick start (≤30 minutes)
 
