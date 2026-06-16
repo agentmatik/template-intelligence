@@ -31,6 +31,23 @@ The **intelligence** is the persistent knowledge layer your company runs on: an 
 └── Config               .gitignore, .github/workflows/
 ```
 
+## What to sync into an AI (context vs raw sources)
+
+This repo is **compiled truth + raw sources.** The root knowledge files and entity
+folders already distill every meeting and document — so when you sync the repo into
+Claude project knowledge (or any AI) for company context, include the **compiled
+brain** and skip the **raw sources**, which are redundant *and* the capacity hogs.
+
+> The calls are **not** summarised file-by-file — but their substance is already in
+> the compiled pages. **The compiled pages *are* the summary of every call.**
+
+| Sync? | Paths | Why |
+|-------|-------|-----|
+| ✅ **Include** | `company.md` · `strategy.md` · `product.md` · `brand.md` · `ops.md` · `finance.md`; `customers/` · `competitors/` · `people/` · `sales/`; curated `decisions/`; `weekly/`; `INDEX.md` · `README.md` | The compiled company brain — small, pure signal. |
+| ❌ **Skip** | `meetings/` (raw transcripts) · `decisions/imported/` (if present) · any chart images · `.github/` · `scripts/` · `skills/` · `templates/` | Raw sources already compiled above; images + transcripts blow past capacity; the rest is machinery. |
+
+Full detail + rationale: [`docs/CLAUDE_SYNC.md`](./docs/CLAUDE_SYNC.md).
+
 ## Quick start (≤30 minutes)
 
 See [`SETUP.md`](./SETUP.md). It walks you from empty clone to working intelligence with seeded strategy, one skill installed, and Claude Code reading the repo correctly.
