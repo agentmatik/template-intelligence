@@ -18,8 +18,11 @@ Versioning: tags `vMAJOR.MINOR` on the template repo. MAJOR = structural changes
 
 **Naming rationale documented** (structure-conventions review):
 
+Strengthened after a 3-agent adversarial assessment (steelman for/against numbered folders + an empirical survey of real SSOT repos):
+
 - `ARCHITECTURE.md` gains a "Folder & file naming (and why no numbered prefixes)" section — records *why* clean semantic names beat numbered prefixes for an agent-first repo (route-by-name/`type:` not tree position; guessable = self-locating; no false sequence; cheap to grow), the plural-folders/singular-root-files + kebab/ISO conventions, and when numbering (Johnny.Decimal) *would* be right (human-browsed trees / curricula). Makes the existing "no numbered prefixes" rule absorbable instead of arbitrary, and records the considered divergence from numbered-folder SSOTs.
 - AGENT-INSTRUCTIONS "no numbered prefixes" rule now points to that rationale.
+- The section now states the **documents-vs-taxonomy distinction** (we *do* date/number sequential documents — ADRs, decisions, weekly — and *don't* number taxonomy folders), the **field convention** (5/5 company handbooks + ~90% agent repos use clean names; numbering's home turf is human-browsed vaults / rendered-docs sort keys / individual decision docs), and the honest framing that numbered taxonomies are a *marginal cost*, not a failure — perfectly agent-legible, just unnecessary for an agent-first repo. Verdict: clean names for agent-first SSOTs; numbering defensible for human-browsed repos (a different audience, not a contradiction).
 
 ## v1.4 — 2026-06-14
 
