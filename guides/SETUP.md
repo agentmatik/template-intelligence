@@ -55,6 +55,7 @@ Fill the minimum that makes the intelligence useful from day 1:
 - [ ] `brand.md` — 3 dos, 3 don'ts, voice example.
 - [ ] `ops.md` — cadence, decision rights, tools.
 - [ ] `finance.md` — pointers to where the money truth lives (never numbers).
+- [ ] `legal.md` — entity name, VAT/tax ID, registered + invoicing address (the facts you put on invoices).
 - [ ] `customers/<top-customer>.md` — use `templates/customer.md`.
 - [ ] `competitors/<top-competitor>.md` — use `templates/competitor.md`.
 - [ ] `people/<cofounder>.md` — use `templates/person.md`.

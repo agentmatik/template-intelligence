@@ -54,6 +54,7 @@ Agents bridge all three layers. Humans write PRs into the middle. The middle lay
 | `brand.md` | Voice (3 dos + 3 don'ts with examples), messaging, naming rules. |
 | `ops.md` | Cadence, decision rights, tools, vendors, GDPR inventory. |
 | `finance.md` | **Pointers only** — where money truth lives, metric formulas. Never the numbers. |
+| `legal.md` | Legal & admin registry: entity, VAT/tax IDs, registered + invoicing addresses, company structure, directors, document pointers. |
 | `customers/` | One file per customer/prospect — compiled truth + append-only timeline. |
 | `competitors/` | One file per competitor, same pattern. |
 | `people/` | Team, freelancers/contractors, advisors, investors, partners. Internal only. |

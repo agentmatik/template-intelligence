@@ -43,7 +43,7 @@ If two sources disagree, surface the conflict. Don't guess.
 
 | Folder         | What goes here                                                  |
 |----------------|-----------------------------------------------------------------|
-| (root)         | `company.md`, `strategy.md`, `product.md`, `brand.md`, `ops.md`, `finance.md` |
+| (root)         | `company.md`, `strategy.md`, `product.md`, `brand.md`, `ops.md`, `finance.md`, `legal.md` |
 | `customers/`   | One file per named customer or active prospect                  |
 | `competitors/` | One file per competitor                                         |
 | `people/`      | Team, freelancers/contractors, advisors, partners, investors (one file each) |
@@ -82,7 +82,7 @@ Every durable note includes:
 
 ```yaml
 ---
-type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | sales | runbook | vision | goals | kpis | accountability | memory
+type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | legal | sales | runbook | vision | goals | kpis | accountability | memory
 status: verified          # draft | active | verified | superseded | archived
 owner: {{FOUNDER_NAME}}
 created: 2026-04-22

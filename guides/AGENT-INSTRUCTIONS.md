@@ -4,7 +4,7 @@
 >
 > This document is your **complete operating manual** for that task. Read it end-to-end before acting. It is long because the task is unforgiving — the wrong shape early creates pain forever.
 >
-> **Prerequisite reading:** [`DATA-ORGANIZATION-PLAYBOOK.md`](./DATA-ORGANIZATION-PLAYBOOK.md) gives you the routing logic (what data goes where) and the generation contract for the six root files. Read it first. Then, for each folder you write into, that folder's `README.md` is the authoritative per-file contract — frontmatter fields, sourcing, worked example, quality bar, edge cases. This document is the *project procedure*; those are the *file specs*.
+> **Prerequisite reading:** [`DATA-ORGANIZATION-PLAYBOOK.md`](./DATA-ORGANIZATION-PLAYBOOK.md) gives you the routing logic (what data goes where) and the generation contract for the seven root files. Read it first. Then, for each folder you write into, that folder's `README.md` is the authoritative per-file contract — frontmatter fields, sourcing, worked example, quality bar, edge cases. This document is the *project procedure*; those are the *file specs*.
 
 ---
 
@@ -55,6 +55,7 @@ When you start from the GitHub template (the normal path), this structure **alre
 ├── brand.md                   # Voice (3 dos + 3 don'ts), messaging, narrative
 ├── ops.md                     # Cadence, decision rights, tools, vendors, GDPR
 ├── finance.md                 # Pointers only — real numbers live elsewhere
+├── legal.md                   # Entity, VAT/tax, addresses, structure, doc pointers
 │
 ├── customers/
 │   ├── README.md
@@ -162,7 +163,7 @@ Every durable note opens with this YAML block:
 
 ```yaml
 ---
-type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | sales | runbook | vision | goals | kpis | accountability | memory
+type: customer            # customer | competitor | person | decision | meeting | weekly | strategy | product | brand | company | ops | finance | legal | sales | runbook | vision | goals | kpis | accountability | memory
 status: draft             # draft | active | verified | superseded | archived
 owner: <person>           # who maintains this
 created: YYYY-MM-DD
@@ -298,7 +299,7 @@ Initialize git locally. Do not push yet.
 
 ### Phase 4 — Root knowledge files
 
-Write the six root files in this order:
+Write the seven root files in this order:
 
 1. **`company.md`** — what the company is. Extract from most recent pitch deck or about page.
 2. **`strategy.md`** — current quarter priorities, bets, north star. Use most recent strategy doc/board update. Note conflicts in handoff.
@@ -306,6 +307,7 @@ Write the six root files in this order:
 4. **`brand.md`** — voice (3 dos, 3 don'ts), messaging. Negative examples matter.
 5. **`ops.md`** — cadence, decision rights, tools, vendors. Skip data inventory if no GDPR exposure.
 6. **`finance.md`** — pointers only. Where the real numbers live. Never the numbers themselves.
+7. **`legal.md`** — entity, VAT/tax IDs, registered + invoicing addresses, company structure, document pointers. Mostly public-register facts; `status: draft` until a human confirms each number.
 
 For each: aim for **accurate**, not comprehensive. Mark `status: draft`. Note sources in handoff.
 

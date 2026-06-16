@@ -27,7 +27,7 @@
 
 Read in this order:
 
-1. `guides/DATA-ORGANIZATION-PLAYBOOK.md` — routing logic + how to fill the six root files
+1. `guides/DATA-ORGANIZATION-PLAYBOOK.md` — routing logic + how to fill the seven root files
 2. `guides/AGENT-INSTRUCTIONS.md` — the eleven-phase migration procedure with checkpoints
 3. The `README.md` inside each folder you write into — the complete per-file generation contract
 
@@ -58,6 +58,8 @@ Read in this order:
 | Who's on the team?                      | `people/`                              |
 | How do we operate?                      | `ops.md`                               |
 | What's our financial picture?           | `finance.md` (high-level only)         |
+| What's our legal entity / VAT / billing address? | `legal.md`                  |
+| What's the company structure / who are the directors? | `legal.md`             |
 | What's our voice/messaging?             | `brand.md`                             |
 | What happened this week?                | `weekly/` — most recent file           |
 | What was said in that meeting?          | `meetings/<category>/` — filter by date |

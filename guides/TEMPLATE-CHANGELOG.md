@@ -6,6 +6,14 @@ Versioning: tags `vMAJOR.MINOR` on the template repo. MAJOR = structural changes
 
 ---
 
+## v1.6 — 2026-06-14
+
+**New root file: `legal.md`** (administrative/legal reference — founder request):
+
+- A seventh root knowledge file for the durable admin facts the company needs day to day: legal entity (registered name, legal form, registration no., tax/VAT IDs, incorporation date, jurisdiction), registered + **invoicing** + trading addresses, **company structure** (entities, high-level ownership, directors/signatories), key registrations (EORI/DUNS/licences), receiving bank/IBAN (only if shareable), and pointers to the underlying documents. The thing you paste into an invoice or a contract — distinct from `company.md` (pitch) and `finance.md` (money truth).
+- Mostly low-sensitivity public-register data, so it lives in the repo; cap table / exact share % / online-banking creds explicitly stay out (finance.md → encrypted store).
+- Wired everywhere: `type: legal` added to the enum (AGENTS.md, playbook, AGENT-INSTRUCTIONS), routing rows (entity/VAT/invoicing-address/structure → legal.md; legal *documents* row retargeted from ops.md to legal.md), README file map, INDEX domain table, SETUP seed list, validate-frontmatter `ROOT_FILES`, the migration tree + Phase-4 order + "six→seven root files" counts, and a full `legal.md` fill-guide in the playbook. The old `ops.md` "Legal pointers" stub was consolidated into a cross-link (no duplication).
+
 ## v1.5 — 2026-06-14
 
 **Naming rationale documented** (structure-conventions review):

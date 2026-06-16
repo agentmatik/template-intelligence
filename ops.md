@@ -64,14 +64,10 @@ For anything else: open a question in `decisions/` and tag the owner.
 
 Full seat map — who owns which function, with responsibilities: [`management/accountability.md`](./management/accountability.md). Update both together on hires/reorgs. Documented core processes: [`management/processes/`](./management/processes/).
 
-## Legal pointers
+## Legal & admin
 
-<!-- Like finance.md: WHERE legal truth lives, never the contents.
-One row per artifact: incorporation docs, MSAs/customer contracts, DPAs,
-IP assignments, NDAs — location (drive/legal tool/lawyer) + access note. -->
+Entity details, VAT/tax IDs, registered + invoicing addresses, company structure, and pointers to legal documents live in [`legal.md`](./legal.md). Decision rights below say *who* can sign; `legal.md` says *which entity* signs.
 
-| Artifact | Where it lives | Access |
-|----------|----------------|--------|
 
 ## Tools
 

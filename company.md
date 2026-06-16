@@ -22,7 +22,8 @@ SOURCE FROM (in priority order):
   1. Most recent pitch deck (cover + problem + solution + traction slides)
   2. Website About / homepage hero
   3. Founder's own one-paragraph description
-  4. Incorporation docs (legal entity, founding date)
+  4. Incorporation docs (legal entity, founding date — full entity/VAT/
+     address/structure detail goes in legal.md, not here)
 
 RULES:
   - status: draft when generated from raw data; a human promotes to verified.

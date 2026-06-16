@@ -2,7 +2,7 @@
 
 **Read this first if you are an AI agent organizing raw company data into this repo.**
 
-This playbook is the connective tissue between raw, unstructured input (a folder of decks, transcripts, CRM dumps, emails, Notion exports, Slack threads) and the structured intelligence repo. It tells you how to route every piece of data, how to fill the six root knowledge files (which have no folder README), and what "good" looks like by the standards used at top startup accelerators and operator playbooks (Y Combinator, a16z, lean-startup operating models).
+This playbook is the connective tissue between raw, unstructured input (a folder of decks, transcripts, CRM dumps, emails, Notion exports, Slack threads) and the structured intelligence repo. It tells you how to route every piece of data, how to fill the seven root knowledge files (which have no folder README), and what "good" looks like by the standards used at top startup accelerators and operator playbooks (Y Combinator, a16z, lean-startup operating models).
 
 For the full step-by-step migration procedure with human checkpoints, see [`AGENT-INSTRUCTIONS.md`](./AGENT-INSTRUCTIONS.md). This file is the *what goes where and why*; that file is the *how to run the project*.
 
@@ -30,6 +30,7 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | Voice, messaging, positioning, narrative | `brand.md` | Include negative examples (what you're NOT) |
 | How the company runs: cadence, tools, decision rights, GDPR | `ops.md` | One file, root |
 | Money: where numbers live, metric definitions | `finance.md` | **Pointers only — never raw figures** |
+| Legal entity, VAT/tax IDs, registered/invoicing address, company structure, directors | `legal.md` | Durable admin facts (mostly public-register data) |
 | A specific customer or prospect | `customers/<slug>.md` | One file each |
 | A specific competitor | `competitors/<slug>.md` | One file each |
 | A specific person (team/freelancer/contractor/advisor/investor/partner) | `people/<slug>.md` | One file each, internal only |
@@ -43,7 +44,7 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | A meeting that happened | `meetings/<category>/YYYY-MM-DD-<topic>.md` | Distill, don't transcribe; category per `meetings/README.md` |
 | A weekly summary | `weekly/YYYY-Www.md` | One per ISO week |
 | Definition of a term (company or system vocabulary) | `GLOSSARY.md` | One row per term |
-| Legal documents (incorporation, MSAs, DPAs, IP assignments) | `ops.md` → Legal pointers section | **Pointers only** — the documents stay in their legal store, like `finance.md` |
+| Legal documents (incorporation, MSAs, DPAs, IP assignments) | `legal.md` → Documents (pointers) | **Pointers only** — the documents stay in their legal store, like `finance.md` |
 | A job candidate or open role | **ATS / hiring tool (not the repo)** | `people/` only after signing; the hiring *process* may be an SOP |
 | Content calendar, editorial pipeline | **Notion / Linear (not the repo)** | Live editorial state stays live; `brand.md` holds the voice |
 | Live ticket status, current sprint | **Linear (not the repo)** | Reference via MCP |
@@ -68,9 +69,9 @@ When migrating non-English raw data: distill into English, preserve original-lan
 
 ---
 
-## The six root knowledge files: how to fill each from raw data
+## The seven root knowledge files: how to fill each from raw data
 
-These six files have no folder README because they are single files. Their full generation contract is here. Each uses frontmatter + a compiled-truth block; `strategy`, `company`, `ops` may also carry a timeline.
+These seven files have no folder README because they are single files. Their full generation contract is here. Each uses frontmatter + a compiled-truth block; `strategy`, `company`, `ops`, `legal` may also carry a timeline.
 
 ### company.md
 
@@ -130,6 +131,16 @@ Keep ≤1000 words. If it's longer, you're putting tactics here that belong in `
 
 **Hard rule:** if you encounter a cap table, payroll, or term sheet in the raw data, do NOT transcribe it. Note in the handoff that it exists and recommend an encrypted home.
 
+### legal.md
+
+**Purpose:** The durable administrative facts needed day to day — what you paste into an invoice or a contract. Distinct from `company.md` (the pitch) and `finance.md` (money truth).
+
+**Source from:** incorporation docs, the public company register, prior invoices, supplier-onboarding forms the company has filled in, the founder.
+
+**Fill:** legal entity (registered name, legal form, registration no., tax/VAT IDs, incorporation date, jurisdiction); registered + invoicing + trading addresses; company structure (entities, high-level ownership, directors/signatories); key registrations (EORI, DUNS, licences); receiving bank/IBAN *only* if treated as shareable (it's on every invoice); pointers to the underlying documents.
+
+**Mostly low-sensitivity** — registered name, number, VAT, registered office, and directors are public-register data, so they belong here. **Hard rule:** cap table, exact share %, beneficial-ownership personal data, and online-banking credentials do NOT — `finance.md` points to the encrypted store. `status: draft` until a human confirms each number (a wrong VAT ID on an invoice is a real problem).
+
 ---
 
 ## The two universal patterns
@@ -163,7 +174,7 @@ No mutable block — the whole file is a dated record. Once written, it's not ed
 
 ```yaml
 ---
-type: <customer|competitor|person|decision|meeting|weekly|company|strategy|product|brand|ops|finance|sales|runbook|vision|goals|kpis|accountability|memory>
+type: <customer|competitor|person|decision|meeting|weekly|company|strategy|product|brand|ops|finance|legal|sales|runbook|vision|goals|kpis|accountability|memory>
 status: <draft|active|verified|superseded|archived>
 owner: "<who maintains this>"
 created: YYYY-MM-DD
@@ -209,4 +220,4 @@ If raw data contains these, route them out (note in handoff) — do not transcri
 
 ## Process in one paragraph
 
-Inventory the raw data → bucket each item (durable / live / raw / sensitive) → scaffold the repo → fill the six root files from the highest-signal sources → create one file per entity (customer, competitor, person) → log recent decisions (≤90 days) → distill recent meetings (≤30 days) → write one weekly brief → validate frontmatter, scan for secrets, check links → push to a private repo → write a handoff documenting what was migrated, skipped, and needs human verification. Default everything to `status: draft`. When unsure, skip and note it rather than guess. See [`AGENT-INSTRUCTIONS.md`](./AGENT-INSTRUCTIONS.md) for the full eleven-phase procedure with checkpoints.
+Inventory the raw data → bucket each item (durable / live / raw / sensitive) → scaffold the repo → fill the seven root files from the highest-signal sources → create one file per entity (customer, competitor, person) → log recent decisions (≤90 days) → distill recent meetings (≤30 days) → write one weekly brief → validate frontmatter, scan for secrets, check links → push to a private repo → write a handoff documenting what was migrated, skipped, and needs human verification. Default everything to `status: draft`. When unsure, skip and note it rather than guess. See [`AGENT-INSTRUCTIONS.md`](./AGENT-INSTRUCTIONS.md) for the full eleven-phase procedure with checkpoints.
