@@ -24,6 +24,7 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 
 | If the raw data is about… | Route to… | Notes |
 |---------------------------|-----------|-------|
+| A hard fact or official link an application/form/deck asks for | `FACTSHEET.md` | Derivative index: mirror the value from its canonical page (`company.md`, `finance.md`, `brand.md`, `people/`); don't make it the only home |
 | What the company is / does / its stage | `company.md` | One file, root |
 | Goals, priorities, bets, north-star metric, risks | `strategy.md` | One file, root |
 | What you're building, roadmap, architecture | `product.md` | Roadmap detail stays in Linear; link it |
@@ -50,6 +51,8 @@ When a piece of data could fit two places, ask: *is this a durable fact about an
 ## The six root knowledge files: how to fill each from raw data
 
 These six files have no folder README because they are single files. Their full generation contract is here. Each uses frontmatter + a compiled-truth block; `strategy`, `company`, `ops` may also carry a timeline.
+
+> **Plus `FACTSHEET.md` (root).** Not one of the six and not a routing destination for raw data; it's a *derivative quick-reference* (facts + official links for applications/forms/decks) compiled **from** these root files and `people/`. Fill it after the root files exist; mirror each value from its canonical page. It carries no frontmatter (like `INDEX.md`/`README.md`). No secrets; public registration numbers only.
 
 ### company.md
 

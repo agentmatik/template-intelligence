@@ -2,6 +2,8 @@
 
 > Curated entry points. Update weekly. Both humans and agents start here.
 
+> 📋 **Filling an application, form, or deck, or need a specific company fact or link?** Go straight to **[`FACTSHEET.md`](./FACTSHEET.md)**, the single dense quick-reference with every fact + every official link (app/store URL, socials, company no. / EIN / DUNS, founders, funding, pricing, accolades). It's the fastest way to answer "what's our X?". *(In a fresh template repo it's pre-filled with placeholders; replace them during setup.)*
+
 ## If you're a new team member
 
 - `README.md` — what this repo is

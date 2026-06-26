@@ -8,6 +8,8 @@ A single-source-of-truth Git repo of plain Markdown that serves three audiences 
 
 Durable truth lives here. Execution state stays in the systems that own it. Agents synthesize across both.
 
+> 📋 **Need a quick fact or an official link** (app/store URL, socials, company no. / EIN / DUNS, founders, funding), or filling an application/form/deck? See **[`FACTSHEET.md`](./FACTSHEET.md)**, the single dense quick-reference. It ships as a placeholder template; fill it with real values during setup (Step 3 below).
+
 ## What's "intelligence"?
 
 The **intelligence** is the persistent knowledge layer your company runs on: an operating layer, not just storage. Agents and humans both read from it. Both write to it. PRs gate the truth.
@@ -24,6 +26,7 @@ The **intelligence** is the persistent knowledge layer your company runs on: an 
 ```
 <company>-intelligence/
 ├── Entry files          AGENTS.md, README.md, INDEX.md
+├── Quick reference      FACTSHEET.md (facts + official links, for applications/forms/decks)
 ├── Root knowledge       company.md, strategy.md, product.md, brand.md, ops.md, finance.md
 ├── Entity folders       customers/, competitors/, people/, sales/
 ├── Time-series          meetings/, decisions/, weekly/
@@ -43,7 +46,7 @@ brain** and skip the **raw sources**, which are redundant *and* the capacity hog
 
 | Tier | Paths | Notes |
 |------|-------|-------|
-| ✅ **Always sync** (the compiled brain) | `company.md` · `strategy.md` · `product.md` · `brand.md` · `ops.md` · `finance.md`; `customers/` · `competitors/` · `people/` · `sales/`; curated `decisions/`; `weekly/`; `INDEX.md` · `README.md` | Small, pure signal — this alone is full company context. |
+| ✅ **Always sync** (the compiled brain) | **`FACTSHEET.md`**; `company.md` · `strategy.md` · `product.md` · `brand.md` · `ops.md` · `finance.md`; `customers/` · `competitors/` · `people/` · `sales/`; curated `decisions/`; `weekly/`; `INDEX.md` · `README.md` | Small, pure signal: this alone is full company context. The fact sheet is tiny and highest-signal; include it first. |
 | 🔶 **Optional** (only if you have headroom) | `decisions/imported/` (if present — granular auto-extracts) · the **last 2–4** strategic `meetings/` (leadership/product/model) | All text/cheap; adds detail but lower-signal than the compiled pages. |
 | ❌ **Don't sync** | `meetings/` bulk — **especially standups** · any chart images · `.github/` · `scripts/` · `skills/` · `templates/` | Content already compiled above; images + transcripts are the capacity hogs; the rest is machinery. |
 

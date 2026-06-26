@@ -9,6 +9,8 @@ This repo is the single durable context store for **{{COMPANY_NAME}}**.
 
 Use it to answer questions, prepare work, normalize raw material, and update company knowledge safely.
 
+> 📋 **Quick facts & links -> [`FACTSHEET.md`](./FACTSHEET.md).** For any specific company fact or official link (the app/store URL, socials, website, registration numbers like company no. / EIN / DUNS, founders + emails, funding numbers, pricing, accolades) read **`FACTSHEET.md`** first. It's the single dense quick-reference, built for filling **applications, forms, and decks**. Don't hunt across files or answer a "what's our X?" from memory; the fact sheet has it, with a link to the canonical page for nuance. *(Template repos ship it pre-filled with placeholders; replace those with real values during setup.)*
+
 **Syncing this repo into an AI for company context?** See [`docs/CLAUDE_SYNC.md`](docs/CLAUDE_SYNC.md): sync the compiled brain (root knowledge + entity folders + curated decisions), skip the raw sources (`meetings/`, any `decisions/imported/`, images) — already compiled and the capacity hogs.
 
 ---
@@ -45,7 +47,7 @@ If two sources disagree, surface the conflict. Don't guess.
 
 | Folder         | What goes here                                                  |
 |----------------|-----------------------------------------------------------------|
-| (root)         | `company.md`, `strategy.md`, `product.md`, `brand.md`, `ops.md`, `finance.md` |
+| (root)         | `FACTSHEET.md` (dense quick-reference: facts + links for applications), `company.md`, `strategy.md`, `product.md`, `brand.md`, `ops.md`, `finance.md` |
 | `customers/`   | One file per named customer or active prospect                  |
 | `competitors/` | One file per competitor                                         |
 | `people/`      | Team, advisors, partners, investors (one file each)             |

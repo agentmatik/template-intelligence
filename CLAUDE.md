@@ -8,9 +8,10 @@ This file adds **Claude-Code-specific** guidance on top of the universal rules i
 
 1. `AGENTS.md` (loaded via the import above)
 2. `INDEX.md` for a curated map of entry points
-3. If the task is recent-work-related: the most recent file in `weekly/`
-4. If the task touches a specific domain: that root file or folder
-5. Only then use MCP for fresh operational state
+3. **`FACTSHEET.md`** - the dense quick-reference for any specific company fact or official link (store/socials/registration/funding/founders). **Reach for it first when asked to fill an application/form/deck or to produce a specific fact or URL**; don't hunt across files.
+4. If the task is recent-work-related: the most recent file in `weekly/`
+5. If the task touches a specific domain: that root file or folder
+6. Only then use MCP for fresh operational state
 
 ## Claude-Code features — when to reach for each
 
@@ -50,3 +51,6 @@ Do not add to `CLAUDE.md`:
 Personal per-machine overrides (sandbox URLs, local paths, preferred thinking mode) go in `CLAUDE.local.md`. That file is gitignored.
 
 @CLAUDE.local.md
+
+## Copy style (Matt's preference — non-negotiable)
+- In ALL human-facing copy/content (Notion pages, guides, posts, emails, client deliverables, docs): use a plain hyphen `-`. NEVER use em-dashes (—) or en-dashes (–) — replace with `-` or rephrase the sentence.
