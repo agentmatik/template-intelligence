@@ -22,6 +22,7 @@ Two costs, not one:
 ## The three tiers
 
 ### ✅ Always sync — the compiled brain (small, pure signal)
+- **⭐ Fact sheet (include this first):** **`FACTSHEET.md`** - the single dense quick-reference with every company fact + official link (app/store URL, socials, website, company no. / EIN / DUNS, founders, funding, pricing, accolades). It's what answers "what's our X?" and fills applications/forms. Tiny and high-signal; never skip it.
 - Root knowledge: `company.md` · `strategy.md` · `product.md` · `brand.md` · `ops.md` · `finance.md`
 - Entity folders: `customers/` · `competitors/` · `people/` · `sales/`
 - `decisions/` — the **curated** decision records (one per file)

@@ -43,6 +43,7 @@ Use your editor's multi-file find/replace.
 
 Fill the minimum that makes the intelligence useful from day 1:
 
+- [ ] `FACTSHEET.md` - the dense quick-reference (facts + official links for applications/forms/decks). Replace every `{{PLACEHOLDER}}` and `[bracketed example]`; delete rows that don't apply. Pull values from the files below as you fill them. Public registration numbers OK; no bank/cap-table/term-sheet detail.
 - [ ] `company.md` — mission, stage, team. Mark `status: verified`.
 - [ ] `strategy.md` — top 3 priorities for this quarter. Mark `status: verified`.
 - [ ] `product.md` — one paragraph, link to Linear roadmap.

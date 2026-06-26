@@ -42,6 +42,7 @@ Create exactly this. No more, no less, on day one.
 ├── AGENTS.md                  # The agent contract (~150 lines). Every tool reads this.
 ├── CLAUDE.md                  # Claude-Code shim. @AGENTS.md + Claude extras.
 ├── INDEX.md                   # Curated navigation, current focus
+├── FACTSHEET.md               # Dense quick-reference: facts + official links for applications/forms/decks (no frontmatter, same as INDEX/README)
 ├── .gitignore                 # Defensive patterns
 ├── .github/
 │   └── workflows/
@@ -269,6 +270,7 @@ Create the directory structure from §2 (above). Then write:
 - `AGENTS.md` — the agent contract from the template (~150 lines)
 - `CLAUDE.md` — thin shim importing `AGENTS.md`
 - `INDEX.md` — minimal at first
+- `FACTSHEET.md` - copy the template's placeholder fact sheet (you fill it in Phase 4 once the root files exist)
 - `.gitignore` — see §6.4
 - `docs/` — copy `AGENT-INSTRUCTIONS.md`, `ARCHITECTURE.md`, `SETUP.md`, `OPERATIONS.md` from template
 - `templates/` — copy entity templates
@@ -288,6 +290,8 @@ Write the six root files in this order:
 6. **`finance.md`** — pointers only. Where the real numbers live. Never the numbers themselves.
 
 For each: aim for **accurate**, not comprehensive. Mark `status: draft`. Note sources in handoff.
+
+**Then fill `FACTSHEET.md`**: the dense quick-reference (facts + official links for applications/forms/decks). It's a *derivative index*: pull each value from the canonical page you just wrote (`company.md` for registration/identity, `finance.md` for funding headlines, `brand.md` for links/taglines, `people/` for founders, `product.md` for tech/platforms). Replace every `{{PLACEHOLDER}}` and `[bracketed example]`; delete rows that don't apply; leave `<unknown>` rather than guessing. **No secrets**: public registration numbers are fine, but bank/PIN/cap-table/term-sheet detail stays in the encrypted store `finance.md` points to. It carries no frontmatter (same as `INDEX.md`/`README.md`).
 
 ### Phase 5 — Entities
 
@@ -426,6 +430,7 @@ Prioritized:
 
 The repo already contains:
 
+- `FACTSHEET.md` - the placeholder fact sheet (root). Fill it in Phase 4; keep its shape. No frontmatter (it's a navigation index like `INDEX.md`/`README.md`, not a canonical knowledge page).
 - `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md` — copy these into entity files and fill in
 - `docs/ARCHITECTURE.md` — keep as-is, customize examples
 - `docs/SETUP.md` — keep as-is
@@ -508,7 +513,8 @@ Extract into `brand.md`:
 
 Before declaring done:
 
-- [ ] All canonical files have full frontmatter
+- [ ] All canonical files have full frontmatter (`FACTSHEET.md` is exempt, like `INDEX.md`/`README.md`)
+- [ ] `FACTSHEET.md` filled from the canonical pages: no leftover `{{PLACEHOLDER}}` or `[bracketed example]`, no secrets
 - [ ] No file marked `status: verified` unless content confirmed (most should be `status: draft`)
 - [ ] Every entity uses compiled-truth + timeline pattern
 - [ ] All wikilinks resolve or annotated TODO
