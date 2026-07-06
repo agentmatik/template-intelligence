@@ -18,7 +18,10 @@ gcp-*.json
 # Migration scratch (used by AGENT-INSTRUCTIONS Phase 1)
 _migration-inventory.md
 _drafts/
-inbox/
+# inbox/ stays local scratch EXCEPT extracted/ - the tracked staging area
+# for transcript-extracted facts (see docs/CURATION.md)
+inbox/*
+!inbox/extracted/
 
 # Time-series binaries — store summaries, not raw audio/video
 meetings/**/*.mp3
