@@ -26,29 +26,29 @@ Raw → time-series folders (auto-commit OK). Canonical → PR required.
 - After each meeting: run `/normalize-meeting` within 48h (before Granola evicts)
 - Glance at any local `inbox/` folder: normalize or archive
 - Touch one canonical page per day
-- Log decisions as they happen — don't defer
+- Log decisions as they happen - don't defer
 
 ## Weekly (Friday, 30 min)
 
 - Run `/weekly-brief` → review draft → merge
-- Run `scripts/check-stale.sh` — verify or archive flagged files
+- Run `scripts/check-stale.sh` - verify or archive flagged files
 - Merge open PRs
 - Glance at rendered docs site (if you have one)
 
 ## Monthly (first Monday, 60 min)
 
-- OKR/bet check-in — update `strategy.md`
+- OKR/bet check-in - update `strategy.md`
 - Refresh top 10 `customers/` compiled-truth blocks
 - Deep pass on one competitor
 - Archive `meetings/` and `weekly/` older than 6 months to `<folder>/archive/YYYY/`
-- Run `gitleaks detect --source .` — should be clean
+- Run `gitleaks detect --source .` - should be clean
 
 ## Quarterly (2 hrs)
 
 - Rewrite `strategy.md` for the new quarter
 - Prune duplicate canonical pages (merge them)
 - Refresh top 20 files
-- Audit MCP scopes — read-only by default
+- Audit MCP scopes - read-only by default
 - Decide: rebuild or iterate? Don't restart the repo. Iterate.
 
 ## Staleness detection
@@ -60,15 +60,15 @@ Raw → time-series folders (auto-commit OK). Canonical → PR required.
 | Customer      | <30 days   | 30-60      | >60 inactive |
 | Competitor    | <60 days   | 60-180     | >180       |
 | Person        | <180 days  | 180-365    | >365       |
-| Decision      | Never stale — historical |
-| Meeting       | Never stale — historical |
+| Decision      | Never stale - historical |
+| Meeting       | Never stale - historical |
 
 Run `scripts/check-stale.sh` weekly.
 
 ## How PRs should look
 
 **Good:**
-- Small — one idea, one file (or tight set)
+- Small - one idea, one file (or tight set)
 - Semantic commit: `customer(acme): update renewal status after 2026-04-15 call`
 - Frontmatter `updated` and `last_verified` refreshed
 - Links to evidence
@@ -81,7 +81,7 @@ Run `scripts/check-stale.sh` weekly.
 - Raw transcript content that should have been summarized
 - Touches `finance.md` from automated sync (manual only)
 
-## Measurable signals — is this working?
+## Measurable signals - is this working?
 
 At day 30, you should answer **yes** to all:
 
@@ -95,7 +95,7 @@ At day 30, you should answer **yes** to all:
 
 If any answer is no, the fix is almost always **more content, not more structure**.
 
-## Founder eval — the 20 questions
+## Founder eval - the 20 questions
 
 Once a quarter, run these against Claude Code:
 

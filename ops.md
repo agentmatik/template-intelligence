@@ -15,7 +15,7 @@ audience: internal
 GENERATION GUIDE (delete this block once filled)
 
 PURPOSE: How the company actually runs day to day. The operating manual.
-Decision rights here are especially valuable — they tell an agent who can
+Decision rights here are especially valuable - they tell an agent who can
 approve what, enabling autonomy.
 
 SOURCE FROM:
@@ -84,7 +84,7 @@ For anything else: open a question in `decisions/` and tag the owner.
 <!-- Material vendors (>€100/mo): name, what for, contact, renewal date.
 Source: invoices, contracts. -->
 
-- [Vendor] — [purpose] — [contact] — renews [date]
+- [Vendor] - [purpose] - [contact] - renews [date]
 
 ## Security & access
 

@@ -22,7 +22,7 @@ Create a note for any meeting that produced something durable:
 
 ## Filename / slug derivation
 
-Format: `YYYY-MM-DD-<short-topic>.md` — date is the **meeting date**, not today.
+Format: `YYYY-MM-DD-<short-topic>.md` - date is the **meeting date**, not today.
 
 - Acme renewal call on 2026-04-15 → `2026-04-15-acme-renewal-call.md`
 - Weekly eng sync on 2026-04-22 → `2026-04-22-eng-sync.md`
@@ -39,12 +39,12 @@ Archive notes older than 6 months to `meetings/archive/YYYY/` to keep the folder
 ---
 type: meeting                   # ALWAYS "meeting".
 title: "Acme renewal call"      # Concise topic, quoted. Not "Meeting at 3pm".
-status: active                  # active. (Meetings aren't draft/verified — they're records.)
+status: active                  # active. (Meetings aren't draft/verified - they're records.)
 owner: "{{FOUNDER_NAME}}"
 created: 2026-04-15             # The MEETING date.
 updated: 2026-04-15
 last_verified: 2026-04-15
-source_of_truth: granola        # granola | manual | gdrive — where the transcript lives
+source_of_truth: granola        # granola | manual | gdrive - where the transcript lives
 source_refs:
   - granola: "<meeting-id-or-url>"
 attendees: ["Matt", "Klaus Berger (Acme)"]   # Names, with org for externals.
@@ -65,14 +65,14 @@ Meetings are **distillations, not transcripts.** A 60-minute meeting becomes ~30
 | **Attendees** | Names + org affiliation for externals | Transcript speaker labels, invite |
 | **Context** | Why this meeting happened, in one or two sentences | Agenda, invite, opening of transcript |
 | **Decisions** | What was decided (or deliberately not). The most important section. Owner + due where applicable. | Look for commitments, agreements, conclusions |
-| **Action items** | Checkbox list: owner — action — deadline | Look for "I'll...", "can you...", assignments |
+| **Action items** | Checkbox list: owner - action - deadline | Look for "I'll...", "can you...", assignments |
 | **Risks / flags** | Concerns surfaced. Link to the entity they affect. | Objections, worries, blockers raised |
 | **Key moments / quotes** | Short attributed quotes ONLY when they matter materially. Never a transcript. | Pivotal statements |
 | **Links** | Granola original, related customer/decision files, Linear tickets created | Cross-references |
 
 ### Critical: propagate canonical changes
 
-If a meeting changed a durable fact, **also update the canonical file** — don't leave the truth stranded in the meeting note:
+If a meeting changed a durable fact, **also update the canonical file** - don't leave the truth stranded in the meeting note:
 
 - Customer status changed → update `customers/<slug>.md` (timeline + compiled truth), ideally via PR
 - A real decision was made → create `decisions/YYYY-MM-DD-<slug>.md`
@@ -118,8 +118,8 @@ Annual renewal due in January; Klaus wanted to discuss terms and the analytics-v
 
 ## Action items
 
-- [ ] Matt — send analytics-v2 beta access — 2026-04-22
-- [ ] Matt — draft expansion proposal (€2k/mo) — 2026-04-30
+- [ ] Matt - send analytics-v2 beta access - 2026-04-22
+- [ ] Matt - draft expansion proposal (€2k/mo) - 2026-04-30
 
 ## Risks / flags
 
@@ -128,7 +128,7 @@ Annual renewal due in January; Klaus wanted to discuss terms and the analytics-v
 ## Key moments
 
 > "If analytics-v2 lands by Q3, we'd expand to the whole plant."
-> — Klaus Berger
+> - Klaus Berger
 
 ## Links
 

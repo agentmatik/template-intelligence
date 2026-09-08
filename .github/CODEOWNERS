@@ -1,0 +1,14 @@
+# Every canonical change needs a human owner's review. With branch
+# protection requiring code-owner review, this is the deterministic form
+# of "PRs gate the truth."
+#
+# Replace with real handles after instantiating the template.
+
+# Default: the founder owns everything
+* @{{GITHUB_FOUNDER_HANDLE}}
+
+# Sensitive surfaces — keep founder-only even as the team grows
+finance.md @{{GITHUB_FOUNDER_HANDLE}}
+people/ @{{GITHUB_FOUNDER_HANDLE}}
+AGENTS.md @{{GITHUB_FOUNDER_HANDLE}}
+.github/ @{{GITHUB_FOUNDER_HANDLE}}

@@ -1,4 +1,4 @@
-# AGENTS.md — {{COMPANY_NAME}} Company Intelligence
+# AGENTS.md - {{COMPANY_NAME}} Company Intelligence
 
 > **This file is canonical. Every agent tool reads it unchanged.**
 > Claude Code reads it via `@AGENTS.md` in `CLAUDE.md`. Cursor, Codex, OpenClaw, Gemini, Windsurf, and Aider read it directly. This is the cross-tool standard.
@@ -11,7 +11,7 @@ Use it to answer questions, prepare work, normalize raw material, and update com
 
 > 📋 **Quick facts & links -> [`FACTSHEET.md`](./FACTSHEET.md).** For any specific company fact or official link (the app/store URL, socials, website, registration numbers like company no. / EIN / DUNS, founders + emails, funding numbers, pricing, accolades) read **`FACTSHEET.md`** first. It's the single dense quick-reference, built for filling **applications, forms, and decks**. Don't hunt across files or answer a "what's our X?" from memory; the fact sheet has it, with a link to the canonical page for nuance. *(Template repos ship it pre-filled with placeholders; replace those with real values during setup.)*
 
-**Syncing this repo into an AI for company context?** See [`docs/CLAUDE_SYNC.md`](docs/CLAUDE_SYNC.md): sync the compiled brain (root knowledge + entity folders + curated decisions), skip the raw sources (`meetings/`, any `decisions/imported/`, images) — already compiled and the capacity hogs.
+**Syncing this repo into an AI for company context?** See [`docs/CLAUDE_SYNC.md`](docs/CLAUDE_SYNC.md): sync the compiled brain (root knowledge + entity folders + curated decisions), skip the raw sources (`meetings/`, any `decisions/imported/`, images) - already compiled and the capacity hogs.
 
 ---
 
@@ -19,9 +19,9 @@ Use it to answer questions, prepare work, normalize raw material, and update com
 
 When you need information, consult in this order:
 
-1. **Files in this repo with `status: verified` frontmatter** — authoritative.
-2. **Live systems via MCP** (Linear, Slack, Granola, Notion, GitHub, Google Workspace) — recent truth.
-3. **Your training data** — background only. Never cite as fact.
+1. **Files in this repo with `status: verified` frontmatter** - authoritative.
+2. **Live systems via MCP** (Linear, Slack, Granola, Notion, GitHub, Google Workspace) - recent truth.
+3. **Your training data** - background only. Never cite as fact.
 
 If two sources disagree, surface the conflict. Don't guess.
 
@@ -52,9 +52,9 @@ If two sources disagree, surface the conflict. Don't guess.
 | `competitors/` | One file per competitor                                         |
 | `people/`      | Team, advisors, partners, investors (one file each)             |
 | `sales/`       | Pipeline by stage; deals worth tracking; pricing                |
-| `decisions/`   | `YYYY-MM-DD-<slug>.md` — append-only ADRs, immutable            |
-| `meetings/`    | `YYYY-MM-DD-<topic>.md` — distilled meeting notes               |
-| `weekly/`      | `YYYY-Www.md` — Friday founder/team brief                       |
+| `decisions/`   | `YYYY-MM-DD-<slug>.md` - append-only ADRs, immutable            |
+| `meetings/`    | `YYYY-MM-DD-<topic>.md` - distilled meeting notes               |
+| `weekly/`      | `YYYY-Www.md` - Friday founder/team brief                       |
 | `skills/`      | (Optional) Cross-tool agent skills in SKILL.md format           |
 | `templates/`   | Note templates with frontmatter scaffolding                     |
 
@@ -65,7 +65,7 @@ If two sources disagree, surface the conflict. Don't guess.
 - Prefer **updating** an existing canonical page over creating a new one.
 - One idea per file.
 - Preserve frontmatter. Add `updated` and `last_verified` when you materially change facts.
-- Keep current truth separate from append-only history — **compiled truth above `---`, dated timeline below.**
+- Keep current truth separate from append-only history - **compiled truth above `---`, dated timeline below.**
 - Use wikilinks (`[[customers/acme-co]]`), not repetition.
 - Mark uncertainty explicitly.
 - Never depend on chat history for continuity. Write important state to files.
@@ -103,7 +103,7 @@ For customers, competitors, and people, structure every file like this:
 ```markdown
 # Acme Co
 
-<Compiled truth — current best understanding. Rewrite as we learn more.
+<Compiled truth - current best understanding. Rewrite as we learn more.
 This is what humans and agents see first.>
 
 ---
@@ -113,14 +113,14 @@ This is what humans and agents see first.>
 - 2026-03-28: Expansion conversation.
 ```
 
-**Top half is mutable** — rewriteable. **Bottom half is append-only** — never delete entries.
+**Top half is mutable** - rewriteable. **Bottom half is append-only** - never delete entries.
 
 ---
 
 ## Naming conventions
 
 - Dated notes: `YYYY-MM-DD-topic.md`
-- Weekly: `YYYY-Www.md` (ISO week — e.g. `2026-W17.md`)
+- Weekly: `YYYY-Www.md` (ISO week - e.g. `2026-W17.md`)
 - Evergreen: `kebab-case-name.md`
 - One idea per file. No catch-all `notes.md`.
 
@@ -130,15 +130,15 @@ This is what humans and agents see first.>
 
 When answering questions or writing content:
 
-- **Concise** — no padding.
-- **Structured** — headings, tables, bullets where they earn their place.
-- **Founder-readable** — no jargon unless it's our jargon.
-- **Explicit about confidence** — flag uncertainty.
-- **Linked to evidence** — cite the page or the live source.
+- **Concise** - no padding.
+- **Structured** - headings, tables, bullets where they earn their place.
+- **Founder-readable** - no jargon unless it's our jargon.
+- **Explicit about confidence** - flag uncertainty.
+- **Linked to evidence** - cite the page or the live source.
 
 ---
 
-## MCP vs Markdown — when to use which
+## MCP vs Markdown - when to use which
 
 **Use MCP when:**
 - The answer depends on current status.

@@ -17,10 +17,10 @@ Create a file when a person meets **any** of these:
 
 **Do NOT create a file for:**
 
-- Customers or prospects — those go in [`../customers/`](../customers/)
+- Customers or prospects - those go in [`../customers/`](../customers/)
 - One-off contacts with no ongoing relationship
 - Job candidates who haven't joined (track those in your ATS, not here)
-- Anyone where you only have a name and nothing else — skip until there's signal
+- Anyone where you only have a name and nothing else - skip until there's signal
 
 When in doubt, the test is: *would an agent preparing the founder for a meeting need a durable file on this person?* If yes, create it. If the info fits in one line of a meeting note, don't.
 
@@ -85,12 +85,12 @@ Fill these fields. Omit a line only if you genuinely have no data and no reasona
 | **Joined / met** | Date they joined the team or the relationship began | Offer letter date, first email, contract start |
 | **What they own** | Their domains, RACI responsibilities, or how they help | Role description, project assignments, meeting context |
 | **Superpower** | The one thing they're uniquely good at | Founder's own assessment, peer feedback in transcripts |
-| **Where they need support** | What they'd benefit from help with — honest and kind | Founder's assessment. Optional. Frame constructively. |
+| **Where they need support** | What they'd benefit from help with - honest and kind | Founder's assessment. Optional. Frame constructively. |
 | **Comms preference** | Async/sync, response time, meeting style | Observed behavior, stated preference |
 
 ### Timeline (below the `---`)
 
-Reverse-chronological dated bullets. **Append-only — never edit or delete past entries.** Light touch for people: log role changes, joining, departure, major contributions, promotions. Not every interaction.
+Reverse-chronological dated bullets. **Append-only - never edit or delete past entries.** Light touch for people: log role changes, joining, departure, major contributions, promotions. Not every interaction.
 
 ```
 - 2026-04-15: Promoted to Head of Engineering.
@@ -148,13 +148,13 @@ tags: [engineering, founding-team]
 
 **Good:** Specific, current, sourced, honest. "Owns all engineering, reports to no one" beats "technical person." The superpower is concrete. The support note is constructive, not a criticism dump.
 
-**Bad:** Vague ("good at tech"), invented (a join-date you guessed), or containing prohibited data (salary, performance ratings, health, personal life). A file that reads like a LinkedIn summary is too generic — capture what's *useful to the company*, not what's public.
+**Bad:** Vague ("good at tech"), invented (a join-date you guessed), or containing prohibited data (salary, performance ratings, health, personal life). A file that reads like a LinkedIn summary is too generic - capture what's *useful to the company*, not what's public.
 
 ---
 
 ## Strict prohibitions
 
-- **No compensation** — salary, equity, bonus. Lives in your cap table / payroll, encrypted.
+- **No compensation** - salary, equity, bonus. Lives in your cap table / payroll, encrypted.
 - **No performance reviews or ratings.** Lives in your HR system.
 - **No medical, health, or sensitive personal information.** Ever.
 - **No personal details beyond work-relevant context.** Birthday is fine if you celebrate them; home address is not.

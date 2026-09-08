@@ -11,7 +11,7 @@ tags: []
 audience: internal
 ---
 
-# Week {{ISO_WEEK}} — {{DATE_RANGE}}
+# Week {{ISO_WEEK}} - {{DATE_RANGE}}
 
 ## What shipped
 
@@ -30,7 +30,7 @@ The non-obvious insight of the week. One paragraph. What do we now know that we 
 
 ## Metrics
 
-Link to live dashboards via MCP. Don't mirror numbers — they go stale.
+Link to live dashboards via MCP. Don't mirror numbers - they go stale.
 
 - [North-star dashboard]({{URL}})
 - [Pipeline]({{URL}})
@@ -41,7 +41,7 @@ Honestly named. What got in the way?
 
 ## Decisions this week
 
-- [[decisions/YYYY-MM-DD-<slug>]] — One-line summary.
+- [[decisions/YYYY-MM-DD-<slug>]] - One-line summary.
 
 ## Next week's focus
 

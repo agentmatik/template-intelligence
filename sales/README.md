@@ -3,8 +3,8 @@
 Pipeline by stage, pricing, and active deals worth tracking. This README is the complete contract for generating the two sales files from raw data (CRM exports, call transcripts, proposals, order forms).
 
 Two files live here:
-- `pipeline.md` — active deals, organized by stage
-- `pricing.md` — what you charge, when, why; pricing-change log
+- `pipeline.md` - active deals, organized by stage
+- `pricing.md` - what you charge, when, why; pricing-change log
 
 ---
 
@@ -14,7 +14,7 @@ A single file (not one-per-deal) listing active opportunities grouped by stage. 
 
 ### When a deal belongs in pipeline.md
 
-- There's been real contact (a call, a demo, a proposal) — not just a cold lead
+- There's been real contact (a call, a demo, a proposal) - not just a cold lead
 - The deal is live (not won, not dead)
 - It's worth the founder knowing about in a weekly review
 
@@ -32,7 +32,7 @@ created: 2026-04-22
 updated: 2026-04-22
 last_verified: 2026-04-22
 source_of_truth: manual         # or "linear" / CRM if synced
-audience: internal              # ALWAYS internal — sales-sensitive
+audience: internal              # ALWAYS internal - sales-sensitive
 tags: []
 ---
 ```
@@ -44,12 +44,12 @@ Group by stage. Common stages (adapt to your funnel): `Discovery → Qualified �
 ```markdown
 ## Negotiation
 
-### Beta Industries — €30–50k ARR — owner: Matt
+### Beta Industries - €30-50k ARR - owner: Matt
 Manufacturing SME, 200 staff. Proposal sent 2026-04-10. Champion is their COO.
 Sticking point: wants quarterly billing. Next step: revised terms by 2026-04-25.
 ```
 
-**Value discipline:** use **rough ranges** ("€30–50k ARR"), never exact contract figures, in pipeline headlines. Exact numbers live in the order form / CRM.
+**Value discipline:** use **rough ranges** ("€30-50k ARR"), never exact contract figures, in pipeline headlines. Exact numbers live in the order form / CRM.
 
 ### Stage transitions
 
@@ -105,7 +105,7 @@ Why the tiers are structured this way. What the value metric is (seats, usage, e
 - 2026-04-01: Raised Team tier €3k → €4k/mo. Grandfathered existing customers 6 months.
 ```
 
-The timeline (below `---`) logs every pricing change with date and rationale — invaluable when a customer asks "why did my price change?"
+The timeline (below `---`) logs every pricing change with date and rationale - invaluable when a customer asks "why did my price change?"
 
 ---
 
@@ -135,4 +135,4 @@ The timeline (below `---`) logs every pricing change with date and rationale —
 - **No pipeline yet** (pre-revenue): create `pipeline.md` with a note "No active deals yet" rather than omitting the file, so the structure is ready.
 - **Conflicting deal value across sources:** use the most recent proposal; range it.
 - **Deal goes cold:** move to a `## Stalled` section; if dead after 60 days, treat as lost.
-- **Never** put exact ARR or contract totals in headlines — ranges only. Exact numbers are CRM/finance territory.
+- **Never** put exact ARR or contract totals in headlines - ranges only. Exact numbers are CRM/finance territory.

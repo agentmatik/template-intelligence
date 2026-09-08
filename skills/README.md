@@ -128,12 +128,12 @@ Skills written here are compatible with OpenClaw, Cursor, and Codex unmodified, 
 
 ---
 
-## Security — treat third-party skills as untrusted code
+## Security - treat third-party skills as untrusted code
 
 Skill supply-chain attacks are real and recent (ClawHavoc, Feb 2026: ~341 malicious skills; a Snyk audit found 283 leaking credentials). Rules:
 
 - **First-party by default.** Write your own.
-- **Read every line** of any third-party `SKILL.md` before installing — the `description` field is a prompt-injection vector.
+- **Read every line** of any third-party `SKILL.md` before installing - the `description` field is a prompt-injection vector.
 - **Pin versions.** Never auto-update a skill that touches a production gateway.
 - **Sandbox** non-first-party skills (OpenClaw Docker mode) when possible.
 - **Least privilege:** a skill should only touch the folders and MCP scopes it genuinely needs.

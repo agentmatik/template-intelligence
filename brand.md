@@ -25,10 +25,10 @@ SOURCE FROM:
 
 CRITICAL RULE: The 3 DON'TS and the worked NEGATIVE example matter most. Voice
 is defined by its boundaries. An agent can't write in-voice from adjectives
-("friendly, professional") — it needs concrete do/don't pairs with examples.
+("friendly, professional") - it needs concrete do/don't pairs with examples.
 
   - status: draft when generated; human verifies.
-  - Link visual assets (logo, deck) — don't embed binaries.
+  - Link visual assets (logo, deck) - don't embed binaries.
 ============================================================ -->
 
 # Brand
@@ -48,18 +48,18 @@ hero headline. -->
 
 <!-- Each with a concrete example sentence in-voice. Source: best existing copy. -->
 
-1. **[Do this]** — Example: "..."
-2. **[Do this]** — Example: "..."
-3. **[Do this]** — Example: "..."
+1. **[Do this]** - Example: "..."
+2. **[Do this]** - Example: "..."
+3. **[Do this]** - Example: "..."
 
 ### Three don'ts
 
 <!-- The boundary. Each with a counter-example of what we'd NEVER write.
 Source: infer from voice, or from copy the founder has rejected. -->
 
-1. **[Don't do this]** — Counter-example: "..."
-2. **[Don't do this]** — Counter-example: "..."
-3. **[Don't do this]** — Counter-example: "..."
+1. **[Don't do this]** - Counter-example: "..."
+2. **[Don't do this]** - Counter-example: "..."
+3. **[Don't do this]** - Counter-example: "..."
 
 ### Worked example
 

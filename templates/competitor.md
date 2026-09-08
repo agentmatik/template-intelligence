@@ -15,7 +15,7 @@ audience: internal
 
 # {{COMPETITOR_NAME}}
 
-<!-- COMPILED TRUTH — what we believe about them right now. -->
+<!-- COMPILED TRUTH - what we believe about them right now. -->
 
 **What they do:** One sentence.
 
@@ -37,6 +37,6 @@ audience: internal
 
 ---
 
-<!-- APPEND-ONLY TIMELINE — launches, funding, customer wins/losses. -->
+<!-- APPEND-ONLY TIMELINE - launches, funding, customer wins/losses. -->
 
 - 2026-04-22: Created this entity page.

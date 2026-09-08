@@ -10,15 +10,15 @@ Template: [`../templates/competitor.md`](../templates/competitor.md)
 
 Create a file for any company that:
 
-- **Directly competes** — buyers evaluate them against you
-- **Adjacently competes** — solves the same problem a different way, or could pivot toward you
+- **Directly competes** - buyers evaluate them against you
+- **Adjacently competes** - solves the same problem a different way, or could pivot toward you
 - **Comes up repeatedly** in sales calls, even if you think they're not a real threat
 
 **Do NOT create a file for:**
 
-- Every company in your category — only ones that actually affect deals or strategy
-- Companies mentioned once with no follow-up — note in a meeting, don't create a file
-- Pure inspiration/aspiration companies that aren't competitors — those belong in `strategy.md` or `market` notes if you add that later
+- Every company in your category - only ones that actually affect deals or strategy
+- Companies mentioned once with no follow-up - note in a meeting, don't create a file
+- Pure inspiration/aspiration companies that aren't competitors - those belong in `strategy.md` or `market` notes if you add that later
 
 ---
 
@@ -66,13 +66,13 @@ Compiled truth (top, mutable) + timeline (bottom, append-only).
 | **Category** | direct / adjacent / tangential + one line of why | Your own positioning judgment |
 | **Founded / Funding / Team** | Year, last known raise, approx headcount | Crunchbase, news, LinkedIn |
 | **Positioning** | How they describe themselves | Their site, ads, sales decks |
-| **Their strength** | The one thing they genuinely do better — be honest | Win/loss notes, customer feedback |
+| **Their strength** | The one thing they genuinely do better - be honest | Win/loss notes, customer feedback |
 | **Their weakness** | The one thing you do better that matters to buyers | Win/loss notes, their gaps |
 | **How we win** | The positioning response when buyers compare | Sales-team playbook, won deals |
-| **How they'd win** | What makes a buyer choose them — honest, not propaganda | Lost deals, their advantages |
+| **How they'd win** | What makes a buyer choose them - honest, not propaganda | Lost deals, their advantages |
 | **Threat level** | low/med/high + reasoning | Your judgment from deal overlap |
 
-**Critical:** A competitor file that is only critical of the competitor is propaganda and useless. Capture their real strengths honestly — the agent and sales team need an accurate map, not a morale boost.
+**Critical:** A competitor file that is only critical of the competitor is propaganda and useless. Capture their real strengths honestly - the agent and sales team need an accurate map, not a morale boost.
 
 ### Timeline
 
@@ -109,7 +109,7 @@ tags: [dach, well-funded]
 
 **What they do:** IoT analytics platform for European manufacturers.
 
-**Category:** Direct — buyers shortlist us both in DACH manufacturing deals.
+**Category:** Direct - buyers shortlist us both in DACH manufacturing deals.
 
 **Founded:** 2022 · **Funding:** $20M Series B (Sequoia, 2026) · **Team:** ~80.
 
@@ -123,7 +123,7 @@ tags: [dach, well-funded]
 
 **How they'd win:** A buyer who prioritizes local language + on-site support over technical depth picks them.
 
-**Threat level:** High — well-funded, same buyers, just closed our language-gap advantage.
+**Threat level:** High - well-funded, same buyers, just closed our language-gap advantage.
 
 ---
 

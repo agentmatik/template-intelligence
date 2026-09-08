@@ -2,9 +2,9 @@
 
 > **You are an AI coding agent (Claude Code, Cursor, Codex, OpenClaw, or similar) helping a founder turn a folder of existing files into a clean, agent-readable single source of truth, hosted as a private GitHub repo following the *Company Intelligence* template.**
 >
-> This document is your **complete operating manual** for that task. Read it end-to-end before acting. It is long because the task is unforgiving — the wrong shape early creates pain forever.
+> This document is your **complete operating manual** for that task. Read it end-to-end before acting. It is long because the task is unforgiving - the wrong shape early creates pain forever.
 >
-> **Prerequisite reading:** [`DATA-ORGANIZATION-PLAYBOOK.md`](./DATA-ORGANIZATION-PLAYBOOK.md) gives you the routing logic (what data goes where) and the generation contract for the six root files. Read it first. Then, for each folder you write into, that folder's `README.md` is the authoritative per-file contract — frontmatter fields, sourcing, worked example, quality bar, edge cases. This document is the *project procedure*; those are the *file specs*.
+> **Prerequisite reading:** [`DATA-ORGANIZATION-PLAYBOOK.md`](./DATA-ORGANIZATION-PLAYBOOK.md) gives you the routing logic (what data goes where) and the generation contract for the six root files. Read it first. Then, for each folder you write into, that folder's `README.md` is the authoritative per-file contract - frontmatter fields, sourcing, worked example, quality bar, edge cases. This document is the *project procedure*; those are the *file specs*.
 
 ---
 
@@ -14,7 +14,7 @@ Internalize these before doing anything. They override generic AI behavior.
 
 **Truth before completeness.** A v1 with twenty accurate files beats one with two hundred files of varying quality. Empty sections are better than guessed sections. Mark frontmatter `status: draft` whenever you're not sure. Never invent dates, numbers, names, or relationships not present in the source material.
 
-**Smaller is correct.** This template is the **v1 spine** with roughly 10–30 files. Resist the urge to add folders, taxonomies, or scaffolding. The user grows it organically when they feel the pain. Pre-optimization is the failure mode.
+**Smaller is correct.** This template is the **v1 spine** with roughly 10-30 files. Resist the urge to add folders, taxonomies, or scaffolding. The user grows it organically when they feel the pain. Pre-optimization is the failure mode.
 
 **One idea per file.** A customer is one file. A decision is one file. A competitor is one file. Don't batch entities. Don't create catch-all `notes.md` files.
 
@@ -22,7 +22,7 @@ Internalize these before doing anything. They override generic AI behavior.
 
 **Auto-commit time-series, PR for canonical.** Meetings and weekly briefs can commit directly. Strategy, customers, decisions, people require PR review. Open PRs for canonical changes; don't push canonical truth to `main`.
 
-**Live systems stay live.** Linear tickets, Slack threads, Notion working docs — these stay where they are. The repo holds *durable* knowledge. Mirror only summaries and decisions, never tickets or live state.
+**Live systems stay live.** Linear tickets, Slack threads, Notion working docs - these stay where they are. The repo holds *durable* knowledge. Mirror only summaries and decisions, never tickets or live state.
 
 **Never commit secrets, PII, financials, or NDA content.** Even if it's in the source files. Especially if it's in the source files. You will see things you should not commit. Refuse, even if the user asks.
 
@@ -53,7 +53,7 @@ Create exactly this. No more, no less, on day one.
 ├── product.md                 # What we're building, roadmap link, architecture
 ├── brand.md                   # Voice (3 dos + 3 don'ts), messaging, narrative
 ├── ops.md                     # Cadence, decision rights, tools, vendors, GDPR
-├── finance.md                 # Pointers only — real numbers live elsewhere
+├── finance.md                 # Pointers only - real numbers live elsewhere
 │
 ├── customers/
 │   ├── README.md
@@ -70,7 +70,7 @@ Create exactly this. No more, no less, on day one.
 ├── sales/
 │   ├── README.md
 │   ├── pipeline.md            # Active deals by stage; one paragraph each
-│   └── pricing.md             # Our pricing — what we charge, when, why
+│   └── pricing.md             # Our pricing - what we charge, when, why
 │
 ├── decisions/
 │   ├── README.md
@@ -106,12 +106,12 @@ Create exactly this. No more, no less, on day one.
 
 **Do not create:**
 
-- ❌ `ops/`, `market/`, `finance/` subfolders — root files until they outgrow ~1000 words
-- ❌ Numbered prefixes (`03-strategy/`) — clean names only
-- ❌ `archive/` subfolders — use `status: archived` in frontmatter
-- ❌ `mkdocs.yml`, `.mcp.json` — add later when the user is ready
-- ❌ `skills/` with content — leave it empty; user adds skills when workflows repeat
-- ❌ `inbox/` — use a local untracked folder during migration
+- ❌ `ops/`, `market/`, `finance/` subfolders - root files until they outgrow ~1000 words
+- ❌ Numbered prefixes (`03-strategy/`) - clean names only
+- ❌ `archive/` subfolders - use `status: archived` in frontmatter
+- ❌ `mkdocs.yml`, `.mcp.json` - add later when the user is ready
+- ❌ `skills/` with content - leave it empty; user adds skills when workflows repeat
+- ❌ `inbox/` - use a local untracked folder during migration
 
 ---
 
@@ -149,8 +149,8 @@ audience: internal        # internal | team | public (default internal for safet
 
 **Rules:**
 
-- `type` is the highest-leverage field — it lets agents route ("for customer questions, look in files where `type: customer`")
-- `status: draft` is your default when migrating existing material — the founder marks `verified` after review
+- `type` is the highest-leverage field - it lets agents route ("for customer questions, look in files where `type: customer`")
+- `status: draft` is your default when migrating existing material - the founder marks `verified` after review
 - `last_verified` is set to the source document's date if you haven't independently verified
 - `audience: internal` is the safe default
 
@@ -174,15 +174,15 @@ audience: internal
 
 # Acme Co
 
-<!-- Compiled truth — current best understanding. Rewrite as we learn more.
+<!-- Compiled truth - current best understanding. Rewrite as we learn more.
 This is what humans and agents see first. -->
 
 **What they do:** ...
 **Our relationship:** Customer | Prospect | Churned · since YYYY-MM-DD
 **Primary contact:** Name, role, email
 **Plan:** Tier, pricing, renewal date
-**Health:** Green/Yellow/Red — one-sentence reason
-**Unmet needs:** 1–3 bullets
+**Health:** Green/Yellow/Red - one-sentence reason
+**Unmet needs:** 1-3 bullets
 
 ---
 
@@ -216,7 +216,7 @@ Forcing functions, not rigid limits.
 
 A **nine-phase** process. Do not skip phases. Do not reorder them.
 
-### Phase 0 — Pre-flight
+### Phase 0 - Pre-flight
 
 **Confirm with the user:**
 
@@ -228,7 +228,7 @@ A **nine-phase** process. Do not skip phases. Do not reorder them.
 
 If any answer is unclear, **ask now**. Don't proceed.
 
-### Phase 1 — Discovery (read before you write)
+### Phase 1 - Discovery (read before you write)
 
 **Walk every file in the source folder.** For each:
 
@@ -249,57 +249,57 @@ Produce a temporary `_migration-inventory.md` file (gitignored, deleted at the e
 
 **Show inventory to user. Get sign-off before Phase 2.**
 
-### Phase 2 — Bucket the inventory
+### Phase 2 - Bucket the inventory
 
 Sort each source file into one of four buckets:
 
 | Bucket | What goes here | Action |
 |--------|---------------|--------|
-| **Repo** | Durable knowledge | Migrate (Phase 4–8) |
+| **Repo** | Durable knowledge | Migrate (Phase 4-8) |
 | **Live system** | Active operational state | Don't migrate. Note where it stays. |
 | **Skip** | Outdated/superseded/redundant | List in inventory, don't migrate. |
-| **Sensitive — quarantine** | Finance, comp, HR, NDA, raw PII | Don't migrate. Ask user where these belong. |
+| **Sensitive - quarantine** | Finance, comp, HR, NDA, raw PII | Don't migrate. Ask user where these belong. |
 
 Show buckets to user, get sign-off. Don't move anything yet.
 
-### Phase 3 — Scaffold the repo
+### Phase 3 - Scaffold the repo
 
 Create the directory structure from §2 (above). Then write:
 
-- `README.md` — short, human-readable (~80 lines)
-- `AGENTS.md` — the agent contract from the template (~150 lines)
-- `CLAUDE.md` — thin shim importing `AGENTS.md`
-- `INDEX.md` — minimal at first
+- `README.md` - short, human-readable (~80 lines)
+- `AGENTS.md` - the agent contract from the template (~150 lines)
+- `CLAUDE.md` - thin shim importing `AGENTS.md`
+- `INDEX.md` - minimal at first
 - `FACTSHEET.md` - copy the template's placeholder fact sheet (you fill it in Phase 4 once the root files exist)
-- `.gitignore` — see §6.4
-- `docs/` — copy `AGENT-INSTRUCTIONS.md`, `ARCHITECTURE.md`, `SETUP.md`, `OPERATIONS.md` from template
-- `templates/` — copy entity templates
-- `.github/workflows/validate.yml` — basic CI
+- `.gitignore` - see §6.4
+- `docs/` - copy `AGENT-INSTRUCTIONS.md`, `ARCHITECTURE.md`, `SETUP.md`, `OPERATIONS.md` from template
+- `templates/` - copy entity templates
+- `.github/workflows/validate.yml` - basic CI
 
 Initialize git locally. Do not push yet.
 
-### Phase 4 — Root knowledge files
+### Phase 4 - Root knowledge files
 
 Write the six root files in this order:
 
-1. **`company.md`** — what the company is. Extract from most recent pitch deck or about page.
-2. **`strategy.md`** — current quarter priorities, bets, north star. Use most recent strategy doc/board update. Note conflicts in handoff.
-3. **`product.md`** — one paragraph what's built today, link to Linear, architecture paragraph.
-4. **`brand.md`** — voice (3 dos, 3 don'ts), messaging. Negative examples matter.
-5. **`ops.md`** — cadence, decision rights, tools, vendors. Skip data inventory if no GDPR exposure.
-6. **`finance.md`** — pointers only. Where the real numbers live. Never the numbers themselves.
+1. **`company.md`** - what the company is. Extract from most recent pitch deck or about page.
+2. **`strategy.md`** - current quarter priorities, bets, north star. Use most recent strategy doc/board update. Note conflicts in handoff.
+3. **`product.md`** - one paragraph what's built today, link to Linear, architecture paragraph.
+4. **`brand.md`** - voice (3 dos, 3 don'ts), messaging. Negative examples matter.
+5. **`ops.md`** - cadence, decision rights, tools, vendors. Skip data inventory if no GDPR exposure.
+6. **`finance.md`** - pointers only. Where the real numbers live. Never the numbers themselves.
 
 For each: aim for **accurate**, not comprehensive. Mark `status: draft`. Note sources in handoff.
 
 **Then fill `FACTSHEET.md`**: the dense quick-reference (facts + official links for applications/forms/decks). It's a *derivative index*: pull each value from the canonical page you just wrote (`company.md` for registration/identity, `finance.md` for funding headlines, `brand.md` for links/taglines, `people/` for founders, `product.md` for tech/platforms). Replace every `{{PLACEHOLDER}}` and `[bracketed example]`; delete rows that don't apply; leave `<unknown>` rather than guessing. **No secrets**: public registration numbers are fine, but bank/PIN/cap-table/term-sheet detail stays in the encrypted store `finance.md` points to. It carries no frontmatter (same as `INDEX.md`/`README.md`).
 
-### Phase 5 — Entities
+### Phase 5 - Entities
 
 For each customer in source material:
 
 1. Create `customers/<slug>.md` using the entity-page pattern (§3.3)
 2. Compiled-truth block at top
-3. Timeline below — dated entries from sources
+3. Timeline below - dated entries from sources
 4. Frontmatter: `type: customer`, `status: draft`
 
 Same process for competitors (`competitors/<slug>.md`) and people (`people/<slug>.md`).
@@ -311,13 +311,13 @@ Same process for competitors (`competitors/<slug>.md`) and people (`people/<slug
 - Don't invent contact details. Use `<unknown>`.
 - People files: **internal only**. Mark `audience: internal`. Never include comp, performance reviews, health info.
 
-### Phase 6 — Sales
+### Phase 6 - Sales
 
 Create `sales/pipeline.md` if any pipeline data exists in source material:
 
 - Stage-organized list of active deals
 - One paragraph per deal: name, stage, value (rough range if known), next step, owner
-- **Never include exact deal values in headlines** — those are sensitive. Rough ranges OK.
+- **Never include exact deal values in headlines** - those are sensitive. Rough ranges OK.
 
 Create `sales/pricing.md` if source material includes pricing discussions:
 
@@ -325,7 +325,7 @@ Create `sales/pricing.md` if source material includes pricing discussions:
 - What's included at each tier
 - Recent pricing changes (with dates)
 
-### Phase 7 — Decisions
+### Phase 7 - Decisions
 
 For each meaningful decision visible in source material from the **last 90 days**:
 
@@ -335,21 +335,21 @@ For each meaningful decision visible in source material from the **last 90 days*
 
 **Don't backfill more than 90 days.** Older decisions invite hallucinated context.
 
-### Phase 8 — Meetings
+### Phase 8 - Meetings
 
 For each meeting transcript in source material from the **last 30 days**:
 
 - Distill into `meetings/YYYY-MM-DD-<topic>.md` (≤500 words)
-- Action items, decisions, key quotes only — never paste full transcripts
+- Action items, decisions, key quotes only - never paste full transcripts
 - Link to original Granola URL if available
 
 **Don't backfill more than 30 days.**
 
-### Phase 9 — First weekly brief
+### Phase 9 - First weekly brief
 
 Write **one** weekly brief: `weekly/YYYY-Www.md` for the most recent complete ISO week. Pull from meetings and decisions you just migrated. Mark `status: draft`.
 
-### Phase 10 — Validate, push, hand off
+### Phase 10 - Validate, push, hand off
 
 **Before touching GitHub:**
 
@@ -383,7 +383,7 @@ In GitHub Settings:
 Save as `MIGRATION-HANDOFF.md` at repo root. User reads first, then deletes.
 
 ```markdown
-# Migration handoff — <date>
+# Migration handoff - <date>
 
 ## What was migrated
 
@@ -402,10 +402,10 @@ List with reasons: too dated, superseded, sensitive, out of scope.
 ## What needs founder review
 
 Prioritized:
-1. **High-priority drafts** — files affecting ongoing work, review within 7 days
-2. **Conflicting sources** — where two docs disagreed, which one I used
-3. **Unknown fields** — places I left `<unknown>`
-4. **Sensitive content I didn't migrate** — list, recommend where it should live
+1. **High-priority drafts** - files affecting ongoing work, review within 7 days
+2. **Conflicting sources** - where two docs disagreed, which one I used
+3. **Unknown fields** - places I left `<unknown>`
+4. **Sensitive content I didn't migrate** - list, recommend where it should live
 
 ## What I didn't do
 
@@ -431,12 +431,12 @@ Prioritized:
 The repo already contains:
 
 - `FACTSHEET.md` - the placeholder fact sheet (root). Fill it in Phase 4; keep its shape. No frontmatter (it's a navigation index like `INDEX.md`/`README.md`, not a canonical knowledge page).
-- `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md` — copy these into entity files and fill in
-- `docs/ARCHITECTURE.md` — keep as-is, customize examples
-- `docs/SETUP.md` — keep as-is
-- `docs/OPERATIONS.md` — keep as-is
-- `.gitignore` — keep as-is (already has defensive patterns)
-- `.github/workflows/validate.yml` — keep as-is (CI for frontmatter + secrets)
+- `templates/customer.md`, `competitor.md`, `person.md`, `decision.md`, `meeting.md`, `weekly.md` - copy these into entity files and fill in
+- `docs/ARCHITECTURE.md` - keep as-is, customize examples
+- `docs/SETUP.md` - keep as-is
+- `docs/OPERATIONS.md` - keep as-is
+- `.gitignore` - keep as-is (already has defensive patterns)
+- `.github/workflows/validate.yml` - keep as-is (CI for frontmatter + secrets)
 
 **Do not overwrite these.** They're already correct.
 
@@ -485,7 +485,7 @@ Don't migrate raw. If a specific decision should be preserved, write it as a `de
 Extract into `brand.md`:
 - Voice (3 dos, 3 don'ts) with worked examples
 - Messaging boilerplate
-- Don't include logo files or full color systems — link the source asset library
+- Don't include logo files or full color systems - link the source asset library
 
 ### 7.8 Financial models, cap tables, comp data
 
@@ -493,7 +493,7 @@ Extract into `brand.md`:
 
 ---
 
-## 8. Failure modes — what NOT to do
+## 8. Failure modes - what NOT to do
 
 - Don't try to be exhaustive. A comprehensive v1 is a bad v1.
 - Don't invent dates. Use "unknown" or the file's modification date with a note.
@@ -534,9 +534,9 @@ Before declaring done:
 
 You're not building a comprehensive knowledge base. You're building a **clean, accurate spine** the user will grow.
 
-The riskiest failure is **confident wrongness** — files marked verified that contain hallucinated relationships, invented dates, or guessed positioning. The user will trust this repo as truth.
+The riskiest failure is **confident wrongness** - files marked verified that contain hallucinated relationships, invented dates, or guessed positioning. The user will trust this repo as truth.
 
-The second-riskiest failure is **structural over-engineering** — folders, taxonomies, subdivisions that look organized but don't match how the user actually thinks.
+The second-riskiest failure is **structural over-engineering** - folders, taxonomies, subdivisions that look organized but don't match how the user actually thinks.
 
 When in doubt:
 - **Skip rather than guess.** Note in handoff.
@@ -544,4 +544,4 @@ When in doubt:
 - **Ask once rather than assume.**
 - **Distill rather than paste.**
 
-Now begin with Phase 0. Confirm prerequisites. Then walk Phase 1 — produce the inventory before writing a single canonical file.
+Now begin with Phase 0. Confirm prerequisites. Then walk Phase 1 - produce the inventory before writing a single canonical file.

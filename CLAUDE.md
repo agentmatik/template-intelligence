@@ -13,7 +13,7 @@ This file adds **Claude-Code-specific** guidance on top of the universal rules i
 5. If the task touches a specific domain: that root file or folder
 6. Only then use MCP for fresh operational state
 
-## Claude-Code features — when to reach for each
+## Claude-Code features - when to reach for each
 
 | Feature             | Use for                                                            |
 |---------------------|--------------------------------------------------------------------|
@@ -21,7 +21,7 @@ This file adds **Claude-Code-specific** guidance on top of the universal rules i
 | **Skills**          | Reusable workflows. On-demand, not always loaded.                  |
 | **Slash commands**  | User-triggered shortcuts. `/weekly-brief`, `/customer-brief`       |
 | **Subagents**       | Isolated research or triage. Returns a compact summary.            |
-| **Hooks**           | Automation around events — lint, validate, import, notify.        |
+| **Hooks**           | Automation around events - lint, validate, import, notify.        |
 | **Output styles**   | Tone/format changes. Not for repo rules or knowledge.              |
 | **MCP**             | Live reads and narrow writes. Not long-term memory.                |
 
@@ -33,9 +33,9 @@ This file adds **Claude-Code-specific** guidance on top of the universal rules i
 
 ## Thinking levels
 
-- `think` — default; routine queries, transcript summaries.
-- `think hard` — competitive analysis, strategy questions.
-- `ultrathink` — fundraising memos, board prep, architectural decisions.
+- `think` - default; routine queries, transcript summaries.
+- `think hard` - competitive analysis, strategy questions.
+- `ultrathink` - fundraising memos, board prep, architectural decisions.
 
 ## What does NOT belong here
 
@@ -52,5 +52,5 @@ Personal per-machine overrides (sandbox URLs, local paths, preferred thinking mo
 
 @CLAUDE.local.md
 
-## Copy style (Matt's preference — non-negotiable)
-- In ALL human-facing copy/content (Notion pages, guides, posts, emails, client deliverables, docs): use a plain hyphen `-`. NEVER use em-dashes (—) or en-dashes (–) — replace with `-` or rephrase the sentence.
+## Copy style (house rule, example)
+- In all human-facing copy (guides, posts, emails, client deliverables, docs) use a plain hyphen `-`. Never use em-dashes or en-dashes; replace them with `-` or rephrase the sentence. Keep or change this rule when you instantiate the template.

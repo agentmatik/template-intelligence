@@ -1,4 +1,4 @@
-# Setup — from empty to working intelligence
+# Setup - from empty to working intelligence
 
 ## Two paths
 
@@ -11,11 +11,11 @@
 ## Prerequisites
 
 - GitHub account (private repo is free with limits, $4/mo Pro otherwise)
-- Claude Code installed — [`code.claude.com/docs/en/setup`](https://code.claude.com/docs/en/setup)
-- 1Password CLI with Claude Code shell plugin (for secrets) — [`developer.1password.com/docs/cli/shell-plugins/claude-code`](https://developer.1password.com/docs/cli/shell-plugins/claude-code)
+- Claude Code installed - [`code.claude.com/docs/en/setup`](https://code.claude.com/docs/en/setup)
+- 1Password CLI with Claude Code shell plugin (for secrets) - [`developer.1password.com/docs/cli/shell-plugins/claude-code`](https://developer.1password.com/docs/cli/shell-plugins/claude-code)
 - (Optional) Obsidian for local Markdown editing
 
-## Step 1 — Use this template (3 min)
+## Step 1 - Use this template (3 min)
 
 On GitHub: click **Use this template** → create new repo `<company>-intelligence` → **private**.
 
@@ -24,7 +24,7 @@ gh repo clone <org>/<company>-intelligence
 cd <company>-intelligence
 ```
 
-## Step 2 — Find & replace placeholders (5 min)
+## Step 2 - Find & replace placeholders (5 min)
 
 Replace these throughout the repo:
 
@@ -39,25 +39,25 @@ Replace these throughout the repo:
 
 Use your editor's multi-file find/replace.
 
-## Step 3 — Seed the ten minimum files (60 min)
+## Step 3 - Seed the ten minimum files (60 min)
 
 Fill the minimum that makes the intelligence useful from day 1:
 
 - [ ] `FACTSHEET.md` - the dense quick-reference (facts + official links for applications/forms/decks). Replace every `{{PLACEHOLDER}}` and `[bracketed example]`; delete rows that don't apply. Pull values from the files below as you fill them. Public registration numbers OK; no bank/cap-table/term-sheet detail.
-- [ ] `company.md` — mission, stage, team. Mark `status: verified`.
-- [ ] `strategy.md` — top 3 priorities for this quarter. Mark `status: verified`.
-- [ ] `product.md` — one paragraph, link to Linear roadmap.
-- [ ] `brand.md` — 3 dos, 3 don'ts, voice example.
-- [ ] `ops.md` — cadence, decision rights, tools.
-- [ ] `customers/<top-customer>.md` — use `templates/customer.md`.
-- [ ] `competitors/<top-competitor>.md` — use `templates/competitor.md`.
-- [ ] `people/<cofounder>.md` — use `templates/person.md`.
-- [ ] `decisions/<today>-adopt-company-intelligence.md` — log this decision.
-- [ ] `weekly/<this-week>.md` — write your first weekly brief.
+- [ ] `company.md` - mission, stage, team. Mark `status: verified`.
+- [ ] `strategy.md` - top 3 priorities for this quarter. Mark `status: verified`.
+- [ ] `product.md` - one paragraph, link to Linear roadmap.
+- [ ] `brand.md` - 3 dos, 3 don'ts, voice example.
+- [ ] `ops.md` - cadence, decision rights, tools.
+- [ ] `customers/<top-customer>.md` - use `templates/customer.md`.
+- [ ] `competitors/<top-competitor>.md` - use `templates/competitor.md`.
+- [ ] `people/<cofounder>.md` - use `templates/person.md`.
+- [ ] `decisions/<today>-adopt-company-intelligence.md` - log this decision.
+- [ ] `weekly/<this-week>.md` - write your first weekly brief.
 
 Don't aim for comprehensive. Aim for **accurate**. Blanks are better than guesses.
 
-## Step 4 — Secure the repo (5 min)
+## Step 4 - Secure the repo (5 min)
 
 GitHub Settings → Security:
 - ✅ Secret scanning + Push protection
@@ -73,7 +73,7 @@ ln -sf ../../scripts/pre-commit.sh .git/hooks/pre-commit
 chmod +x scripts/pre-commit.sh
 ```
 
-## Step 5 — Configure MCP (10 min)
+## Step 5 - Configure MCP (10 min)
 
 In Claude Code, add MCP servers one at a time:
 
@@ -92,7 +92,7 @@ OAuth in browser when prompted. Test:
 
 If wrong, fix the files (not the prompt).
 
-## Step 6 — Try a real task
+## Step 6 - Try a real task
 
 ```
 > /skill weekly-brief
@@ -106,11 +106,11 @@ Or:
 
 Iterate. Add Skills when a workflow repeats. Add MCP servers as needed.
 
-## Week 1 — fill the structure
+## Week 1 - fill the structure
 
 | Day | Focus                                                                              |
 |-----|------------------------------------------------------------------------------------|
-| 1   | Steps 1–6 above                                                                    |
+| 1   | Steps 1-6 above                                                                    |
 | 2   | Add 3-5 more customers + competitors                                               |
 | 3   | Write 3 recent decisions you've made                                               |
 | 4   | Add Granola MCP + normalize last 5 meetings                                        |

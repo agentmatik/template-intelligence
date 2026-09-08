@@ -14,7 +14,7 @@ audience: internal
 <!-- ============================================================
 GENERATION GUIDE (delete this block once filled)
 
-PURPOSE: Where the money truth LIVES — not the money truth itself. A pointer
+PURPOSE: Where the money truth LIVES - not the money truth itself. A pointer
 file plus metric definitions.
 
 ⚠️ HARD RULE FOR AGENTS: If you encounter a cap table, payroll, term sheet, or
@@ -25,7 +25,7 @@ This file only records WHERE those things live and HOW metrics are defined.
 
 WHAT IS OK TO INCLUDE:
   - Pointers to where financial artifacts live (with access notes)
-  - Metric DEFINITIONS (the formula for ARR, burn, etc. — not the values)
+  - Metric DEFINITIONS (the formula for ARR, burn, etc. - not the values)
   - Fundraising round summary (round/date/amount/lead are usually shareable;
     exact terms are not)
   - Review cadence
@@ -58,7 +58,7 @@ documents you then copy.
 ## Key metrics (definitions only)
 
 <!-- The formulas, NOT the values. Values live in dashboards. Source: how the
-company defines these — ask if ambiguous. -->
+company defines these - ask if ambiguous. -->
 
 - **ARR** = [definition]
 - **MRR** = [definition]

@@ -14,7 +14,7 @@ audience: internal
 
 # {{CUSTOMER_NAME}}
 
-<!-- COMPILED TRUTH — rewrite as understanding improves.
+<!-- COMPILED TRUTH - rewrite as understanding improves.
      First thing readers see. Keep current. -->
 
 **What they do:** One sentence.
@@ -37,6 +37,6 @@ audience: internal
 
 ---
 
-<!-- APPEND-ONLY TIMELINE — dated evidence. Never delete entries. -->
+<!-- APPEND-ONLY TIMELINE - dated evidence. Never delete entries. -->
 
 - 2026-04-22: Created this entity page.

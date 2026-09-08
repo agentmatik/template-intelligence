@@ -23,7 +23,7 @@ SOURCE FROM:
   4. Release notes / changelog
 
 CRITICAL RULE: Linear (or your tracker) owns the LIVE roadmap and backlog.
-This file owns DURABLE product thinking only. Do NOT mirror the backlog here —
+This file owns DURABLE product thinking only. Do NOT mirror the backlog here  - 
 it rots instantly. Link to Linear for live state; capture here the "what exists,
 what direction, how it's architected, what we learned" that stays true for weeks.
 
@@ -36,7 +36,7 @@ what direction, how it's architected, what we learned" that stays true for weeks
 ## What exists today
 
 <!-- One paragraph: what's actually shipped and used right now. Source: current
-release notes, the live product, README. Not aspirational — what works today. -->
+release notes, the live product, README. Not aspirational - what works today. -->
 
 ## Roadmap
 

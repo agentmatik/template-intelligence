@@ -1,0 +1,68 @@
+name: validate
+
+# CI for the intelligence repo. Three checks, all advisory rules made
+# deterministic (prose is advisory; CI guarantees it - see docs/ARCHITECTURE.md):
+#   1. Frontmatter - every canonical file carries the required fields
+#   2. Secrets - gitleaks scan; a leak fails the build
+#   3. Links - no broken relative links between Markdown files
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  frontmatter:
+    name: Frontmatter contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate frontmatter on canonical files
+        run: bash scripts/validate-frontmatter.sh
+
+  secrets:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # The gitleaks CLI is free for any repo; the GitHub Action wrapper
+      # requires a paid license for organization accounts - so we run the
+      # pinned binary directly.
+      - name: Install gitleaks
+        run: |
+          GITLEAKS_VERSION=8.21.2
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" | tar -xz gitleaks
+      - name: Detect secrets
+        run: ./gitleaks detect --source . --redact -v
+
+  links:
+    name: Markdown link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check relative links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Offline: only verify file-to-file links inside the repo.
+          # External URLs are checked by humans; CI shouldn't fail on a
+          # third-party outage. {{PLACEHOLDER}} links in templates/ are
+          # scaffolding, not real targets - excluded (raw + URL-encoded).
+          # .claude/skills/* are symlinks into skills/ - lychee resolves
+          # their relative links against the symlink path, so the canonical
+          # copies are checked and the symlinked views are skipped.
+          args: --offline --include-fragments --no-progress --exclude '(%7B%7B|\{\{)' --exclude-path '.claude' "**/*.md"
+          fail: true
+
+  stale-report:
+    name: Staleness report (advisory)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Report stale pages (does not fail the build)
+        run: bash scripts/check-stale.sh || true

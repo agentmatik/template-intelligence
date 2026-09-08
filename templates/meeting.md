@@ -32,7 +32,7 @@ If significant enough for its own `decisions/` file, note here and create it.
 
 ## Action items
 
-- [ ] Owner — Action — Deadline
+- [ ] Owner - Action - Deadline
 
 ## Risks / flags
 
@@ -43,7 +43,7 @@ What got surfaced. Link the entity where it belongs.
 Short attributed quotes when they matter. Not transcripts.
 
 > "Their exact words, if quotable."
-> — Name, role
+> - Name, role
 
 ## Links
 
@@ -54,4 +54,4 @@ Short attributed quotes when they matter. Not transcripts.
 
 ---
 
-*If this meeting changed canonical facts (customer status, product decision, team change), update those pages — don't leave the truth stuck here.*
+*If this meeting changed canonical facts (customer status, product decision, team change), update those pages - don't leave the truth stuck here.*

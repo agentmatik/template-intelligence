@@ -8,7 +8,7 @@ Template: [`../templates/weekly.md`](../templates/weekly.md)
 
 ## When to create a weekly brief
 
-Once per ISO week, ideally Friday. It's the alignment document — the single place to see what happened and what's next. Always created (even a quiet week gets a short one), because the cadence is the point.
+Once per ISO week, ideally Friday. It's the alignment document - the single place to see what happened and what's next. Always created (even a quiet week gets a short one), because the cadence is the point.
 
 ---
 
@@ -46,14 +46,14 @@ tags: []
 
 ## Body structure
 
-Target ≤400 words — readable in two minutes. Sections:
+Target ≤400 words - readable in two minutes. Sections:
 
 | Section | What goes here | How to source it |
 |---------|----------------|------------------|
 | **What shipped** | 3-5 concrete deliverables | Linear (closed issues), GitHub (merged PRs), the week's meeting notes |
-| **What we learned** | The one non-obvious insight of the week | Synthesis across meetings/customer calls. If none, say so — don't invent. |
+| **What we learned** | The one non-obvious insight of the week | Synthesis across meetings/customer calls. If none, say so - don't invent. |
 | **Customer signals** | Who did what, what they said. Link customer files. | `customers/` updates, call notes, support themes |
-| **Metrics** | Links to live dashboards. **Do NOT paste numbers** — they go stale. | `INDEX.md` / `strategy.md` dashboard links |
+| **Metrics** | Links to live dashboards. **Do NOT paste numbers** - they go stale. | `INDEX.md` / `strategy.md` dashboard links |
 | **Blockers / risks** | Honestly named | Meeting notes, Linear blocked items |
 | **Decisions this week** | Link decision files | `decisions/` created this week |
 | **Next week's focus** | Three priorities, not ten | Current Linear cycle, open decisions |
@@ -64,11 +64,11 @@ Target ≤400 words — readable in two minutes. Sections:
 An agent generating this pulls from:
 1. `meetings/YYYY-MM-DD-*.md` dated within the ISO week
 2. `decisions/YYYY-MM-DD-*.md` from the week
-3. Linear via MCP — closed issues, cycle progress
-4. GitHub via MCP — merged PRs
+3. Linear via MCP - closed issues, cycle progress
+4. GitHub via MCP - merged PRs
 5. `customers/` files modified this week (via git log)
 
-It then drafts the brief. **A human reviews and edits before merging.** Never auto-merge a weekly — it's the alignment doc; trust depends on human sign-off.
+It then drafts the brief. **A human reviews and edits before merging.** Never auto-merge a weekly - it's the alignment doc; trust depends on human sign-off.
 
 ---
 
@@ -90,7 +90,7 @@ audience: team
 tags: []
 ---
 
-# Week 2026-W17 — Apr 20-24
+# Week 2026-W17 - Apr 20-24
 
 ## What shipped
 - SAML SSO live for Acme (ENG-882).
@@ -98,7 +98,7 @@ tags: []
 - Hired a second backend engineer (starts May 5).
 
 ## What we learned
-German-language UI is now table stakes in DACH — two prospects raised it
+German-language UI is now table stakes in DACH - two prospects raised it
 unprompted this week. It moved from "nice to have" to a deal-blocker.
 
 ## Customer signals
@@ -112,7 +112,7 @@ unprompted this week. It moved from "nice to have" to a deal-blocker.
 - DataFlow shipped German UI; closes our language-gap advantage. [[competitors/dataflow]]
 
 ## Decisions this week
-- [[decisions/2026-04-22-german-ui-priority]] — fast-track German UI to Q3.
+- [[decisions/2026-04-22-german-ui-priority]] - fast-track German UI to Q3.
 
 ## Next week's focus
 1. Scope German UI for Q3.

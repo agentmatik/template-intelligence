@@ -23,7 +23,7 @@ Write a decision file when the decision meets **any** of these:
 
 ## Filename / slug derivation
 
-Format: `YYYY-MM-DD-<short-slug>.md` — date is when the decision was **made**, not when the file was written.
+Format: `YYYY-MM-DD-<short-slug>.md` - date is when the decision was **made**, not when the file was written.
 
 - "Adopt company intelligence repo" decided 2026-04-22 → `2026-04-22-adopt-company-intelligence.md`
 - "Migrate from Notion to Linear" decided 2026-03-10 → `2026-03-10-notion-to-linear.md`
@@ -64,7 +64,7 @@ Decisions do NOT use the compiled-truth + timeline split. They are **immutable r
 | **Context** | What led here. The problem or opportunity. | The discussion before the decision |
 | **Decision** | What was decided, plainly. One paragraph ideally. | The conclusion reached |
 | **Consequences** | Accepted trade-offs + expected benefits (with 30/60/90 markers) | Stated reasoning, risk discussion |
-| **Alternatives considered** | What else was on the table, why rejected — including "do nothing" | The options debated |
+| **Alternatives considered** | What else was on the table, why rejected - including "do nothing" | The options debated |
 | **Evidence** | Links to meetings, data, customer feedback that informed it | Source material |
 | **Review date** | When to revisit (usually +90 days) | Set to created + 90 days |
 
@@ -117,9 +117,9 @@ for long-form docs only, until migrated to the intelligence repo.
 
 ## Alternatives considered
 
-- **Stay on Notion:** rejected — the team had already voted with their feet.
-- **GitHub Issues:** rejected — weaker cycle/sprint model for our cadence.
-- **Do nothing:** rejected — status tracking was effectively dead.
+- **Stay on Notion:** rejected - the team had already voted with their feet.
+- **GitHub Issues:** rejected - weaker cycle/sprint model for our cadence.
+- **Do nothing:** rejected - status tracking was effectively dead.
 
 ## Evidence
 

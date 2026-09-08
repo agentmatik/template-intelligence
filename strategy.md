@@ -26,8 +26,8 @@ SOURCE FROM:
 RULES:
   - Keep the whole file under ~1000 words. If longer, you're putting tactical
     decisions here that belong in decisions/.
-  - TOP 3 PRIORITIES, IN ORDER. More than three means no priorities — force the cut.
-  - "What we're NOT doing" is mandatory — the rejected-but-plausible directions.
+  - TOP 3 PRIORITIES, IN ORDER. More than three means no priorities - force the cut.
+  - "What we're NOT doing" is mandatory - the rejected-but-plausible directions.
   - North-star: one metric. If the company tracks five "key metrics," pick the
     single one that, if it moves, means everything is working.
   - Be honest in risks. A risk section with no real risks is propaganda.
@@ -42,19 +42,19 @@ RULES:
 tracked, pick the single most causal one. -->
 
 **Primary metric:** [the one number we optimize]
-**Definition:** [exactly how it's calculated — avoids ambiguity later]
+**Definition:** [exactly how it's calculated - avoids ambiguity later]
 **Current value:** [number + as-of date]
 **12-month target:** [where we're trying to get]
 
-## Current quarter — [QX YYYY]
+## Current quarter - [QX YYYY]
 
 <!-- Exactly three, ranked. Source: OKRs, planning doc. Each gets a why,
 a success metric, and an owner. If the raw data lists ten goals, force-rank
 and take the top three; note the rest were deprioritized. -->
 
-1. **[Priority 1]** — Why it matters · success metric · owner.
-2. **[Priority 2]** — Why it matters · success metric · owner.
-3. **[Priority 3]** — Why it matters · success metric · owner.
+1. **[Priority 1]** - Why it matters · success metric · owner.
+2. **[Priority 2]** - Why it matters · success metric · owner.
+3. **[Priority 3]** - Why it matters · success metric · owner.
 
 ## Active bets
 
@@ -78,9 +78,9 @@ regulatory context. -->
 <!-- Top three, honestly named, with mitigation if any. Source: board deck risk
 slide, founder candor, competitor moves. Don't sanitize. -->
 
-1. [Risk] — [mitigation if any]
-2. [Risk] — [mitigation if any]
-3. [Risk] — [mitigation if any]
+1. [Risk] - [mitigation if any]
+2. [Risk] - [mitigation if any]
+3. [Risk] - [mitigation if any]
 
 ## What we're NOT doing
 

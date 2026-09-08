@@ -17,9 +17,9 @@ Create a file when an organization is:
 
 **Do NOT create a file for:**
 
-- Cold leads with no contact yet — those live in `sales/pipeline.md` as a line, not a file
-- Individual people — customer files are about the *organization*; the human champion is a field inside it
-- Customers where you only have a company name and nothing else — wait for signal
+- Cold leads with no contact yet - those live in `sales/pipeline.md` as a line, not a file
+- Individual people - customer files are about the *organization*; the human champion is a field inside it
+- Customers where you only have a company name and nothing else - wait for signal
 
 Rule of thumb: a customer earns a file once there's a relationship to track. One paragraph of context in `sales/pipeline.md` is enough until then.
 
@@ -61,7 +61,7 @@ tags: []                        # e.g. [enterprise, dach, q2-2026]
 ---
 ```
 
-When generating from raw data, default `status: draft` — only a human marks `verified`.
+When generating from raw data, default `status: draft` - only a human marks `verified`.
 
 ---
 
@@ -129,7 +129,7 @@ tags: [enterprise, dach]
 
 **Unmet needs:** Wants analytics-v2 (predictive), SAML SSO (now shipped), and a German-language UI.
 
-**Health:** Green — usage growing, renewal confirmed, champion engaged.
+**Health:** Green - usage growing, renewal confirmed, champion engaged.
 
 **Expansion opportunities:** analytics-v2 upsell (~€2k/mo), additional seats.
 

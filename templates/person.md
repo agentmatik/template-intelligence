@@ -13,7 +13,7 @@ audience: internal
 
 # {{PERSON_NAME}}
 
-<!-- COMPILED TRUTH — current role, contact, context.
+<!-- COMPILED TRUTH - current role, contact, context.
      NEVER include compensation, performance reviews, health/personal info. -->
 
 **Role:** Current role, reporting line (if team), relationship (advisor/partner/investor).
@@ -34,6 +34,6 @@ audience: internal
 
 ---
 
-<!-- APPEND-ONLY TIMELINE — role changes, major contributions, milestones. Light touch. -->
+<!-- APPEND-ONLY TIMELINE - role changes, major contributions, milestones. Light touch. -->
 
 - 2026-04-22: Created this entity page.

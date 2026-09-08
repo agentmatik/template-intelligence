@@ -55,7 +55,7 @@ Isolate token-heavy work (competitor deep-dive, week-of-Slack triage) inside sub
 
 ### 7. Plan, then act, then compact
 
-Long-running agents perform better when they plan, write notes, then compact context — instead of dragging huge transcripts forever.
+Long-running agents perform better when they plan, write notes, then compact context - instead of dragging huge transcripts forever.
 
 ### 8. Use MCP for live reads and narrow writes, not as memory
 
@@ -91,7 +91,7 @@ Vector DBs, graph DBs, temporal-graph memory: defer until trace data shows repea
 
 ## Evolution path
 
-1. **Month 1–3:** File-native + MCP. Most companies never outgrow this.
+1. **Month 1-3:** File-native + MCP. Most companies never outgrow this.
 2. **Month 4+:** Add **evals** (Braintrust, Langfuse, DIY). Measure retrieval quality.
 3. **If evals show misses:** Add **hybrid search**.
 4. **If still insufficient:** Add **vector DB** (Chroma, Qdrant, mem0).
@@ -102,12 +102,12 @@ Each tier earns its complexity.
 
 ## Reference reading
 
-- [Anthropic — Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
-- [Anthropic — Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
-- [agents.md — cross-tool standard](https://agents.md)
+- [Anthropic - Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [Anthropic - Effective harnesses for long-running agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
+- [agents.md - cross-tool standard](https://agents.md)
 - [Cline Memory Bank](https://docs.cline.bot/features/memory-bank)
 - [Garry Tan's gbrain](https://github.com/garrytan/gbrain)
 - [Jesse Vincent's superpowers](https://github.com/obra/superpowers)
-- [Chroma — Context Rot research](https://research.trychroma.com/context-rot)
-- [Drew Breunig — How Long Contexts Fail](https://drewbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)
-- [Harrison Chase — Context engineering for agents](https://blog.langchain.com/context-engineering-for-agents)
+- [Chroma - Context Rot research](https://research.trychroma.com/context-rot)
+- [Drew Breunig - How Long Contexts Fail](https://drewbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)
+- [Harrison Chase - Context engineering for agents](https://blog.langchain.com/context-engineering-for-agents)

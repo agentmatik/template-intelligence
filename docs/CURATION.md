@@ -1,5 +1,5 @@
 > Template note: paths below use the flat single-company layout. In a company-first repo
-> (like vagner-intelligence) prefix entity/time-series paths with `<co>/` and place this file
+> (like a client brain) prefix entity/time-series paths with `<co>/` and place this file
 > at `docs/contracts/curation.md`.
 
 # Curation contract - automated SSOT updates from meeting transcripts

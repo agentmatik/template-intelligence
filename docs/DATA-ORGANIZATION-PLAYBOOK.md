@@ -12,9 +12,9 @@ For the full step-by-step migration procedure with human checkpoints, see [`AGEN
 
 A company's knowledge splits into three kinds. Route by kind:
 
-1. **Durable truth** — true for weeks/months (strategy, who customers are, decisions, brand). → **Lives in this repo as Markdown.**
-2. **Live state** — changes daily (ticket status, current sprint, live chat). → **Stays in the source system** (Linear, Slack); the repo references it via MCP, never mirrors it.
-3. **Raw evidence** — transcripts, threads, decks. → **Distilled into the repo** (the conclusion), with the raw kept in its origin system (Granola, email).
+1. **Durable truth** - true for weeks/months (strategy, who customers are, decisions, brand). → **Lives in this repo as Markdown.**
+2. **Live state** - changes daily (ticket status, current sprint, live chat). → **Stays in the source system** (Linear, Slack); the repo references it via MCP, never mirrors it.
+3. **Raw evidence** - transcripts, threads, decks. → **Distilled into the repo** (the conclusion), with the raw kept in its origin system (Granola, email).
 
 The repo is the company's *compiled* knowledge, not its raw log and not its live dashboard.
 
@@ -30,7 +30,7 @@ The repo is the company's *compiled* knowledge, not its raw log and not its live
 | What you're building, roadmap, architecture | `product.md` | Roadmap detail stays in Linear; link it |
 | Voice, messaging, positioning, narrative | `brand.md` | Include negative examples (what you're NOT) |
 | How the company runs: cadence, tools, decision rights, GDPR | `ops.md` | One file, root |
-| Money: where numbers live, metric definitions | `finance.md` | **Pointers only — never raw figures** |
+| Money: where numbers live, metric definitions | `finance.md` | **Pointers only - never raw figures** |
 | A specific customer or prospect | `customers/<slug>.md` | One file each |
 | A specific competitor | `competitors/<slug>.md` | One file each |
 | A specific person (team/advisor/investor/partner) | `people/<slug>.md` | One file each, internal only |
@@ -60,7 +60,7 @@ These six files have no folder README because they are single files. Their full 
 
 **Source from:** the most recent pitch deck, the website About page, the founder's own description, incorporation docs.
 
-**Fill:** one-paragraph description; stage (pre-seed/seed/A/bootstrapped/profitable); team size; HQ; legal entity; revenue model; the one-sentence "what we do"; **what we don't do** (3 bullets — this is as important as what you do); "why now."
+**Fill:** one-paragraph description; stage (pre-seed/seed/A/bootstrapped/profitable); team size; HQ; legal entity; revenue model; the one-sentence "what we do"; **what we don't do** (3 bullets - this is as important as what you do); "why now."
 
 **Frontmatter `type: company`.** Mark `status: draft` when generated, `verified` only after a human confirms.
 
@@ -90,7 +90,7 @@ Keep ≤1000 words. If it's longer, you're putting tactics here that belong in `
 
 **Source from:** existing brand guides, the best-performing marketing copy, the founder's own writing.
 
-**Fill:** one-liner; elevator pitch; voice as **3 dos + 3 don'ts with examples** (the don'ts and a worked negative example matter most — they define the boundary); messaging boilerplate; naming/capitalization rules; visual references (link to assets, don't embed).
+**Fill:** one-liner; elevator pitch; voice as **3 dos + 3 don'ts with examples** (the don'ts and a worked negative example matter most - they define the boundary); messaging boilerplate; naming/capitalization rules; visual references (link to assets, don't embed).
 
 ### ops.md
 
@@ -98,15 +98,15 @@ Keep ≤1000 words. If it's longer, you're putting tactics here that belong in `
 
 **Source from:** team handbook, calendar patterns, tool inventory, vendor contracts, any GDPR/privacy docs.
 
-**Fill:** cadence table (daily/weekly/monthly/quarterly rituals); **decision rights** (who decides what without committee — critical for agent autonomy); tools table (function → tool); vendors (name, contact, renewal); security & access (SSO, secrets, 2FA); **GDPR data inventory** for EU companies (what data, where, lawful basis, retention).
+**Fill:** cadence table (daily/weekly/monthly/quarterly rituals); **decision rights** (who decides what without committee - critical for agent autonomy); tools table (function → tool); vendors (name, contact, renewal); security & access (SSO, secrets, 2FA); **GDPR data inventory** for EU companies (what data, where, lawful basis, retention).
 
 ### finance.md
 
-**Purpose:** Where the money truth lives — NOT the money truth itself.
+**Purpose:** Where the money truth lives - NOT the money truth itself.
 
 **Source from:** the founder telling you where things live. **Never from raw financial documents you then copy in.**
 
-**Fill:** a table of *where* each financial artifact lives (cap table, bookkeeping, bank, investor reporting) with access notes; metric definitions (ARR, MRR, burn, runway, CAC, LTV — the formulas, not the values); review cadence; fundraising-round summary (round, date, amount, lead — these are usually shareable; exact terms are not).
+**Fill:** a table of *where* each financial artifact lives (cap table, bookkeeping, bank, investor reporting) with access notes; metric definitions (ARR, MRR, burn, runway, CAC, LTV - the formulas, not the values); review cadence; fundraising-round summary (round, date, amount, lead - these are usually shareable; exact terms are not).
 
 **Hard rule:** if you encounter a cap table, payroll, or term sheet in the raw data, do NOT transcribe it. Note in the handoff that it exists and recommend an encrypted home.
 
@@ -135,7 +135,7 @@ This is what a reader sees first.>
 
 ### Immutable record (decisions, meetings, weekly)
 
-No mutable block — the whole file is a dated record. Once written, it's not edited (decisions get *superseded* by new files; meetings and weeklies are simply historical).
+No mutable block - the whole file is a dated record. Once written, it's not edited (decisions get *superseded* by new files; meetings and weeklies are simply historical).
 
 ---
 
@@ -155,7 +155,7 @@ tags: []
 ---
 ```
 
-- `type` is what lets an agent route and retrieve — never omit it.
+- `type` is what lets an agent route and retrieve - never omit it.
 - When generating from raw data, default `status: draft`. Only a human promotes to `verified`.
 - `last_verified` should reflect when the facts were last true, not when you ran the import.
 
@@ -165,12 +165,12 @@ tags: []
 
 A well-organized repo, by operator/accelerator standards, has these properties:
 
-1. **Single source of truth** — each fact lives in exactly one canonical place; everything else links to it.
-2. **Consistent taxonomy** — same file shape every time, so retrieval is predictable.
-3. **Distilled, not dumped** — conclusions, not raw transcripts. A reader gets the answer in seconds.
-4. **Honestly dated** — `last_verified` tells the truth about staleness.
-5. **Negative space defined** — "what we don't do", competitor strengths, ICP anti-profile. The boundaries are as documented as the center.
-6. **Earns its structure** — no empty folders, no speculative taxonomy. Add structure when content demands it, per the "add sections only when existing ones grow too large" rule.
+1. **Single source of truth** - each fact lives in exactly one canonical place; everything else links to it.
+2. **Consistent taxonomy** - same file shape every time, so retrieval is predictable.
+3. **Distilled, not dumped** - conclusions, not raw transcripts. A reader gets the answer in seconds.
+4. **Honestly dated** - `last_verified` tells the truth about staleness.
+5. **Negative space defined** - "what we don't do", competitor strengths, ICP anti-profile. The boundaries are as documented as the center.
+6. **Earns its structure** - no empty folders, no speculative taxonomy. Add structure when content demands it, per the "add sections only when existing ones grow too large" rule.
 
 ---
 
@@ -183,7 +183,7 @@ A well-organized repo, by operator/accelerator standards, has these properties:
 - Anything under NDA
 - Raw meeting transcripts (distill them; the raw stays in Granola)
 
-If raw data contains these, route them out (note in handoff) — do not transcribe them into the repo.
+If raw data contains these, route them out (note in handoff) - do not transcribe them into the repo.
 
 ---
 
