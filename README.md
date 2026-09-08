@@ -126,7 +126,7 @@ See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for the full rationale.
 
 ## License
 
-MIT for the template structure. Your content is yours.
+MIT for the template structure (file layouts, contracts, scripts, documentation) - see [`LICENSE`](./LICENSE). Content you create in a repo instantiated from this template is yours and is not subject to this license.
 
 ---
 
