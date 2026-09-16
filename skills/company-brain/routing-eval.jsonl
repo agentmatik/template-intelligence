@@ -1,0 +1,5 @@
+{"intent":"connect this intelligence repo to gbrain with the right page types","expected_skill":"company-brain"}
+{"intent":"my customer pages show up as note in gbrain, what went wrong","expected_skill":"company-brain"}
+{"intent":"who owns the acme account according to this brain","expected_skill":"company-brain"}
+{"intent":"is the grocery focus decision still current in this brain","expected_skill":"company-brain"}
+{"intent":"fold this meeting into the brain without breaking the curation rules","expected_skill":"company-brain"}

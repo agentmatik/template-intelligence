@@ -131,3 +131,9 @@ MIT for the template structure (file layouts, contracts, scripts, documentation)
 ---
 
 **Maintained by [Agentmatik](https://agentmatik.com).** Based on consensus across independent deep research on agent-ready company context patterns (Anthropic, Cline, gbrain, Superpowers, Chroma context-rot research, LangChain context engineering, AGENTS.md standard).
+
+## Using this brain with gbrain
+
+This repo ships a brain-resident [gbrain](https://github.com/garrytan/gbrain) skillpack (`skillpack.json`, `skills/company-brain/`). A connecting harness discovers it on `gbrain sources add` and reads `skills/company-brain/SKILL.md`.
+
+Sync it with the [company-brain schema pack](https://github.com/mattzimak/gbrain-company-brain) or gbrain retypes `customer`, `decision`, `strategy` and the rest of this layout to `note`. The skill has the commands.
