@@ -1,0 +1,25 @@
+{
+  "api_version": "gbrain-skillpack-v1",
+  "name": "company-brain",
+  "version": "0.1.0",
+  "description": "This company brain as a gbrain source: the company-brain schema pack it expects, how to sync it with types and relationships intact, and the curation rules for writing back.",
+  "author": "Matt Zimak",
+  "license": "MIT",
+  "homepage": "https://github.com/mattzimak/gbrain-company-brain",
+  "gbrain_min_version": "0.50.0.0",
+  "skills": [
+    "skills/company-brain"
+  ],
+  "runbooks": {
+    "bootstrap": "runbooks/bootstrap.md"
+  },
+  "changelog": "CHANGELOG.md",
+  "brain_resident": true,
+  "schema_pack": "company-brain",
+  "routing_evals": [
+    "skills/company-brain/routing-eval.jsonl"
+  ],
+  "llm_evals": [
+    "evals/*.judge.json"
+  ]
+}

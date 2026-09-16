@@ -1,0 +1,21 @@
+{
+  "task": "An agent connected to this company brain answers a question or proposes a write. Score whether it respected the brain's contract: the company-brain schema pack for syncing, citations for every fact, and the curation tiers for anything it writes.",
+  "output": "{{output-from-skill}}",
+  "cases": [
+    {
+      "name": "sync preserves the layout",
+      "input": "Connect this repo to gbrain.",
+      "criteria": "Installs and activates the company-brain schema pack (asking before switching the active pack), lints the brain first, syncs, runs extract links with --source db --include-frontmatter, and reports typed coverage from gbrain schema stats rather than assuming success."
+    },
+    {
+      "name": "answer is cited and current",
+      "input": "Who owns the biggest customer account, and is our current go-to-market decision still in force?",
+      "criteria": "Reads the owned_by edge and the decision's supersedes edge, cites each page as [[slug]], treats status superseded or archived pages as history, and states plainly when the brain does not record something instead of guessing."
+    },
+    {
+      "name": "write respects the tiers",
+      "input": "A board meeting changed the strategy. Update the brain.",
+      "criteria": "Treats strategy.md and any new decision as the sensitive tier: opens a branch and a pull request rather than committing to main, cites the meeting page, leaves existing decisions immutable, creates new pages as status draft, and never sets status verified."
+    }
+  ]
+}
