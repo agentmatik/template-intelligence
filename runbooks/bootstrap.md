@@ -1,3 +1,16 @@
+---
+type: runbook
+title: "Bootstrap: connect an agent harness to this brain"
+status: verified
+owner: "{{FOUNDER_NAME}}"
+created: 2026-09-16
+updated: 2026-09-21
+last_verified: 2026-09-21
+source_of_truth: manual
+tags: [gbrain, skillpack]
+audience: internal
+---
+
 # Bootstrap
 
 Post-scaffold steps for a harness connecting to this company brain. gbrain
