@@ -1,10 +1,11 @@
 name: validate
 
-# CI for the intelligence repo. Three checks, all advisory rules made
+# CI for the intelligence repo. Four checks, all advisory rules made
 # deterministic (prose is advisory; CI guarantees it - see docs/ARCHITECTURE.md):
 #   1. Frontmatter - every canonical file carries the required fields
 #   2. Secrets - gitleaks scan; a leak fails the build
 #   3. Links - no broken relative links between Markdown files
+#   4. Brain lint - the gbrain-company-brain linter, as a GitHub Action
 
 on:
   pull_request:
@@ -22,6 +23,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate frontmatter on canonical files
         run: bash scripts/validate-frontmatter.sh
+
+  brain-lint:
+    name: Company brain lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Same checks gbrain-company-brain runs before a gbrain sync: page types the
+      # pack declares, pages in the right folder, dated decisions, no dangling
+      # wikilinks. Findings show up as annotations on the pull request.
+      - uses: mattzimak/gbrain-company-brain@v0.2.0
+        with:
+          path: .
 
   secrets:
     name: Secret scan (gitleaks)
